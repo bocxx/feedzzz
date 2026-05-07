@@ -1,0 +1,86 @@
+---
+import type { FeedItem } from '../../types/feed';
+import { sourceLabels, typeLabels, formatNumber, relativeTime } from '../../lib/data';
+import { localizedHref, type Locale } from '../../i18n/messages';
+import { Flame, Heart, Download, Star, ArrowUpFromLine, MessageCircle } from '@lucide/astro';
+
+interface Props { item: FeedItem; locale?: Locale; }
+const { item, locale = 'nl' } = Astro.props;
+
+const slug = item.id;
+const href = localizedHref(`/${slug}`, locale);
+
+// Pick stats based on source
+function statsToShow(it: FeedItem) {
+  if (it.source === 'huggingface' && it.type === 'model') {
+    return [
+      { icon: 'heart', label: 'likes', value: it.stats?.likes },
+      { icon: 'download', label: 'downloads', value: it.stats?.downloads },
+    ];
+  }
+  if (it.source === 'huggingface' && it.type === 'space') {
+    return [{ icon: 'heart', label: 'likes', value: it.stats?.likes }];
+  }
+  if (it.source === 'github') {
+    return [
+      { icon: 'star', label: 'stars', value: it.stats?.stars },
+      { icon: 'arrowup', label: 'today', value: it.stats?.stars_today },
+    ];
+  }
+  if (it.source === 'producthunt') {
+    return [
+      { icon: 'arrowup', label: 'votes', value: it.stats?.votes },
+      { icon: 'message', label: 'comments', value: it.stats?.comments },
+    ];
+  }
+  return [];
+}
+const stats = statsToShow(item);
+---
+
+<a href={href} class="feed-card" data-source={item.source} data-type={item.type}
+   data-cats={(item.categories ?? []).join(' ')}>
+  <header class="feed-card__head">
+    <div class="feed-card__source">
+      <span class="source-dot"></span>
+      <span>{sourceLabels[item.source] ?? item.source}</span>
+      <span class="text-muted">· {typeLabels[item.type] ?? item.type}</span>
+    </div>
+    {item.is_trending && (
+      <span class="badge badge--trending">
+        <Flame size={11} stroke-width={2} /> Trending
+      </span>
+    )}
+    {item.logo && (
+      <img src={item.logo} alt="" class="feed-card__logo" width="28" height="28" loading="lazy" />
+    )}
+  </header>
+
+  <h3 class="feed-card__title">{item.title}</h3>
+  {item.tagline && <p class="feed-card__tagline">{item.tagline}</p>}
+  {item.author && <span class="feed-card__author">@{item.author}</span>}
+
+  {item.tags && item.tags.length > 0 && (
+    <div class="feed-card__tags">
+      {item.tags.slice(0, 4).map((t) => (
+        <span class="badge badge--neutral">{t}</span>
+      ))}
+    </div>
+  )}
+
+  <footer class="feed-card__footer">
+    <div class="feed-card__stats">
+      {stats.map((s) => (
+        <span class="feed-card__stat">
+          {s.icon === 'heart' && <Heart size={11} stroke-width={1.8} />}
+          {s.icon === 'download' && <Download size={11} stroke-width={1.8} />}
+          {s.icon === 'star' && <Star size={11} stroke-width={1.8} />}
+          {s.icon === 'arrowup' && <ArrowUpFromLine size={11} stroke-width={1.8} />}
+          {s.icon === 'message' && <MessageCircle size={11} stroke-width={1.8} />}
+          {formatNumber(s.value)}
+        </span>
+      ))}
+    </div>
+    {item.created_at && <span class="text-muted mono" style="font-size: var(--text-xs);">{relativeTime(item.created_at, locale)}</span>}
+  </footer>
+</a>

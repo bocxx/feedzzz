@@ -1,0 +1,27 @@
+---
+import { useTranslations, type Locale } from '../i18n/messages';
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const year = new Date().getFullYear();
+const links = [
+  { label: 'RSS', href: locale === 'en' ? '/en/rss.xml' : '/rss.xml' },
+  { label: 'Whotofollow', href: 'https://whotofollow.online' },
+  { label: 'Debesteaitools', href: 'https://debesteaitools.nl' },
+];
+---
+
+<footer class="site-footer">
+  <div class="container container-wide site-footer__inner">
+    <div>
+      <strong style="color: var(--text-secondary);">{t.siteName}</strong> — {t.footer.tagline}
+      <br />
+      <span class="text-muted">© {year}. {t.footer.dataNote}</span>
+    </div>
+    <nav aria-label="Footer">
+      {links.map((l) => (
+        <a href={l.href} style="margin-left: var(--space-4); color: var(--text-secondary);">{l.label}</a>
+      ))}
+    </nav>
+  </div>
+</footer>

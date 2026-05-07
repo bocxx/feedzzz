@@ -1,0 +1,86 @@
+---
+import '@fontsource-variable/inter';
+import '@fontsource-variable/space-grotesk';
+import '@fontsource/jetbrains-mono';
+import '../styles/main.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import { siteConfig } from '../config/site';
+import { useTranslations, getAlternateUrl, type Locale } from '../i18n/messages';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  robots?: string;
+  ogType?: 'website' | 'article';
+}
+
+const locale = (Astro.currentLocale ?? 'nl') as Locale;
+const t = useTranslations(locale);
+
+const {
+  title,
+  description = t.siteDescription,
+  ogImage,
+  robots = 'index, follow, max-image-preview:large',
+  ogType = 'website',
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, siteConfig.url);
+const resolvedOgImage = ogImage ?? `${siteConfig.url}${siteConfig.defaultOg}`;
+
+// Build hreflang map: same logical page in each locale, honouring per-locale slug aliases.
+const currentPath = Astro.url.pathname;
+const altPath = getAlternateUrl(currentPath, locale);
+const nlPath = locale === 'nl' ? currentPath : altPath;
+const enPath = locale === 'en' ? currentPath : altPath;
+const hreflangs = [
+  { hreflang: 'nl', href: `${siteConfig.url}${nlPath}` },
+  { hreflang: 'en', href: `${siteConfig.url}${enPath}` },
+  { hreflang: 'x-default', href: `${siteConfig.url}${nlPath}` },
+];
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="dark" />
+    <meta name="robots" content={robots} />
+    <meta name="theme-color" content="#1a0e0a" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="canonical" href={canonicalURL.href} />
+    {hreflangs.map((h) => (
+      <link rel="alternate" hreflang={h.hreflang} href={h.href} />
+    ))}
+    <link rel="alternate" type="application/rss+xml" title={`${t.siteName} — feed`} href={locale === 'en' ? '/en/rss.xml' : '/rss.xml'} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta property="og:locale" content={locale === 'en' ? 'en_US' : 'nl_NL'} />
+    {locale === 'nl' && <meta property="og:locale:alternate" content="en_US" />}
+    {locale === 'en' && <meta property="og:locale:alternate" content="nl_NL" />}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:url" content={canonicalURL.href} />
+    <meta property="og:image" content={resolvedOgImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={resolvedOgImage} />
+
+    <title>{title}</title>
+    <slot name="head" />
+  </head>
+  <body>
+    <SiteHeader locale={locale} />
+    <slot />
+    <SiteFooter locale={locale} />
+  </body>
+</html>

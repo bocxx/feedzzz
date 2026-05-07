@@ -1,0 +1,92 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getAllItems, sourceLabels, typeLabels, formatNumber, relativeTime } from '../lib/data';
+import { useTranslations, localizedHref, type Locale } from '../i18n/messages';
+import { ArrowLeft, ExternalLink, Flame } from '@lucide/astro';
+import type { FeedItem } from '../types/feed';
+
+export async function getStaticPaths() {
+  return getAllItems().map((item) => ({
+    params: { id: item.id },
+    props: { item },
+  }));
+}
+
+interface Props { item: FeedItem; }
+const { item } = Astro.props;
+
+const locale = (Astro.currentLocale ?? 'nl') as Locale;
+const t = useTranslations(locale);
+
+const stats = Object.entries(item.stats || {}).filter(([, v]) => v != null && v !== 0);
+const tags = item.tags || [];
+
+const articleJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': item.type === 'product' ? 'Product' : 'CreativeWork',
+  name: item.title,
+  description: item.tagline || '',
+  url: item.url,
+  author: { '@type': item.type === 'repo' || item.source === 'huggingface' ? 'Person' : 'Organization', name: item.author },
+  inLanguage: locale,
+};
+---
+
+<Layout title={`${item.title} — ${t.siteName}`} description={item.tagline || `${typeLabels[item.type]} via ${sourceLabels[item.source]}`} ogType="article">
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
+  </Fragment>
+
+  <main class="container container-narrow detail">
+    <a href={localizedHref('/', locale)} class="detail__back"><ArrowLeft size={14} stroke-width={2} /> {t.detail.back}</a>
+
+    <header class="detail__head">
+      {item.logo && <img src={item.logo} alt="" class="detail__logo" width="72" height="72" loading="eager" />}
+      <div>
+        <div class="detail__meta">
+          <span class="badge badge--neutral">{sourceLabels[item.source]}</span>
+          <span class="badge badge--neutral">{typeLabels[item.type]}</span>
+          {item.is_trending && (
+            <span class="badge badge--trending"><Flame size={11} stroke-width={2} /> Trending</span>
+          )}
+          {item.created_at && <span class="text-muted mono" style="font-size: var(--text-xs);">{relativeTime(item.created_at, locale)}</span>}
+        </div>
+        <h1 class="detail__title">{item.title}</h1>
+        {item.tagline && <p style="color: var(--text-secondary); font-size: var(--text-lg); margin: var(--space-2) 0 0;">{item.tagline}</p>}
+        <a href={item.url} target="_blank" rel="noopener noreferrer" class="detail__cta">
+          {t.detail.openOn} {sourceLabels[item.source]} <ExternalLink size={14} stroke-width={2} />
+        </a>
+      </div>
+    </header>
+
+    {item.description && (
+      <section style="margin-bottom: var(--space-8);">
+        <h2 style="font-size: var(--text-xl); margin-bottom: var(--space-3);">{t.detail.description}</h2>
+        <p style="color: var(--text-secondary);">{item.description}</p>
+      </section>
+    )}
+
+    <section style="margin-bottom: var(--space-8);">
+      <h2 style="font-size: var(--text-xl); margin-bottom: var(--space-3);">{t.detail.details}</h2>
+      <dl class="dl-grid">
+        <dt>{t.detail.maker}</dt><dd>@{item.author}</dd>
+        {item.language && (<><dt>{t.detail.language}</dt><dd>{item.language}</dd></>)}
+        {item.library && (<><dt>{t.detail.library}</dt><dd>{item.library}</dd></>)}
+        {item.domain && item.website && (<><dt>{t.detail.website}</dt><dd><a href={item.website} target="_blank" rel="noopener noreferrer">{item.domain}</a></dd></>)}
+        {stats.map(([k, v]) => (
+          <Fragment><dt style="text-transform: capitalize;">{k.replace(/_/g, ' ')}</dt><dd class="mono">{formatNumber(v as number)}</dd></Fragment>
+        ))}
+        {item.ai_relevance_score != null && (<><dt>{t.detail.aiRelevance}</dt><dd class="mono">{item.ai_relevance_score.toFixed(2)}</dd></>)}
+      </dl>
+    </section>
+
+    {tags.length > 0 && (
+      <section>
+        <h2 style="font-size: var(--text-xl); margin-bottom: var(--space-3);">{t.detail.tags}</h2>
+        <div class="feed-card__tags" style="gap: var(--space-2);">
+          {tags.map((t) => <span class="badge badge--neutral">{t}</span>)}
+        </div>
+      </section>
+    )}
+  </main>
+</Layout>

@@ -1,0 +1,49 @@
+---
+import { Zap, Languages } from '@lucide/astro';
+import { useTranslations, localizedHref, getAlternateUrl, type Locale } from '../i18n/messages';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = useTranslations(locale);
+const otherLocale: Locale = locale === 'nl' ? 'en' : 'nl';
+const otherHref = getAlternateUrl(Astro.url.pathname, locale);
+
+const nav = [
+  { label: t.nav.feed, href: localizedHref('/', locale) },
+  { label: t.nav.trending, href: localizedHref('/?filter=trending', locale) },
+  { label: t.nav.models, href: localizedHref('/?source=huggingface', locale) },
+  { label: t.nav.launches, href: localizedHref('/?source=producthunt', locale) },
+  { label: t.nav.repos, href: localizedHref('/?source=github', locale) },
+  { label: t.nav.about, href: t.aboutPath },
+];
+---
+
+<header class="site-header">
+  <div class="container container-wide site-header__inner">
+    <a href={localizedHref('/', locale)} class="site-logo" aria-label="feedzzz home">
+      <Zap size={18} stroke-width={2.4} style="color: var(--primary-bright); vertical-align: -3px;" />
+      feed<span class="accent">zzz</span>
+    </a>
+    <nav class="site-nav" aria-label={locale === 'nl' ? 'Hoofdnavigatie' : 'Primary'}>
+      {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+      <a href={otherHref} class="lang-toggle" aria-label={locale === 'nl' ? 'Switch to English' : 'Schakel naar Nederlands'}>
+        <Languages size={14} stroke-width={2} style="vertical-align: -2px; margin-right: 4px;" />
+        {otherLocale.toUpperCase()}
+      </a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .lang-toggle {
+    border: 1px solid var(--border-subtle);
+    color: var(--text-secondary) !important;
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-wide);
+  }
+  .lang-toggle:hover {
+    color: var(--primary-bright) !important;
+    border-color: var(--border-accent);
+  }
+</style>

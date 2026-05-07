@@ -1,0 +1,157 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FeedItemCard from '../components/molecules/FeedItemCard.astro';
+import { siteConfig } from '../config/site';
+import { getAllItems, getCounts, getGeneratedAt, sourceLabels, categoryLabel } from '../lib/data';
+import { useTranslations, getDateLocale, type Locale } from '../i18n/messages';
+import {
+  Zap, TrendingUp, Sparkles, Code, Bot, BookOpen, Briefcase,
+  Microscope, Palette, GraduationCap, Wrench, ShieldCheck, Megaphone, Layers,
+} from '@lucide/astro';
+
+const CategoryIcon: Record<string, any> = {
+  'claude': Sparkles, 'coding': Code, 'agents': Bot,
+  'beginners': BookOpen, 'business': Briefcase, 'research': Microscope,
+  'creative': Palette, 'fundamentals': GraduationCap,
+  'tool-insights': Wrench, 'official': ShieldCheck, 'branding': Megaphone,
+};
+
+const CATEGORY_ORDER = [
+  'claude', 'coding', 'agents', 'tool-insights', 'fundamentals',
+  'research', 'business', 'creative', 'beginners', 'branding', 'official',
+];
+
+const locale = (Astro.currentLocale ?? 'nl') as Locale;
+const t = useTranslations(locale);
+
+const items = getAllItems();
+const counts = getCounts();
+const generatedAt = getGeneratedAt();
+
+const updated = new Date(generatedAt).toLocaleDateString(getDateLocale(locale), {
+  day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit',
+});
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: t.siteName,
+  url: siteConfig.url,
+  description: t.siteDescription,
+  inLanguage: locale,
+};
+---
+
+<Layout title={`${t.siteName} — ${counts.total}+ ${locale === 'nl' ? 'AI launches in real-time' : 'AI launches in real time'}`}
+        description={t.siteDescription}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)} />
+  </Fragment>
+
+  <main class="container container-wide">
+    <section class="hero">
+      <div class="hero__meta">
+        <span class="badge badge--primary"><Zap size={11} stroke-width={2} /> {t.hero.live}</span>
+        <span>{t.hero.updated} {updated}</span>
+      </div>
+      <h1 class="hero__title">
+        <span class="hero__gradient">{t.hero.titleA}</span>
+        <br />{t.hero.titleB}
+      </h1>
+      <p class="hero__sub">{t.hero.sub(counts.total, counts.trending)}</p>
+    </section>
+
+    <div class="filter-bar" data-dim="scope">
+      <button class="filter-pill is-active" data-filter="all">{t.filters.all} · {counts.total}</button>
+      <button class="filter-pill" data-filter="trending">
+        <TrendingUp size={11} stroke-width={2} style="vertical-align: -2px; margin-right: 3px;" />
+        {t.filters.trending} · {counts.trending}
+      </button>
+      {Object.entries(counts.bySource).map(([s, n]) => (
+        <button class="filter-pill" data-filter={s}>{sourceLabels[s] ?? s} · {n}</button>
+      ))}
+    </div>
+
+    <div class="cat-bar" data-dim="category" aria-label={t.filters.categoryHeading}>
+      <button class="cat-pill is-active" data-cat-filter="all" type="button">
+        <Layers size={11} stroke-width={2} />
+        {t.filters.categoryAll}
+      </button>
+      {CATEGORY_ORDER
+        .filter((c) => (counts.byCategory?.[c] ?? 0) > 0)
+        .map((c) => {
+          const Icon = CategoryIcon[c];
+          const n = counts.byCategory[c];
+          return (
+            <button class="cat-pill" data-cat={c} data-cat-filter={c} type="button">
+              {Icon && <Icon size={11} stroke-width={1.8} />}
+              <span>{categoryLabel(c, locale)}</span>
+              <span class="cat-pill__count">{n}</span>
+            </button>
+          );
+        })}
+    </div>
+
+    <div class="feed-grid" id="feed-grid">
+      {items.map((it) => <FeedItemCard item={it} locale={locale} />)}
+    </div>
+  </main>
+</Layout>
+
+<script>
+  // Two-dimensional filtering: scope (all/trending/source) AND category.
+  const grid = document.getElementById('feed-grid');
+  const scopePills = document.querySelectorAll<HTMLButtonElement>('.filter-pill');
+  const catPills = document.querySelectorAll<HTMLButtonElement>('.cat-pill');
+
+  let activeScope = 'all';
+  let activeCategory = 'all';
+
+  function applyFilters() {
+    const cards = grid?.querySelectorAll<HTMLAnchorElement>('.feed-card');
+    cards?.forEach((c) => {
+      const src = c.dataset.source;
+      const trending = c.querySelector('.badge--trending');
+      const cats = (c.dataset.cats ?? '').split(' ').filter(Boolean);
+
+      let scopeMatch = true;
+      if (activeScope === 'trending') scopeMatch = !!trending;
+      else if (activeScope !== 'all') scopeMatch = src === activeScope;
+
+      const catMatch = activeCategory === 'all' || cats.includes(activeCategory);
+
+      c.style.display = (scopeMatch && catMatch) ? '' : 'none';
+    });
+  }
+
+  scopePills.forEach((p) => {
+    p.addEventListener('click', () => {
+      scopePills.forEach((x) => x.classList.remove('is-active'));
+      p.classList.add('is-active');
+      activeScope = p.dataset.filter || 'all';
+      applyFilters();
+    });
+  });
+
+  catPills.forEach((p) => {
+    p.addEventListener('click', () => {
+      catPills.forEach((x) => x.classList.remove('is-active'));
+      p.classList.add('is-active');
+      activeCategory = p.dataset.catFilter || 'all';
+      applyFilters();
+    });
+  });
+
+  // URL params: ?source=... or ?filter=trending (scope), ?cat=... (category)
+  const params = new URLSearchParams(location.search);
+  const scopeParam = params.get('filter') || params.get('source');
+  if (scopeParam) {
+    const pill = document.querySelector<HTMLButtonElement>(`.filter-pill[data-filter="${scopeParam}"]`);
+    pill?.click();
+  }
+  const catParam = params.get('cat') || params.get('category');
+  if (catParam) {
+    const pill = document.querySelector<HTMLButtonElement>(`.cat-pill[data-cat-filter="${catParam}"]`);
+    pill?.click();
+  }
+</script>
