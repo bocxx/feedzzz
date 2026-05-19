@@ -77,14 +77,12 @@ const hreflangs = [
 
     <title>{title}</title>
 
-    <!-- Umami Analytics (renders only when PUBLIC_UMAMI_WEBSITE_ID is set) -->
-    <link rel="preconnect" href="https://cloud.umami.is" crossorigin />
-    <link rel="dns-prefetch" href="https://cloud.umami.is" />
-    {import.meta.env.PUBLIC_UMAMI_WEBSITE_ID && (
+    <!-- Cloudflare Web Analytics (token injected via PUBLIC_CF_BEACON_TOKEN) -->
+    {import.meta.env.PUBLIC_CF_BEACON_TOKEN && (
       <script
         defer
-        src="https://cloud.umami.is/script.js"
-        data-website-id={import.meta.env.PUBLIC_UMAMI_WEBSITE_ID}
+        src="https://static.cloudflareinsights.com/beacon.min.js"
+        data-cf-beacon={`{"token": "${import.meta.env.PUBLIC_CF_BEACON_TOKEN}"}`}
       />
     )}
 
