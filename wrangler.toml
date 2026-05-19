@@ -4,10 +4,9 @@ compatibility_flags = ["nodejs_compat"]
 workers_dev = true
 preview_urls = true
 
-routes = [
-  { pattern = "feedzzz.online", custom_domain = true },
-  { pattern = "www.feedzzz.online", custom_domain = true },
-]
+# Custom domains are bound via the Cloudflare dashboard
+# (Worker → Settings → Domains & Routes → Add Custom Domain),
+# not declared here — avoids "Can't infer zone" errors during deploy.
 
 [assets]
 directory = "./dist"
