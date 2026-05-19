@@ -1,0 +1,279 @@
+---
+/**
+ * LaunchHeatmap — GitHub contributions-style 90-day calendar showing
+ * the daily count of launches across all sources (HF + PH + GH).
+ *
+ * Layout: 14 columns (weeks) × 7 rows (Mon-Sun). Color intensity = count.
+ * Hover → tooltip with date + count. Click → filter feed to that date.
+ */
+import type { FeedItem } from '../../types/feed';
+import type { Locale } from '../../i18n/messages';
+
+interface Props {
+  items: FeedItem[];
+  locale?: Locale;
+}
+const { items, locale = 'nl' } = Astro.props;
+
+// Build 90 days back to today
+const DAYS = 91;          // ~13 weeks
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+const counts: Record<string, number> = {};
+for (let i = DAYS - 1; i >= 0; i--) {
+  const d = new Date(today);
+  d.setDate(d.getDate() - i);
+  counts[d.toISOString().slice(0, 10)] = 0;
+}
+
+for (const item of items) {
+  if (!item.created_at) continue;
+  const iso = item.created_at.slice(0, 10);
+  if (iso in counts) counts[iso]++;
+}
+
+const maxCount = Math.max(...Object.values(counts), 1);
+const total = items.length;
+
+// Convert to columns (weeks). Each week starts on Monday.
+// First column may have empty cells at top if today isn't Sunday.
+const startDay = new Date(today);
+startDay.setDate(startDay.getDate() - (DAYS - 1));
+// Roll back to nearest Monday
+const dow = (startDay.getDay() + 6) % 7;   // Mon=0..Sun=6
+startDay.setDate(startDay.getDate() - dow);
+
+interface Cell { date: string; count: number; col: number; row: number; }
+const cells: Cell[] = [];
+const cursor = new Date(startDay);
+let col = 0;
+const totalWeeks = Math.ceil((DAYS + dow) / 7);
+for (let c = 0; c < totalWeeks; c++) {
+  for (let r = 0; r < 7; r++) {
+    const iso = cursor.toISOString().slice(0, 10);
+    const inRange = iso in counts;
+    cells.push({
+      date: iso,
+      count: inRange ? counts[iso] : -1,
+      col: c,
+      row: r,
+    });
+    cursor.setDate(cursor.getDate() + 1);
+  }
+  col++;
+}
+
+const CELL = 13;
+const GAP = 3;
+const PAD_TOP = 18;
+const PAD_LEFT = 28;
+const width = PAD_LEFT + totalWeeks * (CELL + GAP);
+const height = PAD_TOP + 7 * (CELL + GAP);
+
+// Month labels — show month name at first column where its first day appears
+const monthLabels: { col: number; label: string }[] = [];
+const monthsNL = ['jan', 'feb', 'mrt', 'apr', 'mei', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
+const monthsEN = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const months = locale === 'nl' ? monthsNL : monthsEN;
+let lastMonth = -1;
+for (let c = 0; c < totalWeeks; c++) {
+  const cell = cells[c * 7];
+  if (!cell || cell.count === -1) continue;
+  const month = new Date(cell.date).getMonth();
+  if (month !== lastMonth) {
+    monthLabels.push({ col: c, label: months[month] });
+    lastMonth = month;
+  }
+}
+
+const dayLabels = locale === 'nl'
+  ? ['', 'di', '', 'do', '', 'za', '']
+  : ['', 'Tue', '', 'Thu', '', 'Sat', ''];
+
+const TITLE = locale === 'nl' ? 'Launches per dag' : 'Launches per day';
+const SUB = locale === 'nl'
+  ? `${total} launches in de laatste ${DAYS} dagen · piek ${maxCount}/dag`
+  : `${total} launches in the last ${DAYS} days · peak ${maxCount}/day`;
+---
+
+<section class="heatmap-section" aria-label={TITLE}>
+  <header class="heatmap-header">
+    <h2 class="heatmap-title">{TITLE}</h2>
+    <span class="heatmap-sub">{SUB}</span>
+  </header>
+
+  <div class="heatmap-wrap">
+    <svg
+      viewBox={`0 0 ${width} ${height}`}
+      width={width}
+      height={height}
+      class="heatmap-svg"
+      role="img"
+      aria-label={TITLE}>
+
+      {monthLabels.map((m) => (
+        <text x={PAD_LEFT + m.col * (CELL + GAP)} y={12} class="heatmap-axis">{m.label}</text>
+      ))}
+
+      {dayLabels.map((d, i) => (
+        d && <text x={0} y={PAD_TOP + i * (CELL + GAP) + 10} class="heatmap-axis">{d}</text>
+      ))}
+
+      {cells.map((c) => {
+        if (c.count < 0) return null;
+        const intensity = c.count === 0 ? 0 : 0.18 + 0.82 * (c.count / maxCount);
+        const x = PAD_LEFT + c.col * (CELL + GAP);
+        const y = PAD_TOP + c.row * (CELL + GAP);
+        return (
+          <rect
+            x={x} y={y}
+            width={CELL} height={CELL} rx={2}
+            class={c.count > 0 ? 'heatmap-cell heatmap-cell--active' : 'heatmap-cell heatmap-cell--empty'}
+            data-date={c.date}
+            data-count={c.count}
+            style={`opacity: ${c.count === 0 ? 1 : intensity}`}
+            tabindex="0"
+          />
+        );
+      })}
+    </svg>
+  </div>
+
+  <div class="heatmap-legend">
+    <span class="text-muted" style="font-size: var(--text-xs);">
+      {locale === 'nl' ? 'Minder' : 'Less'}
+    </span>
+    {[0, 0.25, 0.5, 0.75, 1].map((step) => (
+      <span class="heatmap-legend__cell" style={`opacity: ${step === 0 ? 1 : 0.18 + 0.82 * step}`}></span>
+    ))}
+    <span class="text-muted" style="font-size: var(--text-xs);">
+      {locale === 'nl' ? 'Meer' : 'More'}
+    </span>
+  </div>
+
+  <div class="heatmap-tooltip" id="heatmap-tooltip" hidden></div>
+</section>
+
+<style>
+  .heatmap-section {
+    padding: var(--space-4) var(--space-5);
+    background: var(--bg-panel);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-6);
+  }
+  .heatmap-header {
+    display: flex; align-items: baseline; gap: var(--space-3);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-3);
+  }
+  .heatmap-title {
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .heatmap-sub {
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+    font-family: var(--font-mono);
+  }
+  .heatmap-wrap {
+    overflow-x: auto;
+    margin: 0 calc(var(--space-5) * -1);
+    padding: 0 var(--space-5);
+  }
+  .heatmap-svg {
+    display: block;
+    min-width: 360px;
+  }
+  .heatmap-axis {
+    fill: var(--text-muted);
+    font-size: 9px;
+    font-family: var(--font-mono);
+  }
+  .heatmap-cell {
+    fill: var(--primary-bright);
+    transition: transform var(--duration-fast), filter var(--duration-fast);
+    cursor: pointer;
+  }
+  .heatmap-cell--empty {
+    fill: color-mix(in oklch, var(--text-muted) 18%, transparent);
+    cursor: default;
+  }
+  .heatmap-cell--active:hover,
+  .heatmap-cell--active:focus {
+    transform-origin: center;
+    transform-box: fill-box;
+    filter: brightness(1.4);
+    outline: 1px solid color-mix(in oklch, var(--primary-bright) 60%, transparent);
+    outline-offset: 2px;
+  }
+  :global(.heatmap-cell--selected) {
+    outline: 2px solid var(--secondary-bright);
+    outline-offset: 2px;
+    filter: brightness(1.6);
+  }
+  .heatmap-legend {
+    display: flex; align-items: center; gap: var(--space-2);
+    margin-top: var(--space-3);
+  }
+  .heatmap-legend__cell {
+    display: inline-block;
+    width: 11px; height: 11px;
+    border-radius: 2px;
+    background: var(--primary-bright);
+  }
+  .heatmap-legend__cell:first-of-type {
+    background: color-mix(in oklch, var(--text-muted) 18%, transparent);
+  }
+  .heatmap-tooltip {
+    position: fixed;
+    z-index: 50;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius-md);
+    padding: var(--space-1-5, 0.375rem) var(--space-2-5, 0.625rem);
+    color: var(--text-primary);
+    font-size: var(--text-xs);
+    font-family: var(--font-mono);
+    pointer-events: none;
+    box-shadow: var(--shadow-md);
+    white-space: nowrap;
+  }
+  .heatmap-tooltip strong { color: var(--primary-bright); margin-right: 4px; }
+</style>
+
+<script>
+  const tooltip = document.getElementById('heatmap-tooltip') as HTMLElement;
+  const cells = document.querySelectorAll<SVGRectElement>('.heatmap-cell--active');
+  const localeAttr = document.documentElement.lang === 'en' ? 'en' : 'nl';
+
+  function fmtDate(iso: string) {
+    const d = new Date(iso);
+    return d.toLocaleDateString(localeAttr === 'en' ? 'en-US' : 'nl-NL', {
+      day: 'numeric', month: 'short', year: 'numeric',
+    });
+  }
+
+  cells.forEach((c) => {
+    c.addEventListener('mouseenter', (e) => {
+      const date = c.dataset.date!;
+      const count = parseInt(c.dataset.count!, 10);
+      tooltip.innerHTML = `<strong>${count}</strong> ${count === 1 ? (localeAttr === 'nl' ? 'launch' : 'launch') : (localeAttr === 'nl' ? 'launches' : 'launches')} · ${fmtDate(date)}`;
+      tooltip.hidden = false;
+    });
+    c.addEventListener('mousemove', (e: MouseEvent) => {
+      tooltip.style.left = (e.clientX + 12) + 'px';
+      tooltip.style.top = (e.clientY + 12) + 'px';
+    });
+    c.addEventListener('mouseleave', () => { tooltip.hidden = true; });
+    // Click → filter feed to that date (visual via dataset attribute)
+    c.addEventListener('click', () => {
+      const date = c.dataset.date!;
+      const event = new CustomEvent('heatmap-day-select', { detail: { date }, bubbles: true });
+      c.dispatchEvent(event);
+    });
+  });
+</script>

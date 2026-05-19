@@ -1,0 +1,361 @@
+---
+/**
+ * /trends — Gartner-style hype-cycle visualisation.
+ *
+ * Plots AI keywords from `feedzzz_hype.json` on a classic hype curve:
+ *   Innovation Trigger → Peak → Trough → Slope of Enlightenment → Plateau
+ *
+ * Phases are derived in the NewsFlux exporter from `trend_snapshots` —
+ * velocity, distance-from-peak and recent growth determine where a keyword
+ * sits on the curve. Pure SVG, no client libs.
+ */
+import Layout from '../layouts/Layout.astro';
+import { useTranslations, localizedHref, type Locale } from '../i18n/messages';
+import { Activity, ArrowLeft } from '@lucide/astro';
+import hypeData from '../data/feedzzz_hype.json';
+
+const locale = (Astro.currentLocale ?? 'nl') as Locale;
+const t = useTranslations(locale);
+
+const items = (hypeData as any).items as Array<{
+  keyword: string; phase: string; total: number; peak: number;
+  current: number; growth_pct: number; days_since_peak: number; pct_of_peak: number;
+}>;
+
+const PHASE_X: Record<string, number> = {
+  innovation: 50,
+  climbing: 180,
+  peak: 290,
+  trough: 480,
+  recovery: 640,
+  plateau: 760,
+  fading: 800,
+};
+const PHASE_Y: Record<string, number> = {
+  innovation: 280,
+  climbing: 110,
+  peak: 50,
+  trough: 250,
+  recovery: 190,
+  plateau: 165,
+  fading: 165,
+};
+const PHASE_LABELS: Record<string, { nl: string; en: string }> = {
+  innovation: { nl: 'Innovation Trigger', en: 'Innovation Trigger' },
+  climbing: { nl: 'Climbing', en: 'Climbing' },
+  peak: { nl: 'Peak of Inflated Expectations', en: 'Peak of Inflated Expectations' },
+  trough: { nl: 'Trough of Disillusionment', en: 'Trough of Disillusionment' },
+  recovery: { nl: 'Slope of Enlightenment', en: 'Slope of Enlightenment' },
+  plateau: { nl: 'Plateau of Productivity', en: 'Plateau of Productivity' },
+  fading: { nl: 'Fading', en: 'Fading' },
+};
+const PHASE_COLOR: Record<string, string> = {
+  innovation: 'oklch(78% 0.14 150)',     // green — newcomer
+  climbing: 'oklch(82% 0.14 70)',         // amber — rising
+  peak: 'oklch(75% 0.18 25)',             // ember — hot
+  trough: 'oklch(72% 0.13 280)',          // muted purple — crash
+  recovery: 'oklch(78% 0.13 200)',        // cyan — recovering
+  plateau: 'oklch(75% 0.10 250)',         // blue — stable
+  fading: 'oklch(55% 0.04 30)',           // gray — gone
+};
+
+// Deterministic jitter so positions are stable across reloads
+function jitter(seed: string, range: number) {
+  let h = 5381;
+  for (let i = 0; i < seed.length; i++) h = ((h << 5) + h + seed.charCodeAt(i)) | 0;
+  return ((Math.abs(h) % 1000) / 1000 - 0.5) * range;
+}
+
+const W = 880;
+const H = 360;
+const PAD_X = 40;
+const PAD_Y = 30;
+
+// Plot each keyword with deterministic jitter
+const dots = items.map((item) => {
+  const baseX = PHASE_X[item.phase] ?? 760;
+  const baseY = PHASE_Y[item.phase] ?? 200;
+  const jx = jitter(item.keyword, 50);
+  const jy = jitter(item.keyword + '_y', 30);
+  // Dot radius based on total mentions (5..14)
+  const minR = 5, maxR = 14;
+  const maxTotal = Math.max(...items.map(i => i.total));
+  const r = minR + (item.total / maxTotal) * (maxR - minR);
+  return {
+    ...item,
+    x: baseX + jx + PAD_X,
+    y: baseY + jy + PAD_Y,
+    r,
+    color: PHASE_COLOR[item.phase] ?? 'oklch(60% 0.05 270)',
+  };
+});
+
+// Phases that have any data
+const phaseCounts: Record<string, number> = {};
+for (const it of items) phaseCounts[it.phase] = (phaseCounts[it.phase] ?? 0) + 1;
+const phasesInUse = Object.keys(phaseCounts);
+
+const heading = locale === 'nl' ? 'AI Hype-cycle' : 'AI hype cycle';
+const sub = locale === 'nl'
+  ? `${items.length} keywords gepositioneerd op basis van groei, piek-afstand en huidige activiteit.`
+  : `${items.length} keywords positioned by growth, distance from peak, and current activity.`;
+---
+
+<Layout
+  title={`${heading} · ${t.siteName}`}
+  description={sub}>
+  <main class="container container-wide" style="padding-block: var(--space-8);">
+    <a href={localizedHref('/', locale)} class="detail__back" style="margin-bottom: var(--space-4);">
+      <ArrowLeft size={14} stroke-width={2} /> {locale === 'nl' ? 'Terug naar feed' : 'Back to feed'}
+    </a>
+
+    <header class="trends-hero">
+      <div class="trends-hero__meta">
+        <span class="badge badge--primary">
+          <Activity size={11} stroke-width={2} />
+          {locale === 'nl' ? 'Live trend-analyse' : 'Live trend analysis'}
+        </span>
+      </div>
+      <h1 class="hero__title" style="font-size: var(--text-4xl); text-align: left;">
+        <span class="hero__gradient">{heading}</span>
+      </h1>
+      <p class="hero__sub" style="text-align: left; margin: var(--space-3) 0 0;">{sub}</p>
+    </header>
+
+    <div class="trends-chart">
+      <svg viewBox={`0 0 ${W + PAD_X * 2} ${H + PAD_Y * 2 + 60}`} class="trends-svg" role="img"
+           aria-label="Hype cycle plot">
+        <!-- Axis baseline -->
+        <line x1={PAD_X} y1={H + PAD_Y} x2={W + PAD_X} y2={H + PAD_Y} class="trends-axis" />
+        <text x={PAD_X} y={PAD_Y + 10} class="trends-axis-label">{locale === 'nl' ? 'Aandacht' : 'Visibility'}</text>
+        <text x={W + PAD_X} y={H + PAD_Y + 18} class="trends-axis-label trends-axis-label--end">{locale === 'nl' ? 'Tijd / volwassenheid →' : 'Time / maturity →'}</text>
+
+        <!-- The Gartner curve — cubic Beziers approximating the classic shape -->
+        <path d={`
+          M ${PAD_X} ${H + PAD_Y - 20}
+          C ${PAD_X + 80} ${H + PAD_Y - 20}, ${PAD_X + 220} ${PAD_Y + 50}, ${PAD_X + 290} ${PAD_Y + 50}
+          C ${PAD_X + 360} ${PAD_Y + 50}, ${PAD_X + 420} ${H + PAD_Y - 80}, ${PAD_X + 480} ${H + PAD_Y - 80}
+          C ${PAD_X + 580} ${H + PAD_Y - 80}, ${PAD_X + 680} ${PAD_Y + 180}, ${PAD_X + 760} ${PAD_Y + 180}
+          L ${W + PAD_X} ${PAD_Y + 180}
+        `} class="trends-curve" />
+
+        <!-- Phase region labels (positioned along the curve) -->
+        {phasesInUse.map((p) => (
+          <text x={(PHASE_X[p] ?? 760) + PAD_X}
+                y={(PHASE_Y[p] ?? 200) + PAD_Y - 38}
+                class="trends-phase-label"
+                style={`fill: ${PHASE_COLOR[p]}`}>
+            {PHASE_LABELS[p][locale]}
+          </text>
+        ))}
+
+        <!-- Keyword dots -->
+        {dots.map((d) => (
+          <g class="trends-dot-group" data-phase={d.phase}>
+            <circle
+              cx={d.x} cy={d.y} r={d.r}
+              class="trends-dot"
+              style={`fill: ${d.color}; --c: ${d.color}`}
+              data-keyword={d.keyword}
+              data-phase={d.phase}
+              data-total={d.total}
+              data-current={d.current}
+              data-growth={d.growth_pct}
+              data-pct-of-peak={d.pct_of_peak}
+            />
+            <text x={d.x} y={d.y - d.r - 4}
+                  class="trends-dot-label"
+                  text-anchor="middle">
+              {d.keyword.length > 18 ? d.keyword.slice(0, 16) + '…' : d.keyword}
+            </text>
+          </g>
+        ))}
+      </svg>
+
+      <!-- Phase legend -->
+      <div class="trends-legend">
+        {phasesInUse.map((p) => (
+          <span class="trends-legend__item">
+            <span class="trends-legend__dot" style={`background: ${PHASE_COLOR[p]}`}></span>
+            <span>{PHASE_LABELS[p][locale]}</span>
+            <span class="text-muted mono" style="font-size: 11px;">{phaseCounts[p]}</span>
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <div class="trends-tooltip" id="trends-tooltip" hidden></div>
+  </main>
+</Layout>
+
+<style>
+  .trends-hero {
+    margin-bottom: var(--space-6);
+  }
+  .trends-hero__meta {
+    margin-bottom: var(--space-3);
+  }
+  .trends-chart {
+    background: linear-gradient(180deg,
+      color-mix(in oklch, var(--primary-bright) 4%, var(--bg-panel)),
+      var(--bg-panel) 80%);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: var(--space-4);
+    overflow-x: auto;
+  }
+  .trends-svg {
+    display: block;
+    min-width: 720px;
+    width: 100%;
+    height: auto;
+  }
+  .trends-axis {
+    stroke: var(--border-subtle);
+    stroke-width: 1;
+  }
+  .trends-axis-label {
+    fill: var(--text-muted);
+    font-size: 11px;
+    font-family: var(--font-mono);
+  }
+  .trends-axis-label--end { text-anchor: end; }
+
+  .trends-curve {
+    stroke: color-mix(in oklch, var(--primary-bright) 40%, transparent);
+    stroke-width: 2.5;
+    fill: none;
+    stroke-linecap: round;
+  }
+  .trends-phase-label {
+    font-size: 10px;
+    font-family: var(--font-display);
+    font-weight: var(--font-bold);
+    text-anchor: middle;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    opacity: 0.85;
+  }
+  .trends-dot {
+    cursor: pointer;
+    stroke: var(--bg-deep);
+    stroke-width: 2;
+    transition: filter var(--duration-fast), transform var(--duration-fast);
+    filter: drop-shadow(0 0 6px color-mix(in oklch, var(--c, white) 60%, transparent));
+  }
+  .trends-dot:hover {
+    filter: drop-shadow(0 0 14px color-mix(in oklch, var(--c, white) 80%, transparent)) brightness(1.2);
+  }
+  .trends-dot-label {
+    fill: var(--text-secondary);
+    font-size: 10px;
+    font-family: var(--font-mono);
+    pointer-events: none;
+  }
+  .trends-dot:hover + .trends-dot-label,
+  .trends-dot-group:hover .trends-dot-label {
+    fill: var(--text-primary);
+    font-weight: var(--font-bold);
+  }
+
+  .trends-legend {
+    display: flex; flex-wrap: wrap; gap: var(--space-3);
+    margin-top: var(--space-3);
+    padding-top: var(--space-3);
+    border-top: 1px solid var(--border-subtle);
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+  }
+  .trends-legend__item {
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .trends-legend__dot {
+    display: inline-block; width: 10px; height: 10px;
+    border-radius: 50%;
+  }
+
+  .trends-tooltip {
+    position: fixed;
+    z-index: 50;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-accent);
+    border-radius: var(--radius-md);
+    padding: var(--space-2) var(--space-3);
+    color: var(--text-primary);
+    font-size: var(--text-xs);
+    pointer-events: none;
+    box-shadow: var(--shadow-lg);
+    max-width: 260px;
+  }
+  .trends-tooltip strong {
+    display: block;
+    color: var(--text-primary);
+    font-size: var(--text-sm);
+    margin-bottom: 4px;
+  }
+  .trends-tooltip .phase {
+    display: inline-block;
+    padding: 2px 6px;
+    border-radius: var(--radius-full);
+    font-family: var(--font-mono);
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wide);
+    margin-bottom: 6px;
+  }
+  .trends-tooltip dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2px 12px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+  }
+  .trends-tooltip dt { color: var(--text-muted); }
+  .trends-tooltip dd { margin: 0; color: var(--text-secondary); }
+</style>
+
+<script>
+  const tooltip = document.getElementById('trends-tooltip') as HTMLElement;
+  const dots = document.querySelectorAll<SVGCircleElement>('.trends-dot');
+  const locale = document.documentElement.lang === 'en' ? 'en' : 'nl';
+
+  const PHASE_LABELS_JS: Record<string, string> = {
+    innovation: locale === 'nl' ? 'Innovation Trigger' : 'Innovation Trigger',
+    climbing: locale === 'nl' ? 'Climbing' : 'Climbing',
+    peak: locale === 'nl' ? 'Peak' : 'Peak',
+    trough: locale === 'nl' ? 'Trough' : 'Trough',
+    recovery: locale === 'nl' ? 'Slope of Enlightenment' : 'Slope of Enlightenment',
+    plateau: locale === 'nl' ? 'Plateau' : 'Plateau',
+    fading: locale === 'nl' ? 'Verdwijnt' : 'Fading',
+  };
+
+  dots.forEach((d) => {
+    d.addEventListener('mouseenter', () => {
+      const kw = d.dataset.keyword!;
+      const phase = d.dataset.phase!;
+      const total = parseInt(d.dataset.total!, 10);
+      const current = parseInt(d.dataset.current!, 10);
+      const growth = parseFloat(d.dataset.growth!);
+      const pctPeak = parseFloat(d.dataset.pctOfPeak!);
+      const arrow = growth > 5 ? '▲' : growth < -5 ? '▼' : '→';
+      const growthClass = growth > 5 ? 'good' : growth < -5 ? 'bad' : 'flat';
+      tooltip.hidden = false;
+      tooltip.innerHTML = `
+        <strong>${kw}</strong>
+        <span class="phase" style="background: color-mix(in oklch, ${getComputedStyle(d).fill} 20%, transparent); color: ${getComputedStyle(d).fill};">${PHASE_LABELS_JS[phase]}</span>
+        <dl>
+          <dt>${locale === 'nl' ? 'Totaal' : 'Total'}</dt><dd>${total.toLocaleString()}</dd>
+          <dt>${locale === 'nl' ? 'Nu/dag' : 'Now/day'}</dt><dd>${current}</dd>
+          <dt>${locale === 'nl' ? 'Groei (w/w)' : 'Growth (w/w)'}</dt><dd>${arrow} ${growth.toFixed(1)}%</dd>
+          <dt>${locale === 'nl' ? '% van piek' : '% of peak'}</dt><dd>${(pctPeak * 100).toFixed(0)}%</dd>
+        </dl>
+      `;
+    });
+    d.addEventListener('mousemove', (e: MouseEvent) => {
+      tooltip.style.left = (e.clientX + 14) + 'px';
+      tooltip.style.top = (e.clientY + 14) + 'px';
+    });
+    d.addEventListener('mouseleave', () => { tooltip.hidden = true; });
+  });
+</script>

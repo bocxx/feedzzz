@@ -39,7 +39,8 @@ const stats = statsToShow(item);
 ---
 
 <a href={href} class="feed-card" data-source={item.source} data-type={item.type}
-   data-cats={(item.categories ?? []).join(' ')}>
+   data-cats={(item.categories ?? []).join(' ')}
+   data-created={item.created_at ?? ''}>
   <header class="feed-card__head">
     <div class="feed-card__source">
       <span class="source-dot"></span>

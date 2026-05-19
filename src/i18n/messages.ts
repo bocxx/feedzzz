@@ -14,6 +14,7 @@ export const messages = {
       models: 'Modellen',
       launches: 'Launches',
       repos: 'Repos',
+      trends: 'Hype-cycle',
       about: 'Over',
     },
 
@@ -87,6 +88,7 @@ export const messages = {
       models: 'Models',
       launches: 'Launches',
       repos: 'Repos',
+      trends: 'Hype cycle',
       about: 'About',
     },
 

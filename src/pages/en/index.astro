@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import FeedItemCard from '../../components/molecules/FeedItemCard.astro';
+import LaunchHeatmap from '../../components/molecules/LaunchHeatmap.astro';
 import { siteConfig } from '../../config/site';
 import { getAllItems, getCounts, getGeneratedAt, sourceLabels, categoryLabel } from '../../lib/data';
 import { useTranslations, getDateLocale, type Locale } from '../../i18n/messages';
@@ -61,6 +62,8 @@ const websiteJsonLd = {
       <p class="hero__sub">{t.hero.sub(counts.total, counts.trending)}</p>
     </section>
 
+    <LaunchHeatmap items={items} locale={locale} />
+
     <div class="filter-bar" data-dim="scope">
       <button class="filter-pill is-active" data-filter="all">{t.filters.all} · {counts.total}</button>
       <button class="filter-pill" data-filter="trending">
@@ -106,6 +109,7 @@ const websiteJsonLd = {
 
   let activeScope = 'all';
   let activeCategory = 'all';
+  let activeDate: string | null = null;
 
   function applyFilters() {
     const cards = grid?.querySelectorAll<HTMLAnchorElement>('.feed-card');
@@ -113,16 +117,32 @@ const websiteJsonLd = {
       const src = c.dataset.source;
       const trending = c.querySelector('.badge--trending');
       const cats = (c.dataset.cats ?? '').split(' ').filter(Boolean);
+      const created = c.dataset.created ?? '';
 
       let scopeMatch = true;
       if (activeScope === 'trending') scopeMatch = !!trending;
       else if (activeScope !== 'all') scopeMatch = src === activeScope;
 
       const catMatch = activeCategory === 'all' || cats.includes(activeCategory);
+      const dateMatch = !activeDate || created.slice(0, 10) === activeDate;
 
-      c.style.display = (scopeMatch && catMatch) ? '' : 'none';
+      c.style.display = (scopeMatch && catMatch && dateMatch) ? '' : 'none';
     });
   }
+
+  // Heatmap day → filter feed to that date
+  document.addEventListener('heatmap-day-select', (e: Event) => {
+    const detail = (e as CustomEvent).detail;
+    activeDate = activeDate === detail.date ? null : detail.date;
+    // Visual: pulse the active day cell
+    document.querySelectorAll('.heatmap-cell--selected').forEach((x) => x.classList.remove('heatmap-cell--selected'));
+    if (activeDate) {
+      document.querySelector(`.heatmap-cell[data-date="${activeDate}"]`)?.classList.add('heatmap-cell--selected');
+    }
+    applyFilters();
+    // Scroll to grid
+    grid?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
 
   scopePills.forEach((p) => {
     p.addEventListener('click', () => {
