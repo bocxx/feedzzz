@@ -32,6 +32,9 @@ export const messages = {
       trending: 'Trending',
       categoryAll: 'Alle onderwerpen',
       categoryHeading: 'Onderwerp',
+      clearAll: 'Wis filters',
+      emptyTitle: 'Geen resultaten',
+      emptyBody: 'Geen items die aan alle actieve filters voldoen. Probeer er een paar weg te halen.',
     },
 
     detail: {
@@ -106,6 +109,9 @@ export const messages = {
       trending: 'Trending',
       categoryAll: 'All topics',
       categoryHeading: 'Topic',
+      clearAll: 'Clear filters',
+      emptyTitle: 'No results',
+      emptyBody: 'No items match all active filters. Try removing a few.',
     },
 
     detail: {

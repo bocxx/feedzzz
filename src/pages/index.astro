@@ -98,8 +98,47 @@ const websiteJsonLd = {
     <div class="feed-grid" id="feed-grid">
       {items.map((it) => <FeedItemCard item={it} locale={locale} />)}
     </div>
+
+    <div class="empty-state" id="empty-state" hidden>
+      <h3>{t.filters.emptyTitle}</h3>
+      <p>{t.filters.emptyBody}</p>
+      <button class="clear-btn" id="clear-filters" type="button">{t.filters.clearAll}</button>
+    </div>
   </main>
 </Layout>
+
+<style>
+  .empty-state {
+    text-align: center;
+    padding: var(--space-12) var(--space-4);
+    color: var(--text-muted);
+    border: 1px dashed var(--border-subtle);
+    border-radius: var(--radius-lg);
+    margin-top: var(--space-4);
+  }
+  .empty-state h3 {
+    color: var(--text-secondary);
+    font-size: var(--text-xl);
+    margin: 0 0 var(--space-2);
+  }
+  .empty-state p {
+    max-width: 420px;
+    margin: 0 auto var(--space-4);
+    font-size: var(--text-sm);
+  }
+  .clear-btn {
+    background: var(--primary-bright);
+    color: var(--text-inverse);
+    border: none;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-md);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: filter var(--duration-fast);
+  }
+  .clear-btn:hover { filter: brightness(1.15); }
+</style>
 
 <script>
   // Two-dimensional filtering: scope (all/trending/source) AND category.
@@ -111,8 +150,12 @@ const websiteJsonLd = {
   let activeCategory = 'all';
   let activeDate: string | null = null;
 
+  const emptyState = document.getElementById('empty-state') as HTMLElement;
+  const clearBtn = document.getElementById('clear-filters') as HTMLButtonElement;
+
   function applyFilters() {
     const cards = grid?.querySelectorAll<HTMLAnchorElement>('.feed-card');
+    let visible = 0;
     cards?.forEach((c) => {
       const src = c.dataset.source;
       const trending = c.querySelector('.badge--trending');
@@ -126,9 +169,34 @@ const websiteJsonLd = {
       const catMatch = activeCategory === 'all' || cats.includes(activeCategory);
       const dateMatch = !activeDate || created.slice(0, 10) === activeDate;
 
-      c.style.display = (scopeMatch && catMatch && dateMatch) ? '' : 'none';
+      const show = scopeMatch && catMatch && dateMatch;
+      c.style.display = show ? '' : 'none';
+      if (show) visible++;
     });
+
+    // Show empty-state when filters yield 0 cards AND at least one filter is active
+    const anyActive = activeScope !== 'all' || activeCategory !== 'all' || activeDate !== null;
+    if (visible === 0 && anyActive) {
+      emptyState.hidden = false;
+      if (grid) grid.style.display = 'none';
+    } else {
+      emptyState.hidden = true;
+      if (grid) grid.style.display = '';
+    }
   }
+
+  function clearAllFilters() {
+    activeScope = 'all';
+    activeCategory = 'all';
+    activeDate = null;
+    scopePills.forEach((p) => p.classList.toggle('is-active', p.dataset.filter === 'all'));
+    catPills.forEach((p) => p.classList.toggle('is-active', p.dataset.catFilter === 'all'));
+    document.querySelectorAll('.heatmap-cell--selected').forEach((x) => x.classList.remove('heatmap-cell--selected'));
+    // Clean URL too
+    history.replaceState({}, '', location.pathname);
+    applyFilters();
+  }
+  clearBtn?.addEventListener('click', clearAllFilters);
 
   // Heatmap day → filter feed to that date
   document.addEventListener('heatmap-day-select', (e: Event) => {
