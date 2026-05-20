@@ -1,5 +1,5 @@
 {
-  "name": "feedzzz",
+  "name": "feedzz",
   "type": "module",
   "version": "0.1.0",
   "private": true,
@@ -7,6 +7,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "deploy": "npm run build && wrangler deploy",
     "sync-data": "tsx scripts/sync-data.ts"
   },
   "dependencies": {
@@ -17,12 +18,12 @@
     "@fontsource-variable/space-grotesk": "^5.2.10",
     "@fontsource/jetbrains-mono": "^5.2.8",
     "@lucide/astro": "^0.563.0",
-    "astro": "^6.2.1",
+    "astro": "^6.3.5",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@astrojs/cloudflare": "^13.3.0",
+    "@astrojs/cloudflare": "^13.5.2",
     "wrangler": "^4.78.0"
   }
 }

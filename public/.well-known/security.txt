@@ -1,4 +1,4 @@
-Contact: mailto:security@feedzzz.online
+Contact: mailto:security@feedzz.online
 Expires: 2027-05-19T23:59:59.000Z
 Preferred-Languages: nl, en
-Canonical: https://feedzzz.online/.well-known/security.txt
+Canonical: https://feedzz.online/.well-known/security.txt

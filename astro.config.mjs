@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 const isDev = process.argv.includes('dev');
 
 export default defineConfig({
-  site: 'https://feedzzz.online',
+  site: 'https://feedzz.online',
   output: 'static',
   adapter: isDev ? undefined : cloudflare(),
   i18n: {

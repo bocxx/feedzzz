@@ -4,7 +4,7 @@ export const DEFAULT_LOCALE: Locale = 'nl';
 
 export const messages = {
   nl: {
-    siteName: 'feedzzz',
+    siteName: 'feedzz',
     siteDescription: 'Discovery feed voor AI launches, agents, modellen en tools — in real-time.',
     siteTagline: 'AI launches, hot off the press.',
 
@@ -58,7 +58,7 @@ export const messages = {
     },
 
     about: {
-      title: 'Over feedzzz',
+      title: 'Over feedzz',
       whatHeading: 'Wat zit erin',
       whatIntro: 'Een doorlopend bijgewerkte feed van AI launches uit drie bronnen:',
       sourceHF: 'nieuwe modellen en spaces (demo\'s), gesorteerd op trending score en likes',
@@ -67,7 +67,7 @@ export const messages = {
       stats: (total: number, trending: number, updated: string) =>
         `Op dit moment ${total} items in de feed, waarvan ${trending} trending. Laatste update: ${updated}.`,
       howHeading: 'Hoe werkt het',
-      howBody: 'feedzzz is een statische site die data ontvangt uit een achterliggende NewsFlux-pipeline. Elke dag worden modellen, spaces, launches en repos opgehaald via officiële API\'s, in een DuckDB-database opgeslagen, en geëxporteerd naar deze site als JSON. Geen runtime database, geen tracking, geen cookies.',
+      howBody: 'feedzz is een statische site die data ontvangt uit een achterliggende NewsFlux-pipeline. Elke dag worden modellen, spaces, launches en repos opgehaald via officiële API\'s, in een DuckDB-database opgeslagen, en geëxporteerd naar deze site als JSON. Geen runtime database, geen tracking, geen cookies.',
       relatedHeading: 'Verwante sites',
       relatedBody: 'Op zoek naar wie te volgen? Probeer',
     },
@@ -81,7 +81,7 @@ export const messages = {
   },
 
   en: {
-    siteName: 'feedzzz',
+    siteName: 'feedzz',
     siteDescription: 'Discovery feed for AI launches, agents, models and tools — in real time.',
     siteTagline: 'AI launches, hot off the press.',
 
@@ -135,7 +135,7 @@ export const messages = {
     },
 
     about: {
-      title: 'About feedzzz',
+      title: 'About feedzz',
       whatHeading: 'What\'s inside',
       whatIntro: 'A continuously updated feed of AI launches from three sources:',
       sourceHF: 'new models and spaces (demos), sorted by trending score and likes',
@@ -144,7 +144,7 @@ export const messages = {
       stats: (total: number, trending: number, updated: string) =>
         `Currently ${total} items in the feed, of which ${trending} are trending. Last update: ${updated}.`,
       howHeading: 'How it works',
-      howBody: 'feedzzz is a static site fed by a backend NewsFlux pipeline. Models, spaces, launches and repos are fetched daily via official APIs, stored in a DuckDB database, and exported as JSON to this site. No runtime database, no tracking, no cookies.',
+      howBody: 'feedzz is a static site fed by a backend NewsFlux pipeline. Models, spaces, launches and repos are fetched daily via official APIs, stored in a DuckDB database, and exported as JSON to this site. No runtime database, no tracking, no cookies.',
       relatedHeading: 'Related sites',
       relatedBody: 'Looking for who to follow? Try',
     },
