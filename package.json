@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "node scripts/generate-og.mjs && astro build",
     "preview": "astro preview",
     "deploy": "npm run build && wrangler deploy",
     "sync-data": "tsx scripts/sync-data.ts"
@@ -24,6 +24,8 @@
   },
   "devDependencies": {
     "@astrojs/cloudflare": "^13.5.2",
+    "@resvg/resvg-js": "^2.6.2",
+    "satori": "^0.26.0",
     "wrangler": "^4.78.0"
   }
 }
