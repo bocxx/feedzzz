@@ -1,0 +1,6 @@
+---
+import RoundupPage from "../../components/RoundupPage.astro";
+import type { Locale } from "../../i18n/messages";
+const locale = (Astro.currentLocale ?? "en") as Locale;
+---
+<RoundupPage slug="trending" locale={locale} />
