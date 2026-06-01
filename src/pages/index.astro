@@ -95,8 +95,15 @@ const websiteJsonLd = {
         })}
     </div>
 
-    <div class="feed-grid" id="feed-grid">
+    <div class="feed-grid" id="feed-grid" data-locale={locale}>
       {items.map((it) => <FeedItemCard item={it} locale={locale} />)}
+    </div>
+
+    <div class="load-more" id="load-more-wrap" hidden>
+      <button class="load-more__btn" id="load-more" type="button">
+        {locale === 'nl' ? 'Meer laden' : 'Load more'}
+      </button>
+      <p class="load-more__count" id="load-more-count"></p>
     </div>
 
     <div class="empty-state" id="empty-state" hidden>
@@ -108,6 +115,49 @@ const websiteJsonLd = {
 </Layout>
 
 <style>
+  /* Render-perf: laat de browser off-screen kaarten overslaan. De
+     intrinsieke hoogte voorkomt scroll-sprongen bij het overslaan. */
+  .feed-grid > .feed-card {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 220px;
+  }
+
+  /* Laad-meer */
+  .load-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    margin: var(--space-8) 0 var(--space-4);
+  }
+  .load-more__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: color-mix(in oklch, var(--primary-bright) 12%, transparent);
+    color: var(--primary-bright);
+    border: 1px solid var(--border-accent);
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-full);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: background var(--duration-fast), transform var(--duration-fast), box-shadow var(--duration-fast);
+  }
+  .load-more__btn:hover {
+    background: var(--primary-bright);
+    color: var(--text-inverse);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  .load-more__btn:active { transform: translateY(0); }
+  .load-more__count {
+    margin: 0;
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+  }
+
   .empty-state {
     text-align: center;
     padding: var(--space-12) var(--space-4);
@@ -150,11 +200,21 @@ const websiteJsonLd = {
   let activeCategory = 'all';
   let activeDate: string | null = null;
 
+  // Laad-meer: filteren bepaalt de match-set, deze limiet bepaalt hoeveel
+  // ervan zichtbaar zijn. Reset naar PAGE_SIZE bij elke filterwijziging.
+  const PAGE_SIZE = 48;
+  let shownCount = PAGE_SIZE;
+
   const emptyState = document.getElementById('empty-state') as HTMLElement;
   const clearBtn = document.getElementById('clear-filters') as HTMLButtonElement;
+  const loadMoreWrap = document.getElementById('load-more-wrap') as HTMLElement;
+  const loadMoreBtn = document.getElementById('load-more') as HTMLButtonElement;
+  const loadMoreCount = document.getElementById('load-more-count') as HTMLElement;
+  const FEED_LOCALE = grid?.dataset.locale === 'en' ? 'en' : 'nl';
 
   function applyFilters() {
     const cards = grid?.querySelectorAll<HTMLAnchorElement>('.feed-card');
+    let matched = 0;
     let visible = 0;
     cards?.forEach((c) => {
       const src = c.dataset.source;
@@ -169,21 +229,48 @@ const websiteJsonLd = {
       const catMatch = activeCategory === 'all' || cats.includes(activeCategory);
       const dateMatch = !activeDate || created.slice(0, 10) === activeDate;
 
-      const show = scopeMatch && catMatch && dateMatch;
-      c.style.display = show ? '' : 'none';
-      if (show) visible++;
+      if (!(scopeMatch && catMatch && dateMatch)) {
+        c.style.display = 'none';
+        return;
+      }
+      matched++;
+      // Toon alleen de eerste `shownCount` matches; de rest wacht op "Meer laden".
+      if (matched <= shownCount) { c.style.display = ''; visible++; }
+      else c.style.display = 'none';
     });
 
     // Show empty-state when filters yield 0 cards AND at least one filter is active
     const anyActive = activeScope !== 'all' || activeCategory !== 'all' || activeDate !== null;
-    if (visible === 0 && anyActive) {
+    if (matched === 0 && anyActive) {
       emptyState.hidden = false;
       if (grid) grid.style.display = 'none';
+      loadMoreWrap.hidden = true;
+      return;
+    }
+    emptyState.hidden = true;
+    if (grid) grid.style.display = '';
+
+    // Laad-meer knop + teller ("X van Y getoond")
+    if (matched > shownCount) {
+      loadMoreWrap.hidden = false;
+      loadMoreCount.textContent = FEED_LOCALE === 'nl'
+        ? `${visible} van ${matched} getoond`
+        : `Showing ${visible} of ${matched}`;
     } else {
-      emptyState.hidden = true;
-      if (grid) grid.style.display = '';
+      loadMoreWrap.hidden = true;
     }
   }
+
+  // Filterwijziging → terug naar de eerste pagina.
+  function filterChanged() {
+    shownCount = PAGE_SIZE;
+    applyFilters();
+  }
+
+  loadMoreBtn?.addEventListener('click', () => {
+    shownCount += PAGE_SIZE;
+    applyFilters();
+  });
 
   function clearAllFilters() {
     activeScope = 'all';
@@ -194,7 +281,7 @@ const websiteJsonLd = {
     document.querySelectorAll('.heatmap-cell--selected').forEach((x) => x.classList.remove('heatmap-cell--selected'));
     // Clean URL too
     history.replaceState({}, '', location.pathname);
-    applyFilters();
+    filterChanged();
   }
   clearBtn?.addEventListener('click', clearAllFilters);
 
@@ -207,7 +294,7 @@ const websiteJsonLd = {
     if (activeDate) {
       document.querySelector(`.heatmap-cell[data-date="${activeDate}"]`)?.classList.add('heatmap-cell--selected');
     }
-    applyFilters();
+    filterChanged();
     // Scroll to grid
     grid?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
@@ -217,7 +304,7 @@ const websiteJsonLd = {
       scopePills.forEach((x) => x.classList.remove('is-active'));
       p.classList.add('is-active');
       activeScope = p.dataset.filter || 'all';
-      applyFilters();
+      filterChanged();
     });
   });
 
@@ -226,7 +313,7 @@ const websiteJsonLd = {
       catPills.forEach((x) => x.classList.remove('is-active'));
       p.classList.add('is-active');
       activeCategory = p.dataset.catFilter || 'all';
-      applyFilters();
+      filterChanged();
     });
   });
 
@@ -242,4 +329,7 @@ const websiteJsonLd = {
     const pill = document.querySelector<HTMLButtonElement>(`.cat-pill[data-cat-filter="${catParam}"]`);
     pill?.click();
   }
+
+  // Pas de initiële pagina-limiet toe (ook als er geen URL-filter is).
+  applyFilters();
 </script>
