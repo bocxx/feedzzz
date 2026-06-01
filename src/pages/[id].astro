@@ -32,7 +32,7 @@ const articleJsonLd = {
 };
 ---
 
-<Layout title={`${item.title} — ${t.siteName}`} description={item.tagline || `${typeLabels[item.type]} via ${sourceLabels[item.source]}`} ogType="article">
+<Layout title={`${item.title} — ${t.siteName}`} description={item.tagline || `${typeLabels[item.type]} via ${sourceLabels[item.source]}`} ogType="article" robots="noindex, follow">
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(articleJsonLd)} />
   </Fragment>
