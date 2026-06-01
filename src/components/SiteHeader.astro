@@ -11,10 +11,10 @@ const otherHref = getAlternateUrl(Astro.url.pathname, locale);
 
 const nav = [
   { label: t.nav.feed, href: localizedHref('/', locale) },
-  { label: t.nav.trending, href: localizedHref('/?filter=trending', locale) },
-  { label: t.nav.models, href: localizedHref('/?source=huggingface', locale) },
-  { label: t.nav.launches, href: localizedHref('/?source=producthunt', locale) },
-  { label: t.nav.repos, href: localizedHref('/?source=github', locale) },
+  { label: t.nav.trending, href: localizedHref('/trending', locale) },
+  { label: t.nav.models, href: localizedHref('/ai-modellen', locale) },
+  { label: t.nav.launches, href: localizedHref('/ai-launches', locale) },
+  { label: t.nav.repos, href: localizedHref('/ai-repos', locale) },
   { label: t.nav.trends, href: localizedHref('/trends', locale) },
   { label: t.nav.about, href: t.aboutPath },
 ];

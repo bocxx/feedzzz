@@ -28,7 +28,14 @@ export default defineConfig({
       // in de sitemap. SEO-equity + crawlbudget concentreren op de hub.
       filter: (page) => {
         const path = new URL(page).pathname.replace(/\/$/, '') || '/';
-        const HUBS = new Set(['/', '/trends', '/over', '/en', '/en/trends', '/en/about']);
+        const HUBS = new Set([
+          // Hubs
+          '/', '/trends', '/over',
+          '/en', '/en/trends', '/en/about',
+          // Evergreen roundup-pagina's (gecureerd + zoekwaardig)
+          '/trending', '/ai-modellen', '/ai-repos', '/ai-launches',
+          '/en/trending', '/en/ai-modellen', '/en/ai-repos', '/en/ai-launches',
+        ]);
         return HUBS.has(path);
       },
       i18n: {

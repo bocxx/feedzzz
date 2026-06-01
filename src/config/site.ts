@@ -7,10 +7,10 @@ export const siteConfig = {
   defaultOg: '/og-image.png',
   navigation: [
     { label: 'Feed', href: '/' },
-    { label: 'Trending', href: '/?filter=trending' },
-    { label: 'Models', href: '/?source=huggingface' },
-    { label: 'Launches', href: '/?source=producthunt' },
-    { label: 'Repos', href: '/?source=github' },
+    { label: 'Trending', href: '/trending' },
+    { label: 'Models', href: '/ai-modellen' },
+    { label: 'Launches', href: '/ai-launches' },
+    { label: 'Repos', href: '/ai-repos' },
     { label: 'Over', href: '/over' },
   ],
   footerLinks: [
