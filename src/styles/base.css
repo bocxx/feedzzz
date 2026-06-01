@@ -126,7 +126,7 @@
   }
 
   /* Hero */
-  .hero { padding-block: var(--space-12) var(--space-10); text-align: center; }
+  .hero { padding-block: var(--space-8) var(--space-6); text-align: center; }
   .hero__meta {
     display: flex; gap: var(--space-3); justify-content: center; align-items: center;
     margin-bottom: var(--space-5); color: var(--text-muted); font-size: var(--text-sm);
@@ -149,6 +149,19 @@
     font-size: var(--text-lg);
   }
 
+  /* Sticky filter-stack: scope- + categorie-filters blijven bovenaan plakken
+     tijdens het scrollen door de lange feed, zodat je kunt filteren zonder
+     terug omhoog te scrollen. */
+  .filter-stack {
+    position: sticky;
+    top: var(--header-height);
+    z-index: 20;
+    background: var(--bg-deep);
+    padding-top: var(--space-3);
+    margin-bottom: var(--space-5);
+    box-shadow: 0 10px 16px -14px rgb(0 0 0 / 0.7);
+  }
+
   /* Filter bar */
   .filter-bar {
     display: flex; flex-wrap: wrap; gap: var(--space-2);
@@ -156,7 +169,7 @@
     background: var(--bg-panel);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--space-3);
   }
   .filter-pill {
     background: transparent;
@@ -251,9 +264,10 @@
      with their own active state. */
   .cat-bar {
     display: flex; flex-wrap: wrap; gap: var(--space-2);
-    margin-bottom: var(--space-6);
-    margin-top: calc(var(--space-6) * -1 + var(--space-1));
+    margin-bottom: 0;
+    margin-top: 0;
     padding-inline: var(--space-1);
+    padding-bottom: var(--space-3);
   }
   .cat-pill {
     --cat-color: oklch(72% 0.06 270);
@@ -321,12 +335,24 @@
     position: relative;
     overflow: hidden;
   }
+  /* Bron-accent: een gekleurde strip langs de linkerrand (HuggingFace/GitHub/
+     Product Hunt elk hun eigen --accent), zodat je per bron kunt scannen. */
+  .feed-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--accent, var(--primary-bright));
+    opacity: 0.55;
+    transition: opacity var(--duration-fast);
+  }
   .feed-card:hover {
-    transform: translateY(-2px);
-    border-color: var(--border-accent);
-    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+    border-color: color-mix(in oklch, var(--accent, var(--primary-bright)) 45%, transparent);
+    box-shadow: var(--shadow-lg), 0 0 22px -8px var(--accent, var(--primary-bright));
     color: var(--text-primary);
   }
+  .feed-card:hover::before { opacity: 1; }
   .feed-card__head {
     display: flex; justify-content: space-between; align-items: flex-start; gap: var(--space-3);
   }
@@ -339,15 +365,15 @@
     font-weight: var(--font-semibold);
   }
   .feed-card__logo {
-    width: 28px; height: 28px;
+    width: 36px; height: 36px;
     border-radius: var(--radius-md);
     background: var(--bg-elevated);
     object-fit: cover;
   }
   .feed-card__title {
     font-family: var(--font-display);
-    font-size: var(--text-lg);
-    font-weight: var(--font-semibold);
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
     line-height: var(--leading-snug);
     word-break: break-word;
     overflow-wrap: anywhere;

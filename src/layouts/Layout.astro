@@ -50,7 +50,7 @@ const hreflangs = [
     <meta name="description" content={description} />
     <meta name="color-scheme" content="dark" />
     <meta name="robots" content={robots} />
-    <meta name="theme-color" content="#1a0e0a" />
+    <meta name="theme-color" content="#010405" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="canonical" href={canonicalURL.href} />
     {hreflangs.map((h) => (
@@ -76,6 +76,28 @@ const hreflangs = [
     <meta name="twitter:image" content={resolvedOgImage} />
 
     <title>{title}</title>
+
+    <!-- Theme persistence (inline to prevent flash) -->
+    <script is:inline>
+      (function () {
+        var stored = localStorage.getItem('theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+        if (theme === 'light') {
+          var cs = document.querySelector('meta[name="color-scheme"]');
+          if (cs) cs.setAttribute('content', 'light');
+          var tc = document.querySelector('meta[name="theme-color"]');
+          if (tc) tc.setAttribute('content', '#fcfaf7');
+        }
+      })();
+      document.addEventListener('astro:after-swap', function () {
+        var stored = localStorage.getItem('theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', theme);
+        var tc = document.querySelector('meta[name="theme-color"]');
+        if (tc) tc.setAttribute('content', theme === 'light' ? '#fcfaf7' : '#010405');
+      });
+    </script>
 
     <!-- Cloudflare Web Analytics (token injected via PUBLIC_CF_BEACON_TOKEN) -->
     {import.meta.env.PUBLIC_CF_BEACON_TOKEN && (
