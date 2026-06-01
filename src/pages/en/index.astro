@@ -64,6 +64,7 @@ const websiteJsonLd = {
 
     <LaunchHeatmap items={items} locale={locale} />
 
+    <div class="filter-stack">
     <div class="filter-bar" data-dim="scope">
       <button class="filter-pill is-active" data-filter="all">{t.filters.all} · {counts.total}</button>
       <button class="filter-pill" data-filter="trending">
@@ -93,6 +94,7 @@ const websiteJsonLd = {
             </button>
           );
         })}
+    </div>
     </div>
 
     <div class="feed-grid" id="feed-grid" data-locale={locale}>
