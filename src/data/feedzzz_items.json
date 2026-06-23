@@ -1,38 +1,7 @@
 {
-  "generated_at": "2026-06-21T04:50:01.202822",
+  "generated_at": "2026-06-23T09:30:30.943311",
   "count": 500,
   "items": [
-    {
-      "id": "hf-model-deepseek-ai-deepseek-v4-pro",
-      "type": "model",
-      "source": "huggingface",
-      "title": "deepseek-ai/DeepSeek-V4-Pro",
-      "tagline": "text-generation",
-      "author": "deepseek-ai",
-      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "safetensors",
-        "deepseek_v4",
-        "text-generation",
-        "conversational",
-        "license:mit",
-        "eval-results",
-        "endpoints_compatible"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 4981,
-        "downloads": 2797050
-      },
-      "is_trending": true,
-      "trending_rank": 16,
-      "created_at": "2026-04-22T06:04:45",
-      "updated_at": "2026-06-08T06:02:44",
-      "categories": []
-    },
     {
       "id": "hf-model-qwen-qwen3-6-27b",
       "type": "model",
@@ -55,11 +24,11 @@
       ],
       "library": "transformers",
       "stats": {
-        "likes": 1762,
-        "downloads": 5989156
+        "likes": 1783,
+        "downloads": 5965321
       },
       "is_trending": true,
-      "trending_rank": 40,
+      "trending_rank": 36,
       "created_at": "2026-04-21T07:50:43",
       "updated_at": "2026-04-24T02:39:16",
       "categories": []
@@ -86,14 +55,47 @@
       ],
       "library": "transformers",
       "stats": {
-        "likes": 2183,
-        "downloads": 5058494
+        "likes": 2212,
+        "downloads": 5308304
       },
       "is_trending": false,
-      "trending_rank": 31,
+      "trending_rank": 33,
       "created_at": "2026-04-15T05:59:19",
       "updated_at": "2026-04-24T02:53:42",
       "categories": []
+    },
+    {
+      "id": "hf-model-deepseek-ai-deepseek-v4-pro",
+      "type": "model",
+      "source": "huggingface",
+      "title": "deepseek-ai/DeepSeek-V4-Pro",
+      "tagline": "text-generation",
+      "author": "deepseek-ai",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "deepseek_v4",
+        "text-generation",
+        "conversational",
+        "arxiv:2606.19348",
+        "license:mit",
+        "eval-results"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 5016,
+        "downloads": 2421858
+      },
+      "is_trending": true,
+      "trending_rank": 21,
+      "created_at": "2026-04-22T06:04:45",
+      "updated_at": "2026-06-22T12:12:50",
+      "categories": [
+        "research"
+      ]
     },
     {
       "id": "hf-model-hauhaucs-qwen3-6-35b-a3b-uncensored-hauhaucs-aggressive",
@@ -117,8 +119,8 @@
       ],
       "library": null,
       "stats": {
-        "likes": 2029,
-        "downloads": 3812636
+        "likes": 2121,
+        "downloads": 4078305
       },
       "is_trending": false,
       "trending_rank": 10,
@@ -142,43 +144,12 @@
         "public-apis"
       ],
       "stats": {
-        "stars": 443108,
-        "stars_today": 330
+        "stars": 443386,
+        "stars_today": 207
       },
       "is_trending": true,
       "ai_relevance_score": 0.15000000596046448,
-      "created_at": "2026-06-20",
-      "categories": []
-    },
-    {
-      "id": "hf-model-deepseek-ai-deepseek-v4-flash",
-      "type": "model",
-      "source": "huggingface",
-      "title": "deepseek-ai/DeepSeek-V4-Flash",
-      "tagline": "text-generation",
-      "author": "deepseek-ai",
-      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "safetensors",
-        "deepseek_v4",
-        "text-generation",
-        "conversational",
-        "license:mit",
-        "eval-results",
-        "endpoints_compatible"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 1538,
-        "downloads": 2481903
-      },
-      "is_trending": false,
-      "trending_rank": 46,
-      "created_at": "2026-04-22T06:04:20",
-      "updated_at": "2026-06-08T06:03:43",
+      "created_at": "2026-06-22",
       "categories": []
     },
     {
@@ -203,14 +174,47 @@
       ],
       "library": "Model Optimizer",
       "stats": {
-        "likes": 247,
-        "downloads": 3616724
+        "likes": 259,
+        "downloads": 4149443
       },
       "is_trending": true,
       "trending_rank": 99,
       "created_at": "2026-05-27T18:09:46",
       "updated_at": "2026-06-12T21:32:12",
       "categories": []
+    },
+    {
+      "id": "hf-model-deepseek-ai-deepseek-v4-flash",
+      "type": "model",
+      "source": "huggingface",
+      "title": "deepseek-ai/DeepSeek-V4-Flash",
+      "tagline": "text-generation",
+      "author": "deepseek-ai",
+      "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "deepseek_v4",
+        "text-generation",
+        "conversational",
+        "arxiv:2606.19348",
+        "license:mit",
+        "eval-results"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 1564,
+        "downloads": 2353239
+      },
+      "is_trending": false,
+      "trending_rank": 47,
+      "created_at": "2026-04-22T06:04:20",
+      "updated_at": "2026-06-22T12:12:13",
+      "categories": [
+        "research"
+      ]
     },
     {
       "id": "hf-model-minimaxai-minimax-m2-7",
@@ -306,37 +310,6 @@
       "categories": []
     },
     {
-      "id": "hf-model-k2-fsa-omnivoice",
-      "type": "model",
-      "source": "huggingface",
-      "title": "k2-fsa/OmniVoice",
-      "tagline": "text-to-speech",
-      "author": "k2-fsa",
-      "url": "https://huggingface.co/k2-fsa/OmniVoice",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "omnivoice",
-        "safetensors",
-        "zero-shot",
-        "multilingual",
-        "voice-cloning",
-        "voice-design",
-        "text-to-speech",
-        "aae"
-      ],
-      "library": "omnivoice",
-      "stats": {
-        "likes": 1055,
-        "downloads": 1829342
-      },
-      "is_trending": false,
-      "trending_rank": 98,
-      "created_at": "2026-03-30T13:43:33",
-      "updated_at": "2026-05-07T15:45:07",
-      "categories": []
-    },
-    {
       "id": "hf-model-google-gemma-4-12b-it",
       "type": "model",
       "source": "huggingface",
@@ -358,13 +331,44 @@
       ],
       "library": "transformers",
       "stats": {
-        "likes": 1103,
-        "downloads": 1696240
+        "likes": 1142,
+        "downloads": 1912198
       },
       "is_trending": true,
-      "trending_rank": 23,
+      "trending_rank": 28,
       "created_at": "2026-05-23T01:17:15",
       "updated_at": "2026-06-04T11:58:10",
+      "categories": []
+    },
+    {
+      "id": "hf-model-k2-fsa-omnivoice",
+      "type": "model",
+      "source": "huggingface",
+      "title": "k2-fsa/OmniVoice",
+      "tagline": "text-to-speech",
+      "author": "k2-fsa",
+      "url": "https://huggingface.co/k2-fsa/OmniVoice",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "omnivoice",
+        "safetensors",
+        "zero-shot",
+        "multilingual",
+        "voice-cloning",
+        "voice-design",
+        "text-to-speech",
+        "aae"
+      ],
+      "library": "omnivoice",
+      "stats": {
+        "likes": 1058,
+        "downloads": 1829342
+      },
+      "is_trending": false,
+      "trending_rank": 90,
+      "created_at": "2026-03-30T13:43:33",
+      "updated_at": "2026-05-07T15:45:07",
       "categories": []
     },
     {
@@ -420,14 +424,48 @@
       ],
       "library": "diffusers",
       "stats": {
-        "likes": 1726,
-        "downloads": 963762
+        "likes": 1749,
+        "downloads": 932787
       },
       "is_trending": false,
-      "trending_rank": 45,
+      "trending_rank": 40,
       "created_at": "2026-05-03T00:33:24",
-      "updated_at": "2026-06-13T17:00:18",
+      "updated_at": "2026-06-22T22:27:41",
       "categories": []
+    },
+    {
+      "id": "hf-model-yuxinlu1-gemma-4-12b-coder-fable5-composer2-5-v1-gguf",
+      "type": "model",
+      "source": "huggingface",
+      "title": "yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF",
+      "tagline": "text-generation",
+      "author": "yuxinlu1",
+      "url": "https://huggingface.co/yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "gguf",
+        "gemma4",
+        "coding",
+        "code",
+        "reasoning",
+        "thinking",
+        "llama.cpp",
+        "local-llm"
+      ],
+      "library": "gguf",
+      "stats": {
+        "likes": 2182,
+        "downloads": 414734
+      },
+      "is_trending": true,
+      "trending_rank": 2,
+      "created_at": "2026-06-10T07:24:02",
+      "updated_at": "2026-06-19T03:52:11",
+      "categories": [
+        "coding",
+        "fundamentals"
+      ]
     },
     {
       "id": "hf-model-unsloth-qwen3-6-27b-gguf",
@@ -461,6 +499,38 @@
       "categories": []
     },
     {
+      "id": "gh-affaan-m-ecc",
+      "type": "repo",
+      "source": "github",
+      "title": "affaan-m/ECC",
+      "tagline": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor ",
+      "author": "affaan-m",
+      "url": "https://github.com/affaan-m/ECC",
+      "domain": "github.com",
+      "logo": "https://github.com/affaan-m.png?size=64",
+      "language": "JavaScript",
+      "tags": [
+        "ai agents",
+        "anthropic",
+        "claude",
+        "cursor",
+        "llm",
+        "mcp"
+      ],
+      "stats": {
+        "stars": 219429,
+        "stars_today": 500
+      },
+      "is_trending": true,
+      "ai_relevance_score": 0.5,
+      "created_at": "2026-06-22",
+      "categories": [
+        "claude",
+        "agents",
+        "coding"
+      ]
+    },
+    {
       "id": "hf-model-unsloth-qwen3-6-35b-a3b-gguf",
       "type": "model",
       "source": "huggingface",
@@ -482,80 +552,14 @@
       ],
       "library": "transformers",
       "stats": {
-        "likes": 1252,
-        "downloads": 1017926
+        "likes": 1266,
+        "downloads": 977032
       },
       "is_trending": false,
-      "trending_rank": 91,
+      "trending_rank": 95,
       "created_at": "2026-04-16T04:31:31",
       "updated_at": "2026-04-20T12:42:25",
       "categories": []
-    },
-    {
-      "id": "hf-model-yuxinlu1-gemma-4-12b-coder-fable5-composer2-5-v1-gguf",
-      "type": "model",
-      "source": "huggingface",
-      "title": "yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF",
-      "tagline": "text-generation",
-      "author": "yuxinlu1",
-      "url": "https://huggingface.co/yuxinlu1/gemma-4-12B-coder-fable5-composer2.5-v1-GGUF",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "gguf",
-        "gemma4",
-        "coding",
-        "code",
-        "reasoning",
-        "thinking",
-        "llama.cpp",
-        "local-llm"
-      ],
-      "library": "gguf",
-      "stats": {
-        "likes": 1945,
-        "downloads": 312332
-      },
-      "is_trending": true,
-      "trending_rank": 1,
-      "created_at": "2026-06-10T07:24:02",
-      "updated_at": "2026-06-19T03:52:11",
-      "categories": [
-        "coding",
-        "fundamentals"
-      ]
-    },
-    {
-      "id": "gh-affaan-m-ecc",
-      "type": "repo",
-      "source": "github",
-      "title": "affaan-m/ECC",
-      "tagline": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor ",
-      "author": "affaan-m",
-      "url": "https://github.com/affaan-m/ECC",
-      "domain": "github.com",
-      "logo": "https://github.com/affaan-m.png?size=64",
-      "language": "JavaScript",
-      "tags": [
-        "ai agents",
-        "anthropic",
-        "claude",
-        "cursor",
-        "llm",
-        "mcp"
-      ],
-      "stats": {
-        "stars": 218717,
-        "stars_today": 601
-      },
-      "is_trending": true,
-      "ai_relevance_score": 0.5,
-      "created_at": "2026-06-20",
-      "categories": [
-        "claude",
-        "agents",
-        "coding"
-      ]
     },
     {
       "id": "hf-model-unsloth-gemma-4-26b-a4b-it-gguf",
@@ -589,6 +593,39 @@
       "categories": []
     },
     {
+      "id": "hf-model-zai-org-glm-5-2",
+      "type": "model",
+      "source": "huggingface",
+      "title": "zai-org/GLM-5.2",
+      "tagline": "text-generation",
+      "author": "zai-org",
+      "url": "https://huggingface.co/zai-org/GLM-5.2",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "glm_moe_dsa",
+        "text-generation",
+        "conversational",
+        "en",
+        "zh",
+        "arxiv:2602.15763"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 2060,
+        "downloads": 33589
+      },
+      "is_trending": true,
+      "trending_rank": 1,
+      "created_at": "2026-06-16T07:39:20",
+      "updated_at": "2026-06-23T03:56:16",
+      "categories": [
+        "research"
+      ]
+    },
+    {
       "id": "gh-nousresearch-hermes-agent",
       "type": "repo",
       "source": "github",
@@ -608,12 +645,12 @@
         "claude"
       ],
       "stats": {
-        "stars": 186265,
-        "stars_today": 1112
+        "stars": 199182,
+        "stars_today": 700
       },
       "is_trending": true,
       "ai_relevance_score": 0.44999998807907104,
-      "created_at": "2026-06-08",
+      "created_at": "2026-06-22",
       "categories": [
         "agents",
         "claude"
@@ -637,16 +674,47 @@
         "workflow"
       ],
       "stats": {
-        "stars": 193316,
-        "stars_today": 166
+        "stars": 193379,
+        "stars_today": 172
       },
       "is_trending": true,
       "ai_relevance_score": 0.4000000059604645,
-      "created_at": "2026-06-20",
+      "created_at": "2026-06-21",
       "categories": [
         "tool-insights",
         "agents"
       ]
+    },
+    {
+      "id": "hf-model-unsloth-gemma-4-12b-it-gguf",
+      "type": "model",
+      "source": "huggingface",
+      "title": "unsloth/gemma-4-12b-it-GGUF",
+      "tagline": "image-text-to-text",
+      "author": "unsloth",
+      "url": "https://huggingface.co/unsloth/gemma-4-12b-it-GGUF",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "gguf",
+        "gemma4",
+        "unsloth",
+        "gemma",
+        "google",
+        "gemma4_unified",
+        "image-text-to-text",
+        "base_model:google/gemma-4-12B-it"
+      ],
+      "library": null,
+      "stats": {
+        "likes": 685,
+        "downloads": 1255027
+      },
+      "is_trending": true,
+      "trending_rank": 41,
+      "created_at": "2026-05-29T11:25:59",
+      "updated_at": "2026-06-09T15:32:24",
+      "categories": []
     },
     {
       "id": "hf-model-openai-privacy-filter",
@@ -680,6 +748,37 @@
       "categories": []
     },
     {
+      "id": "hf-model-google-diffusiongemma-26b-a4b-it",
+      "type": "model",
+      "source": "huggingface",
+      "title": "google/diffusiongemma-26B-A4B-it",
+      "tagline": "image-text-to-text",
+      "author": "google",
+      "url": "https://huggingface.co/google/diffusiongemma-26B-A4B-it",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "diffusion_gemma",
+        "image-text-to-text",
+        "conversational",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 1050,
+        "downloads": 874368
+      },
+      "is_trending": true,
+      "trending_rank": 14,
+      "created_at": "2026-06-09T12:40:12",
+      "updated_at": "2026-06-10T13:45:13",
+      "categories": []
+    },
+    {
       "id": "hf-model-zai-org-glm-5-1",
       "type": "model",
       "source": "huggingface",
@@ -701,11 +800,11 @@
       ],
       "library": "transformers",
       "stats": {
-        "likes": 1810,
-        "downloads": 110734
+        "likes": 1812,
+        "downloads": 107138
       },
       "is_trending": false,
-      "trending_rank": 53,
+      "trending_rank": 79,
       "created_at": "2026-04-03T09:28:47",
       "updated_at": "2026-05-13T08:10:58",
       "categories": [
@@ -738,34 +837,34 @@
       ]
     },
     {
-      "id": "hf-model-unsloth-gemma-4-12b-it-gguf",
+      "id": "hf-model-dealignai-gemma-4-31b-jang-4m-crack",
       "type": "model",
       "source": "huggingface",
-      "title": "unsloth/gemma-4-12b-it-GGUF",
+      "title": "dealignai/Gemma-4-31B-JANG_4M-CRACK",
       "tagline": "image-text-to-text",
-      "author": "unsloth",
-      "url": "https://huggingface.co/unsloth/gemma-4-12b-it-GGUF",
+      "author": "dealignai",
+      "url": "https://huggingface.co/dealignai/Gemma-4-31B-JANG_4M-CRACK",
       "domain": "huggingface.co",
       "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
       "tags": [
-        "gguf",
+        "mlx",
+        "safetensors",
         "gemma4",
-        "unsloth",
-        "gemma",
-        "google",
-        "gemma4_unified",
-        "image-text-to-text",
-        "base_model:google/gemma-4-12B-it"
+        "abliterated",
+        "uncensored",
+        "crack",
+        "jang",
+        "image-text-to-text"
       ],
-      "library": null,
+      "library": "mlx",
       "stats": {
-        "likes": 661,
-        "downloads": 1182658
+        "likes": 1666,
+        "downloads": 48346
       },
-      "is_trending": true,
-      "trending_rank": 32,
-      "created_at": "2026-05-29T11:25:59",
-      "updated_at": "2026-06-09T15:32:24",
+      "is_trending": false,
+      "trending_rank": 78,
+      "created_at": "2026-04-04T03:02:08",
+      "updated_at": "2026-04-25T21:33:07",
       "categories": []
     },
     {
@@ -790,109 +889,14 @@
       ],
       "library": "transformers",
       "stats": {
-        "likes": 786,
-        "downloads": 923833
+        "likes": 815,
+        "downloads": 875257
       },
       "is_trending": false,
-      "trending_rank": 47,
+      "trending_rank": 35,
       "created_at": "2026-05-11T12:57:11",
       "updated_at": "2026-05-26T08:45:52",
       "categories": []
-    },
-    {
-      "id": "hf-model-dealignai-gemma-4-31b-jang-4m-crack",
-      "type": "model",
-      "source": "huggingface",
-      "title": "dealignai/Gemma-4-31B-JANG_4M-CRACK",
-      "tagline": "image-text-to-text",
-      "author": "dealignai",
-      "url": "https://huggingface.co/dealignai/Gemma-4-31B-JANG_4M-CRACK",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "mlx",
-        "safetensors",
-        "gemma4",
-        "abliterated",
-        "uncensored",
-        "crack",
-        "jang",
-        "image-text-to-text"
-      ],
-      "library": "mlx",
-      "stats": {
-        "likes": 1659,
-        "downloads": 49384
-      },
-      "is_trending": false,
-      "trending_rank": 51,
-      "created_at": "2026-04-04T03:02:08",
-      "updated_at": "2026-04-25T21:33:07",
-      "categories": []
-    },
-    {
-      "id": "hf-model-google-diffusiongemma-26b-a4b-it",
-      "type": "model",
-      "source": "huggingface",
-      "title": "google/diffusiongemma-26B-A4B-it",
-      "tagline": "image-text-to-text",
-      "author": "google",
-      "url": "https://huggingface.co/google/diffusiongemma-26B-A4B-it",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "safetensors",
-        "diffusion_gemma",
-        "image-text-to-text",
-        "conversational",
-        "license:apache-2.0",
-        "endpoints_compatible",
-        "region:us"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 1019,
-        "downloads": 673464
-      },
-      "is_trending": true,
-      "trending_rank": 6,
-      "created_at": "2026-06-09T12:40:12",
-      "updated_at": "2026-06-10T13:45:13",
-      "categories": []
-    },
-    {
-      "id": "hf-model-zai-org-glm-5-2",
-      "type": "model",
-      "source": "huggingface",
-      "title": "zai-org/GLM-5.2",
-      "tagline": "text-generation",
-      "author": "zai-org",
-      "url": "https://huggingface.co/zai-org/GLM-5.2",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "safetensors",
-        "glm_moe_dsa",
-        "text-generation",
-        "conversational",
-        "en",
-        "zh",
-        "arxiv:2602.15763"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 1643,
-        "downloads": 19683
-      },
-      "is_trending": true,
-      "trending_rank": 2,
-      "created_at": "2026-06-16T07:39:20",
-      "updated_at": "2026-06-19T09:14:51",
-      "categories": [
-        "research"
-      ]
     },
     {
       "id": "gh-automatic1111-stable-diffusion-webui",
@@ -1099,6 +1103,68 @@
       ]
     },
     {
+      "id": "hf-model-unsloth-qwen3-6-35b-a3b-mtp-gguf",
+      "type": "model",
+      "source": "huggingface",
+      "title": "unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
+      "tagline": "image-text-to-text",
+      "author": "unsloth",
+      "url": "https://huggingface.co/unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "gguf",
+        "unsloth",
+        "qwen",
+        "qwen3_5_moe",
+        "image-text-to-text",
+        "base_model:Qwen/Qwen3.6-35B-A3B",
+        "base_model:quantized:Qwen/Qwen3.6-35B-A3B"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 570,
+        "downloads": 902759
+      },
+      "is_trending": false,
+      "trending_rank": 63,
+      "created_at": "2026-05-11T12:57:12",
+      "updated_at": "2026-05-20T08:48:17",
+      "categories": []
+    },
+    {
+      "id": "hf-model-hauhaucs-gemma-4-e4b-uncensored-hauhaucs-aggressive",
+      "type": "model",
+      "source": "huggingface",
+      "title": "HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive",
+      "tagline": "image-text-to-text",
+      "author": "HauhauCS",
+      "url": "https://huggingface.co/HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "gguf",
+        "uncensored",
+        "gemma4",
+        "abliterated",
+        "vision",
+        "multimodal",
+        "audio",
+        "image-text-to-text"
+      ],
+      "library": null,
+      "stats": {
+        "likes": 825,
+        "downloads": 631836
+      },
+      "is_trending": false,
+      "trending_rank": 88,
+      "created_at": "2026-04-02T22:29:19",
+      "updated_at": "2026-04-06T03:50:35",
+      "categories": []
+    },
+    {
       "id": "gh-langgenius-dify",
       "type": "repo",
       "source": "github",
@@ -1130,35 +1196,34 @@
       ]
     },
     {
-      "id": "hf-model-unsloth-qwen3-6-35b-a3b-mtp-gguf",
-      "type": "model",
-      "source": "huggingface",
-      "title": "unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
-      "tagline": "image-text-to-text",
-      "author": "unsloth",
-      "url": "https://huggingface.co/unsloth/Qwen3.6-35B-A3B-MTP-GGUF",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "id": "gh-firecrawl-firecrawl",
+      "type": "repo",
+      "source": "github",
+      "title": "firecrawl/firecrawl",
+      "tagline": "The API to search, scrape, and interact with the web at scale. \ud83d\udd25",
+      "author": "firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "domain": "github.com",
+      "logo": "https://github.com/firecrawl.png?size=64",
+      "language": "TypeScript",
       "tags": [
-        "transformers",
-        "gguf",
-        "unsloth",
-        "qwen",
-        "qwen3_5_moe",
-        "image-text-to-text",
-        "base_model:Qwen/Qwen3.6-35B-A3B",
-        "base_model:quantized:Qwen/Qwen3.6-35B-A3B"
+        "ai",
+        "ai agents",
+        "ai crawler",
+        "ai scraping",
+        "ai search",
+        "firecrawl"
       ],
-      "library": "transformers",
       "stats": {
-        "likes": 561,
-        "downloads": 857099
+        "stars": 137536,
+        "stars_today": 615
       },
-      "is_trending": false,
-      "trending_rank": 48,
-      "created_at": "2026-05-11T12:57:12",
-      "updated_at": "2026-05-20T08:48:17",
-      "categories": []
+      "is_trending": true,
+      "ai_relevance_score": 0.4000000059604645,
+      "created_at": "2026-06-23",
+      "categories": [
+        "agents"
+      ]
     },
     {
       "id": "gh-vercel-next-js",
@@ -1217,34 +1282,65 @@
       ]
     },
     {
-      "id": "hf-model-hauhaucs-gemma-4-e4b-uncensored-hauhaucs-aggressive",
+      "id": "hf-model-moonshotai-kimi-k2-7-code",
       "type": "model",
       "source": "huggingface",
-      "title": "HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive",
+      "title": "moonshotai/Kimi-K2.7-Code",
       "tagline": "image-text-to-text",
-      "author": "HauhauCS",
-      "url": "https://huggingface.co/HauhauCS/Gemma-4-E4B-Uncensored-HauhauCS-Aggressive",
+      "author": "moonshotai",
+      "url": "https://huggingface.co/moonshotai/Kimi-K2.7-Code",
       "domain": "huggingface.co",
       "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
       "tags": [
-        "gguf",
-        "uncensored",
-        "gemma4",
-        "abliterated",
-        "vision",
-        "multimodal",
-        "audio",
-        "image-text-to-text"
+        "transformers",
+        "safetensors",
+        "kimi_k25",
+        "image-feature-extraction",
+        "compressed-tensors",
+        "image-text-to-text",
+        "conversational",
+        "custom_code"
       ],
-      "library": null,
+      "library": "transformers",
       "stats": {
-        "likes": 778,
-        "downloads": 604649
+        "likes": 964,
+        "downloads": 412778
       },
-      "is_trending": false,
-      "trending_rank": 95,
-      "created_at": "2026-04-02T22:29:19",
-      "updated_at": "2026-04-06T03:50:35",
+      "is_trending": true,
+      "trending_rank": 11,
+      "created_at": "2026-06-11T07:51:47",
+      "updated_at": "2026-06-15T07:49:29",
+      "categories": []
+    },
+    {
+      "id": "hf-model-minimaxai-minimax-m3",
+      "type": "model",
+      "source": "huggingface",
+      "title": "MiniMaxAI/MiniMax-M3",
+      "tagline": "image-text-to-text",
+      "author": "MiniMaxAI",
+      "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "minimax_m3_vl",
+        "image-text-to-text",
+        "multimodal",
+        "moe",
+        "agent",
+        "coding"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 1210,
+        "downloads": 119967
+      },
+      "is_trending": true,
+      "trending_rank": 5,
+      "created_at": "2026-06-02T07:49:31",
+      "updated_at": "2026-06-22T06:35:16",
       "categories": []
     },
     {
@@ -1274,98 +1370,6 @@
         "claude",
         "agents"
       ]
-    },
-    {
-      "id": "gh-firecrawl-firecrawl",
-      "type": "repo",
-      "source": "github",
-      "title": "firecrawl/firecrawl",
-      "tagline": "The API to search, scrape, and interact with the web at scale. \ud83d\udd25",
-      "author": "firecrawl",
-      "url": "https://github.com/firecrawl/firecrawl",
-      "domain": "github.com",
-      "logo": "https://github.com/firecrawl.png?size=64",
-      "language": "TypeScript",
-      "tags": [
-        "ai",
-        "ai agents",
-        "ai crawler",
-        "ai scraping",
-        "ai search",
-        "firecrawl"
-      ],
-      "stats": {
-        "stars": 125867,
-        "stars_today": 504
-      },
-      "is_trending": true,
-      "ai_relevance_score": 0.4000000059604645,
-      "created_at": "2026-05-29",
-      "categories": [
-        "agents"
-      ]
-    },
-    {
-      "id": "hf-model-moonshotai-kimi-k2-7-code",
-      "type": "model",
-      "source": "huggingface",
-      "title": "moonshotai/Kimi-K2.7-Code",
-      "tagline": "image-text-to-text",
-      "author": "moonshotai",
-      "url": "https://huggingface.co/moonshotai/Kimi-K2.7-Code",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "safetensors",
-        "kimi_k25",
-        "image-feature-extraction",
-        "compressed-tensors",
-        "image-text-to-text",
-        "conversational",
-        "custom_code"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 924,
-        "downloads": 317963
-      },
-      "is_trending": true,
-      "trending_rank": 5,
-      "created_at": "2026-06-11T07:51:47",
-      "updated_at": "2026-06-15T07:49:29",
-      "categories": []
-    },
-    {
-      "id": "hf-model-minimaxai-minimax-m3",
-      "type": "model",
-      "source": "huggingface",
-      "title": "MiniMaxAI/MiniMax-M3",
-      "tagline": "image-text-to-text",
-      "author": "MiniMaxAI",
-      "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "safetensors",
-        "minimax_m3_vl",
-        "image-text-to-text",
-        "multimodal",
-        "moe",
-        "agent",
-        "coding"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 1151,
-        "downloads": 85771
-      },
-      "is_trending": true,
-      "trending_rank": 3,
-      "created_at": "2026-06-02T07:49:31",
-      "updated_at": "2026-06-16T05:18:24",
-      "categories": []
     },
     {
       "id": "gh-github-spec-kit",
@@ -1565,6 +1569,29 @@
       ]
     },
     {
+      "id": "hf-space-k2-fsa-omnivoice",
+      "type": "space",
+      "source": "huggingface",
+      "title": "k2-fsa/OmniVoice",
+      "tagline": "gradio demo",
+      "author": "k2-fsa",
+      "url": "https://huggingface.co/spaces/k2-fsa/OmniVoice",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "gradio",
+        "region:us"
+      ],
+      "stats": {
+        "likes": 1057
+      },
+      "is_trending": false,
+      "trending_rank": 21,
+      "created_at": "2026-03-30T13:56:16",
+      "updated_at": "2026-04-13T06:55:17",
+      "categories": []
+    },
+    {
       "id": "gh-supabase-supabase",
       "type": "repo",
       "source": "github",
@@ -1590,29 +1617,6 @@
       "categories": [
         "fundamentals"
       ]
-    },
-    {
-      "id": "hf-space-k2-fsa-omnivoice",
-      "type": "space",
-      "source": "huggingface",
-      "title": "k2-fsa/OmniVoice",
-      "tagline": "gradio demo",
-      "author": "k2-fsa",
-      "url": "https://huggingface.co/spaces/k2-fsa/OmniVoice",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "gradio",
-        "region:us"
-      ],
-      "stats": {
-        "likes": 1045
-      },
-      "is_trending": false,
-      "trending_rank": 31,
-      "created_at": "2026-03-30T13:56:16",
-      "updated_at": "2026-04-13T06:55:17",
-      "categories": []
     },
     {
       "id": "gh-openai-whisper",
@@ -1668,6 +1672,39 @@
       "created_at": "2026-05-15T08:05:57",
       "updated_at": "2026-05-28T06:25:28",
       "categories": []
+    },
+    {
+      "id": "hf-model-davidau-qwen3-6-40b-claude-4-6-opus-deckard-heretic-uncensored-thinking-neo-code-di-imatrix-max-gguf",
+      "type": "model",
+      "source": "huggingface",
+      "title": "DavidAU/Qwen3.6-40B-Claude-4.6-Opus-Deckard-Heretic-Uncensored-Thinking-NEO-CODE-Di-IMatrix-MAX-GGUF",
+      "tagline": "image-text-to-text",
+      "author": "DavidAU",
+      "url": "https://huggingface.co/DavidAU/Qwen3.6-40B-Claude-4.6-Opus-Deckard-Heretic-Uncensored-Thinking-NEO-CODE-Di-IMatrix-MAX-GGUF",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "gguf",
+        "unsloth",
+        "fine tune",
+        "heretic",
+        "uncensored",
+        "abliterated",
+        "multi-stage tuned.",
+        "all use cases"
+      ],
+      "library": null,
+      "stats": {
+        "likes": 429,
+        "downloads": 584554
+      },
+      "is_trending": false,
+      "trending_rank": 45,
+      "created_at": "2026-05-01T00:29:29",
+      "updated_at": "2026-06-11T02:11:55",
+      "categories": [
+        "claude"
+      ]
     },
     {
       "id": "hf-model-antirez-deepseek-v4-gguf",
@@ -1763,39 +1800,6 @@
       ]
     },
     {
-      "id": "hf-model-davidau-qwen3-6-40b-claude-4-6-opus-deckard-heretic-uncensored-thinking-neo-code-di-imatrix-max-gguf",
-      "type": "model",
-      "source": "huggingface",
-      "title": "DavidAU/Qwen3.6-40B-Claude-4.6-Opus-Deckard-Heretic-Uncensored-Thinking-NEO-CODE-Di-IMatrix-MAX-GGUF",
-      "tagline": "image-text-to-text",
-      "author": "DavidAU",
-      "url": "https://huggingface.co/DavidAU/Qwen3.6-40B-Claude-4.6-Opus-Deckard-Heretic-Uncensored-Thinking-NEO-CODE-Di-IMatrix-MAX-GGUF",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "gguf",
-        "unsloth",
-        "fine tune",
-        "heretic",
-        "uncensored",
-        "abliterated",
-        "multi-stage tuned.",
-        "all use cases"
-      ],
-      "library": null,
-      "stats": {
-        "likes": 409,
-        "downloads": 587521
-      },
-      "is_trending": false,
-      "trending_rank": 28,
-      "created_at": "2026-05-01T00:29:29",
-      "updated_at": "2026-06-11T02:11:55",
-      "categories": [
-        "claude"
-      ]
-    },
-    {
       "id": "gh-harry0703-moneyprinterturbo",
       "type": "repo",
       "source": "github",
@@ -1848,11 +1852,11 @@
       ],
       "library": null,
       "stats": {
-        "likes": 857,
-        "downloads": 125898
+        "likes": 868,
+        "downloads": 123114
       },
       "is_trending": false,
-      "trending_rank": 61,
+      "trending_rank": 98,
       "created_at": "2026-04-11T11:03:05",
       "updated_at": "2026-04-12T13:42:43",
       "categories": []
@@ -1946,6 +1950,37 @@
       "categories": []
     },
     {
+      "id": "hf-model-google-gemma-4-12b",
+      "type": "model",
+      "source": "huggingface",
+      "title": "google/gemma-4-12B",
+      "tagline": "any-to-any",
+      "author": "google",
+      "url": "https://huggingface.co/google/gemma-4-12B",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "gemma4_unified",
+        "image-text-to-text",
+        "any-to-any",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 600,
+        "downloads": 318390
+      },
+      "is_trending": false,
+      "trending_rank": 69,
+      "created_at": "2026-05-23T02:43:54",
+      "updated_at": "2026-06-04T11:58:12",
+      "categories": []
+    },
+    {
       "id": "gh-microsoft-playwright",
       "type": "repo",
       "source": "github",
@@ -1970,6 +2005,37 @@
       "categories": [
         "tool-insights"
       ]
+    },
+    {
+      "id": "hf-model-unsloth-gemma-4-26b-a4b-it-qat-gguf",
+      "type": "model",
+      "source": "huggingface",
+      "title": "unsloth/gemma-4-26B-A4B-it-qat-GGUF",
+      "tagline": "image-text-to-text",
+      "author": "unsloth",
+      "url": "https://huggingface.co/unsloth/gemma-4-26B-A4B-it-qat-GGUF",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "gguf",
+        "gemma4",
+        "image-text-to-text",
+        "unsloth",
+        "gemma",
+        "google",
+        "base_model:google/gemma-4-26B-A4B-it-qat-q4_0-unquantized"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 200,
+        "downloads": 700947
+      },
+      "is_trending": true,
+      "trending_rank": 72,
+      "created_at": "2026-06-05T10:35:42",
+      "updated_at": "2026-06-10T11:44:18",
+      "categories": []
     },
     {
       "id": "gh-tauricresearch-tradingagents",
@@ -2030,37 +2096,6 @@
       "categories": []
     },
     {
-      "id": "hf-model-google-gemma-4-12b",
-      "type": "model",
-      "source": "huggingface",
-      "title": "google/gemma-4-12B",
-      "tagline": "any-to-any",
-      "author": "google",
-      "url": "https://huggingface.co/google/gemma-4-12B",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "safetensors",
-        "gemma4_unified",
-        "image-text-to-text",
-        "any-to-any",
-        "license:apache-2.0",
-        "endpoints_compatible",
-        "region:us"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 584,
-        "downloads": 308190
-      },
-      "is_trending": false,
-      "trending_rank": 63,
-      "created_at": "2026-05-23T02:43:54",
-      "updated_at": "2026-06-04T11:58:12",
-      "categories": []
-    },
-    {
       "id": "gh-modelcontextprotocol-servers",
       "type": "repo",
       "source": "github",
@@ -2102,12 +2137,12 @@
         "ml-for-beginners"
       ],
       "stats": {
-        "stars": 86810,
-        "stars_today": 46
+        "stars": 87189,
+        "stars_today": 49
       },
       "is_trending": true,
       "ai_relevance_score": 0.5,
-      "created_at": "2026-06-14",
+      "created_at": "2026-06-23",
       "categories": [
         "fundamentals"
       ]
@@ -2220,7 +2255,7 @@
         "votes": 685,
         "comments": 160
       },
-      "is_trending": true,
+      "is_trending": false,
       "ai_relevant": true,
       "ai_keywords": [
         "ai",
@@ -2359,35 +2394,36 @@
       ]
     },
     {
-      "id": "hf-model-unsloth-gemma-4-26b-a4b-it-qat-gguf",
-      "type": "model",
-      "source": "huggingface",
-      "title": "unsloth/gemma-4-26B-A4B-it-qat-GGUF",
-      "tagline": "image-text-to-text",
-      "author": "unsloth",
-      "url": "https://huggingface.co/unsloth/gemma-4-26B-A4B-it-qat-GGUF",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "id": "gh-bytedance-deer-flow",
+      "type": "repo",
+      "source": "github",
+      "title": "bytedance/deer-flow",
+      "tagline": "An open-source long-horizon SuperAgent harness that researches, codes, and creates. With the help of sandboxes, memories, tools, skill, subagents and message ga",
+      "author": "bytedance",
+      "url": "https://github.com/bytedance/deer-flow",
+      "domain": "github.com",
+      "logo": "https://github.com/bytedance.png?size=64",
+      "language": "Python",
       "tags": [
-        "transformers",
-        "gguf",
-        "gemma4",
-        "image-text-to-text",
-        "unsloth",
-        "gemma",
-        "google",
-        "base_model:google/gemma-4-26B-A4B-it-qat-q4_0-unquantized"
+        "agentic",
+        "ai",
+        "ai agents",
+        "deer-flow",
+        "langchain",
+        "llm"
       ],
-      "library": "transformers",
       "stats": {
-        "likes": 185,
-        "downloads": 616828
+        "stars": 73409,
+        "stars_today": 738
       },
       "is_trending": true,
-      "trending_rank": 84,
-      "created_at": "2026-06-05T10:35:42",
-      "updated_at": "2026-06-10T11:44:18",
-      "categories": []
+      "ai_relevance_score": 0.44999998807907104,
+      "created_at": "2026-06-23",
+      "categories": [
+        "agents",
+        "coding",
+        "fundamentals"
+      ]
     },
     {
       "id": "gh-openhands-openhands",
@@ -2483,38 +2519,6 @@
       ]
     },
     {
-      "id": "gh-chopratejas-headroom",
-      "type": "repo",
-      "source": "github",
-      "title": "chopratejas/headroom",
-      "tagline": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
-      "author": "chopratejas",
-      "url": "https://github.com/chopratejas/headroom",
-      "domain": "github.com",
-      "logo": "https://github.com/chopratejas.png?size=64",
-      "language": "Python",
-      "tags": [
-        "ai",
-        "anthropic",
-        "cursor",
-        "headroom",
-        "langchain",
-        "llm"
-      ],
-      "stats": {
-        "stars": 41155,
-        "stars_today": 3786
-      },
-      "is_trending": true,
-      "ai_relevance_score": 0.6000000238418579,
-      "created_at": "2026-06-20",
-      "categories": [
-        "agents",
-        "claude",
-        "coding"
-      ]
-    },
-    {
       "id": "gh-juliusbrussee-caveman",
       "type": "repo",
       "source": "github",
@@ -2533,12 +2537,12 @@
         "llm"
       ],
       "stats": {
-        "stars": 75076,
-        "stars_today": 314
+        "stars": 75197,
+        "stars_today": 295
       },
       "is_trending": true,
       "ai_relevance_score": 0.44999998807907104,
-      "created_at": "2026-06-20",
+      "created_at": "2026-06-21",
       "categories": [
         "claude",
         "fundamentals"
@@ -2566,11 +2570,11 @@
       ],
       "library": null,
       "stats": {
-        "likes": 660,
-        "downloads": 99601
+        "likes": 661,
+        "downloads": 102330
       },
       "is_trending": false,
-      "trending_rank": 89,
+      "trending_rank": 100,
       "created_at": "2026-04-27T12:52:53",
       "updated_at": "2026-05-08T08:09:51",
       "categories": []
@@ -2847,7 +2851,7 @@
         "stars": 61047,
         "stars_today": 1031
       },
-      "is_trending": true,
+      "is_trending": false,
       "ai_relevance_score": 0.44999998807907104,
       "created_at": "2026-06-05",
       "categories": [
@@ -2885,6 +2889,38 @@
       "created_at": "2026-05-28T09:43:54",
       "updated_at": "2026-06-10T13:59:50",
       "categories": []
+    },
+    {
+      "id": "gh-chopratejas-headroom",
+      "type": "repo",
+      "source": "github",
+      "title": "chopratejas/headroom",
+      "tagline": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 60-95% fewer tokens, same answers. Library, proxy, MCP server.",
+      "author": "chopratejas",
+      "url": "https://github.com/chopratejas/headroom",
+      "domain": "github.com",
+      "logo": "https://github.com/chopratejas.png?size=64",
+      "language": "Python",
+      "tags": [
+        "ai",
+        "anthropic",
+        "cursor",
+        "headroom",
+        "langchain",
+        "llm"
+      ],
+      "stats": {
+        "stars": 44997,
+        "stars_today": 2624
+      },
+      "is_trending": true,
+      "ai_relevance_score": 0.6000000238418579,
+      "created_at": "2026-06-22",
+      "categories": [
+        "agents",
+        "claude",
+        "coding"
+      ]
     },
     {
       "id": "gh-openbb-finance-openbb",
@@ -2979,28 +3015,34 @@
       ]
     },
     {
-      "id": "hf-model-facebook-tribev2",
+      "id": "hf-model-unsloth-gemma-4-12b-it-qat-gguf",
       "type": "model",
       "source": "huggingface",
-      "title": "facebook/tribev2",
-      "tagline": "",
-      "author": "facebook",
-      "url": "https://huggingface.co/facebook/tribev2",
+      "title": "unsloth/gemma-4-12B-it-qat-GGUF",
+      "tagline": "any-to-any",
+      "author": "unsloth",
+      "url": "https://huggingface.co/unsloth/gemma-4-12B-it-qat-GGUF",
       "domain": "huggingface.co",
       "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
       "tags": [
-        "license:cc-by-nc-4.0",
-        "region:us"
+        "transformers",
+        "gguf",
+        "gemma4",
+        "unsloth",
+        "gemma",
+        "google",
+        "any-to-any",
+        "base_model:google/gemma-4-12B-it-qat-q4_0-unquantized"
       ],
-      "library": null,
+      "library": "transformers",
       "stats": {
-        "likes": 512,
-        "downloads": 178361
+        "likes": 278,
+        "downloads": 411729
       },
       "is_trending": false,
-      "trending_rank": 93,
-      "created_at": "2026-03-24T10:54:10",
-      "updated_at": "2026-03-27T09:07:48",
+      "trending_rank": 85,
+      "created_at": "2026-06-05T10:35:42",
+      "updated_at": "2026-06-10T11:44:14",
       "categories": []
     },
     {
@@ -3068,6 +3110,37 @@
       ]
     },
     {
+      "id": "hf-model-jackrong-qwopus3-6-27b-v2-mtp-gguf",
+      "type": "model",
+      "source": "huggingface",
+      "title": "Jackrong/Qwopus3.6-27B-v2-MTP-GGUF",
+      "tagline": "image-text-to-text",
+      "author": "Jackrong",
+      "url": "https://huggingface.co/Jackrong/Qwopus3.6-27B-v2-MTP-GGUF",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "gguf",
+        "llama.cpp",
+        "image-text-to-text",
+        "vision",
+        "multimodal",
+        "text-generation-inference",
+        "unsloth"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 334,
+        "downloads": 349274
+      },
+      "is_trending": false,
+      "trending_rank": 98,
+      "created_at": "2026-05-21T06:37:47",
+      "updated_at": "2026-06-02T22:22:21",
+      "categories": []
+    },
+    {
       "id": "gh-unslothai-unsloth",
       "type": "repo",
       "source": "github",
@@ -3087,12 +3160,12 @@
         "mistral"
       ],
       "stats": {
-        "stars": 66959,
-        "stars_today": 116
+        "stars": 66988,
+        "stars_today": 114
       },
       "is_trending": true,
       "ai_relevance_score": 0.550000011920929,
-      "created_at": "2026-06-20",
+      "created_at": "2026-06-21",
       "categories": [
         "fundamentals"
       ]
@@ -3159,37 +3232,6 @@
       ]
     },
     {
-      "id": "hf-model-jackrong-qwopus3-6-27b-v2-mtp-gguf",
-      "type": "model",
-      "source": "huggingface",
-      "title": "Jackrong/Qwopus3.6-27B-v2-MTP-GGUF",
-      "tagline": "image-text-to-text",
-      "author": "Jackrong",
-      "url": "https://huggingface.co/Jackrong/Qwopus3.6-27B-v2-MTP-GGUF",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "gguf",
-        "llama.cpp",
-        "image-text-to-text",
-        "vision",
-        "multimodal",
-        "text-generation-inference",
-        "unsloth"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 328,
-        "downloads": 344928
-      },
-      "is_trending": false,
-      "trending_rank": 71,
-      "created_at": "2026-05-21T06:37:47",
-      "updated_at": "2026-06-02T22:22:21",
-      "categories": []
-    },
-    {
       "id": "gh-opendatalab-mineru",
       "type": "repo",
       "source": "github",
@@ -3219,6 +3261,37 @@
         "agents",
         "fundamentals"
       ]
+    },
+    {
+      "id": "hf-model-nvidia-nemotron-3-5-asr-streaming-0-6b",
+      "type": "model",
+      "source": "huggingface",
+      "title": "nvidia/nemotron-3.5-asr-streaming-0.6b",
+      "tagline": "automatic-speech-recognition",
+      "author": "nvidia",
+      "url": "https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "nemo",
+        "speech-recognition",
+        "cache-aware ASR",
+        "automatic-speech-recognition",
+        "streaming-asr",
+        "multilingual",
+        "speech",
+        "audio"
+      ],
+      "library": "nemo",
+      "stats": {
+        "likes": 634,
+        "downloads": 34860
+      },
+      "is_trending": false,
+      "trending_rank": 9,
+      "created_at": "2026-05-15T21:52:25",
+      "updated_at": "2026-06-16T16:01:48",
+      "categories": []
     },
     {
       "id": "hf-model-nvidia-nemotron-3-nano-omni-30b-a3b-reasoning-bf16",
@@ -3278,6 +3351,68 @@
       ]
     },
     {
+      "id": "hf-model-google-gemma-4-12b-it-qat-q4-0-gguf",
+      "type": "model",
+      "source": "huggingface",
+      "title": "google/gemma-4-12B-it-qat-q4_0-gguf",
+      "tagline": "any-to-any",
+      "author": "google",
+      "url": "https://huggingface.co/google/gemma-4-12B-it-qat-q4_0-gguf",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "gguf",
+        "any-to-any",
+        "base_model:google/gemma-4-12B-it-qat-q4_0-unquantized",
+        "base_model:quantized:google/gemma-4-12B-it-qat-q4_0-unquantized",
+        "license:apache-2.0",
+        "endpoints_compatible",
+        "region:us"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 180,
+        "downloads": 473379
+      },
+      "is_trending": false,
+      "trending_rank": 99,
+      "created_at": "2026-06-05T00:28:47",
+      "updated_at": "2026-06-05T15:48:49",
+      "categories": []
+    },
+    {
+      "id": "hf-model-weiboai-vibethinker-3b",
+      "type": "model",
+      "source": "huggingface",
+      "title": "WeiboAI/VibeThinker-3B",
+      "tagline": "text-generation",
+      "author": "WeiboAI",
+      "url": "https://huggingface.co/WeiboAI/VibeThinker-3B",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen2",
+        "text-generation",
+        "math",
+        "code",
+        "reasoning",
+        "gpqa"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 618,
+        "downloads": 32385
+      },
+      "is_trending": true,
+      "trending_rank": 3,
+      "created_at": "2026-06-12T11:43:29",
+      "updated_at": "2026-06-19T18:28:29",
+      "categories": []
+    },
+    {
       "id": "gh-code-yeongyu-oh-my-openagent",
       "type": "repo",
       "source": "github",
@@ -3297,48 +3432,17 @@
         "cursor"
       ],
       "stats": {
-        "stars": 63035,
-        "stars_today": 228
+        "stars": 63074,
+        "stars_today": 195
       },
       "is_trending": true,
       "ai_relevance_score": 0.4000000059604645,
-      "created_at": "2026-06-20",
+      "created_at": "2026-06-21",
       "categories": [
         "agents",
         "claude",
         "coding"
       ]
-    },
-    {
-      "id": "hf-model-unsloth-gemma-4-12b-it-qat-gguf",
-      "type": "model",
-      "source": "huggingface",
-      "title": "unsloth/gemma-4-12B-it-qat-GGUF",
-      "tagline": "any-to-any",
-      "author": "unsloth",
-      "url": "https://huggingface.co/unsloth/gemma-4-12B-it-qat-GGUF",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "gguf",
-        "gemma4",
-        "unsloth",
-        "gemma",
-        "google",
-        "any-to-any",
-        "base_model:google/gemma-4-12B-it-qat-q4_0-unquantized"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 267,
-        "downloads": 383211
-      },
-      "is_trending": false,
-      "trending_rank": 49,
-      "created_at": "2026-06-05T10:35:42",
-      "updated_at": "2026-06-10T11:44:14",
-      "categories": []
     },
     {
       "id": "gh-openinterpreter-openinterpreter",
@@ -3365,6 +3469,37 @@
       "categories": [
         "coding"
       ]
+    },
+    {
+      "id": "hf-model-nvidia-diffusiongemma-26b-a4b-it-nvfp4",
+      "type": "model",
+      "source": "huggingface",
+      "title": "nvidia/diffusiongemma-26B-A4B-it-NVFP4",
+      "tagline": "text-generation",
+      "author": "nvidia",
+      "url": "https://huggingface.co/nvidia/diffusiongemma-26B-A4B-it-NVFP4",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "safetensors",
+        "diffusion_gemma",
+        "nvidia",
+        "ModelOpt",
+        "DiffusionGemma-26B-A4B-IT",
+        "quantized",
+        "NVFP4",
+        "nvfp4"
+      ],
+      "library": null,
+      "stats": {
+        "likes": 82,
+        "downloads": 555074
+      },
+      "is_trending": true,
+      "trending_rank": 99,
+      "created_at": "2026-06-10T16:00:45",
+      "updated_at": "2026-06-11T00:05:07",
+      "categories": []
     },
     {
       "id": "gh-earendil-works-pi",
@@ -3413,12 +3548,44 @@
         "stars": 62893,
         "stars_today": 46
       },
-      "is_trending": true,
+      "is_trending": false,
       "ai_relevance_score": 0.30000001192092896,
       "created_at": "2026-06-08",
       "categories": [
         "coding",
         "agents"
+      ]
+    },
+    {
+      "id": "gh-ruvnet-ruflo",
+      "type": "repo",
+      "source": "github",
+      "title": "ruvnet/ruflo",
+      "tagline": "\ud83c\udf0a The leading agent meta-harness for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Featur",
+      "author": "ruvnet",
+      "url": "https://github.com/ruvnet/ruflo",
+      "domain": "github.com",
+      "logo": "https://github.com/ruvnet.png?size=64",
+      "language": "TypeScript",
+      "tags": [
+        "agentic ai",
+        "ai agents",
+        "ai assistant",
+        "ai coding",
+        "ai skills",
+        "claude"
+      ],
+      "stats": {
+        "stars": 60793,
+        "stars_today": 219
+      },
+      "is_trending": true,
+      "ai_relevance_score": 0.30000001192092896,
+      "created_at": "2026-06-22",
+      "categories": [
+        "agents",
+        "coding",
+        "claude"
       ]
     },
     {
@@ -3449,36 +3616,35 @@
       ]
     },
     {
-      "id": "gh-ruvnet-ruflo",
-      "type": "repo",
-      "source": "github",
-      "title": "ruvnet/ruflo",
-      "tagline": "\ud83c\udf0a The leading agent meta-harness for Claude. Deploy intelligent multi-agent swarms, coordinate autonomous workflows, and build conversational AI systems. Featur",
-      "author": "ruvnet",
-      "url": "https://github.com/ruvnet/ruflo",
-      "domain": "github.com",
-      "logo": "https://github.com/ruvnet.png?size=64",
-      "language": "TypeScript",
+      "id": "hf-model-ideogram-ai-ideogram-4-fp8",
+      "type": "model",
+      "source": "huggingface",
+      "title": "ideogram-ai/ideogram-4-fp8",
+      "tagline": "text-to-image",
+      "author": "ideogram-ai",
+      "url": "https://huggingface.co/ideogram-ai/ideogram-4-fp8",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
       "tags": [
-        "agentic ai",
-        "ai agents",
-        "ai assistant",
-        "ai coding",
-        "ai skills",
-        "claude"
+        "diffusers",
+        "safetensors",
+        "text-to-image",
+        "image-generation",
+        "diffusion",
+        "flow-matching",
+        "dit",
+        "ideogram"
       ],
+      "library": "diffusers",
       "stats": {
-        "stars": 60490,
-        "stars_today": 201
+        "likes": 597,
+        "downloads": 27991
       },
-      "is_trending": true,
-      "ai_relevance_score": 0.30000001192092896,
-      "created_at": "2026-06-20",
-      "categories": [
-        "agents",
-        "coding",
-        "claude"
-      ]
+      "is_trending": false,
+      "trending_rank": 56,
+      "created_at": "2026-05-30T23:40:55",
+      "updated_at": "2026-06-03T18:34:44",
+      "categories": []
     },
     {
       "id": "hf-model-baidu-ernie-image",
@@ -3542,66 +3708,33 @@
       ]
     },
     {
-      "id": "hf-model-google-gemma-4-12b-it-qat-q4-0-gguf",
-      "type": "model",
-      "source": "huggingface",
-      "title": "google/gemma-4-12B-it-qat-q4_0-gguf",
-      "tagline": "any-to-any",
-      "author": "google",
-      "url": "https://huggingface.co/google/gemma-4-12B-it-qat-q4_0-gguf",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "id": "gh-zhulinsen-daily-stock-analysis",
+      "type": "repo",
+      "source": "github",
+      "title": "ZhuLinsen/daily_stock_analysis",
+      "tagline": "LLM \u9a71\u52a8\u7684\u591a\u5e02\u573a\u80a1\u7968\u667a\u80fd\u5206\u6790\u7cfb\u7edf\uff1a\u591a\u6e90\u884c\u60c5\u3001\u5b9e\u65f6\u65b0\u95fb\u3001\u51b3\u7b56\u770b\u677f\u4e0e\u81ea\u52a8\u63a8\u9001\uff0c\u652f\u6301\u96f6\u6210\u672c\u5b9a\u65f6\u8fd0\u884c\u3002  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashbo",
+      "author": "ZhuLinsen",
+      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "domain": "github.com",
+      "logo": "https://github.com/ZhuLinsen.png?size=64",
+      "language": "Python",
       "tags": [
-        "transformers",
-        "gguf",
-        "any-to-any",
-        "base_model:google/gemma-4-12B-it-qat-q4_0-unquantized",
-        "base_model:quantized:google/gemma-4-12B-it-qat-q4_0-unquantized",
-        "license:apache-2.0",
-        "endpoints_compatible",
-        "region:us"
+        "ai agent",
+        "aigc",
+        "daily_stock_analysis",
+        "llm"
       ],
-      "library": "transformers",
       "stats": {
-        "likes": 176,
-        "downloads": 441974
+        "stars": 46085,
+        "stars_today": 1557
       },
-      "is_trending": false,
-      "trending_rank": 90,
-      "created_at": "2026-06-05T00:28:47",
-      "updated_at": "2026-06-05T15:48:49",
-      "categories": []
-    },
-    {
-      "id": "hf-model-ideogram-ai-ideogram-4-fp8",
-      "type": "model",
-      "source": "huggingface",
-      "title": "ideogram-ai/ideogram-4-fp8",
-      "tagline": "text-to-image",
-      "author": "ideogram-ai",
-      "url": "https://huggingface.co/ideogram-ai/ideogram-4-fp8",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "diffusers",
-        "safetensors",
-        "text-to-image",
-        "image-generation",
-        "diffusion",
-        "flow-matching",
-        "dit",
-        "ideogram"
-      ],
-      "library": "diffusers",
-      "stats": {
-        "likes": 585,
-        "downloads": 25111
-      },
-      "is_trending": false,
-      "trending_rank": 42,
-      "created_at": "2026-05-30T23:40:55",
-      "updated_at": "2026-06-03T18:34:44",
-      "categories": []
+      "is_trending": true,
+      "ai_relevance_score": 0.30000001192092896,
+      "created_at": "2026-06-23",
+      "categories": [
+        "agents",
+        "fundamentals"
+      ]
     },
     {
       "id": "ph-publora-2",
@@ -3668,37 +3801,6 @@
       "categories": [
         "business"
       ]
-    },
-    {
-      "id": "hf-model-nvidia-nemotron-3-5-asr-streaming-0-6b",
-      "type": "model",
-      "source": "huggingface",
-      "title": "nvidia/nemotron-3.5-asr-streaming-0.6b",
-      "tagline": "automatic-speech-recognition",
-      "author": "nvidia",
-      "url": "https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "nemo",
-        "speech-recognition",
-        "cache-aware ASR",
-        "automatic-speech-recognition",
-        "streaming-asr",
-        "multilingual",
-        "speech",
-        "audio"
-      ],
-      "library": "nemo",
-      "stats": {
-        "likes": 576,
-        "downloads": 21426
-      },
-      "is_trending": false,
-      "trending_rank": 12,
-      "created_at": "2026-05-15T21:52:25",
-      "updated_at": "2026-06-16T16:01:48",
-      "categories": []
     },
     {
       "id": "ph-rankspot",
@@ -3794,6 +3896,37 @@
       ]
     },
     {
+      "id": "hf-model-froggeric-qwen-fixed-chat-templates",
+      "type": "model",
+      "source": "huggingface",
+      "title": "froggeric/Qwen-Fixed-Chat-Templates",
+      "tagline": "",
+      "author": "froggeric",
+      "url": "https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "mlx",
+        "jinja",
+        "chat-template",
+        "qwen",
+        "qwen3.5",
+        "qwen3.6",
+        "lm-studio",
+        "llama.cpp"
+      ],
+      "library": "mlx",
+      "stats": {
+        "likes": 594,
+        "downloads": 0
+      },
+      "is_trending": false,
+      "trending_rank": 78,
+      "created_at": "2026-04-23T15:28:14",
+      "updated_at": "2026-06-05T11:30:50",
+      "categories": []
+    },
+    {
       "id": "gh-mempalace-mempalace",
       "type": "repo",
       "source": "github",
@@ -3814,7 +3947,7 @@
         "stars": 55207,
         "stars_today": 404
       },
-      "is_trending": true,
+      "is_trending": false,
       "ai_relevance_score": 0.3499999940395355,
       "created_at": "2026-06-10",
       "categories": [
@@ -3850,6 +3983,37 @@
       "categories": []
     },
     {
+      "id": "hf-model-bosonai-higgs-audio-v3-tts-4b",
+      "type": "model",
+      "source": "huggingface",
+      "title": "bosonai/higgs-audio-v3-tts-4b",
+      "tagline": "text-to-speech",
+      "author": "bosonai",
+      "url": "https://huggingface.co/bosonai/higgs-audio-v3-tts-4b",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "higgs_multimodal_qwen3",
+        "text-generation",
+        "text-to-speech",
+        "speech-generation",
+        "voice-agent",
+        "expressive-speech"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 513,
+        "downloads": 78686
+      },
+      "is_trending": false,
+      "trending_rank": 37,
+      "created_at": "2026-06-04T05:37:32",
+      "updated_at": "2026-06-16T00:11:02",
+      "categories": []
+    },
+    {
       "id": "gh-ultralytics-ultralytics",
       "type": "repo",
       "source": "github",
@@ -3870,37 +4034,6 @@
       "is_trending": false,
       "ai_relevance_score": 0.3499999940395355,
       "created_at": "2026-05-29",
-      "categories": []
-    },
-    {
-      "id": "hf-model-froggeric-qwen-fixed-chat-templates",
-      "type": "model",
-      "source": "huggingface",
-      "title": "froggeric/Qwen-Fixed-Chat-Templates",
-      "tagline": "",
-      "author": "froggeric",
-      "url": "https://huggingface.co/froggeric/Qwen-Fixed-Chat-Templates",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "mlx",
-        "jinja",
-        "chat-template",
-        "qwen",
-        "qwen3.5",
-        "qwen3.6",
-        "lm-studio",
-        "llama.cpp"
-      ],
-      "library": "mlx",
-      "stats": {
-        "likes": 582,
-        "downloads": 0
-      },
-      "is_trending": false,
-      "trending_rank": 70,
-      "created_at": "2026-04-23T15:28:14",
-      "updated_at": "2026-06-05T11:30:50",
       "categories": []
     },
     {
@@ -3968,6 +4101,42 @@
       "created_at": "2026-05-28T07:01:00",
       "categories": [
         "agents"
+      ]
+    },
+    {
+      "id": "ph-agentx-4",
+      "type": "product",
+      "source": "producthunt",
+      "title": "AgentX",
+      "tagline": "Evaluate AI agent, pinpoint issues, and fix with one click.",
+      "description": "Evaluate AI agents before they fail. Create test suites, run evaluations, and pinpoint issues before they reach production. AgentX provides full observability and traceability for your AI agents. AI analysis not only identifies problems but also suggests fixes-like an AI doctor f",
+      "author": "[REDACTED]",
+      "url": "https://www.producthunt.com/posts/agentx-4",
+      "website": "https://www.producthunt.com/r/MAKIXB6C4DMJG6?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+NewsFlux+%28ID%3A+281470%29",
+      "domain": "producthunt.com",
+      "logo": "https://ph-files.imgix.net/3569abf9-5c75-44f2-8b6e-d7af7caaad97.gif?auto=format",
+      "tags": [
+        "analytics",
+        "developer-tools",
+        "artificial-intelligence"
+      ],
+      "stats": {
+        "votes": 430,
+        "comments": 145
+      },
+      "is_trending": true,
+      "ai_relevant": true,
+      "ai_keywords": [
+        "ai",
+        "ai agent",
+        "ai agents",
+        "artificial intelligence",
+        "llm"
+      ],
+      "created_at": "2026-06-22T07:01:00",
+      "categories": [
+        "agents",
+        "coding"
       ]
     },
     {
@@ -4069,35 +4238,32 @@
       ]
     },
     {
-      "id": "hf-model-bosonai-higgs-audio-v3-tts-4b",
-      "type": "model",
-      "source": "huggingface",
-      "title": "bosonai/higgs-audio-v3-tts-4b",
-      "tagline": "text-to-speech",
-      "author": "bosonai",
-      "url": "https://huggingface.co/bosonai/higgs-audio-v3-tts-4b",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "id": "gh-leonxlnx-taste-skill",
+      "type": "repo",
+      "source": "github",
+      "title": "Leonxlnx/taste-skill",
+      "tagline": "Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop ",
+      "author": "Leonxlnx",
+      "url": "https://github.com/Leonxlnx/taste-skill",
+      "domain": "github.com",
+      "logo": "https://github.com/Leonxlnx.png?size=64",
+      "language": "JavaScript",
       "tags": [
-        "transformers",
-        "safetensors",
-        "higgs_multimodal_qwen3",
-        "text-generation",
-        "text-to-speech",
-        "speech-generation",
-        "voice-agent",
-        "expressive-speech"
+        "ai",
+        "claude",
+        "generative ai",
+        "taste-skill"
       ],
-      "library": "transformers",
       "stats": {
-        "likes": 494,
-        "downloads": 72225
+        "stars": 49182,
+        "stars_today": 724
       },
-      "is_trending": false,
-      "trending_rank": 27,
-      "created_at": "2026-06-04T05:37:32",
-      "updated_at": "2026-06-16T00:11:02",
-      "categories": []
+      "is_trending": true,
+      "ai_relevance_score": 0.20000000298023224,
+      "created_at": "2026-06-23",
+      "categories": [
+        "claude"
+      ]
     },
     {
       "id": "gh-santifer-career-ops",
@@ -4162,34 +4328,34 @@
       ]
     },
     {
-      "id": "hf-model-nvidia-diffusiongemma-26b-a4b-it-nvfp4",
+      "id": "hf-model-unsloth-diffusiongemma-26b-a4b-it-gguf",
       "type": "model",
       "source": "huggingface",
-      "title": "nvidia/diffusiongemma-26B-A4B-it-NVFP4",
-      "tagline": "text-generation",
-      "author": "nvidia",
-      "url": "https://huggingface.co/nvidia/diffusiongemma-26B-A4B-it-NVFP4",
+      "title": "unsloth/diffusiongemma-26B-A4B-it-GGUF",
+      "tagline": "image-text-to-text",
+      "author": "unsloth",
+      "url": "https://huggingface.co/unsloth/diffusiongemma-26B-A4B-it-GGUF",
       "domain": "huggingface.co",
       "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
       "tags": [
-        "safetensors",
+        "gguf",
+        "gemma4",
+        "unsloth",
+        "gemma",
+        "google",
         "diffusion_gemma",
-        "nvidia",
-        "ModelOpt",
-        "DiffusionGemma-26B-A4B-IT",
-        "quantized",
-        "NVFP4",
-        "nvfp4"
+        "image-text-to-text",
+        "base_model:google/diffusiongemma-26B-A4B-it"
       ],
       "library": null,
       "stats": {
-        "likes": 81,
-        "downloads": 474663
+        "likes": 325,
+        "downloads": 233358
       },
-      "is_trending": true,
-      "trending_rank": 85,
-      "created_at": "2026-06-10T16:00:45",
-      "updated_at": "2026-06-11T00:05:07",
+      "is_trending": false,
+      "trending_rank": 48,
+      "created_at": "2026-06-10T14:19:12",
+      "updated_at": "2026-06-12T14:44:09",
       "categories": []
     },
     {
@@ -4343,6 +4509,36 @@
       "categories": []
     },
     {
+      "id": "gh-flowiseai-flowise",
+      "type": "repo",
+      "source": "github",
+      "title": "FlowiseAI/Flowise",
+      "tagline": "Build AI Agents, Visually",
+      "author": "FlowiseAI",
+      "url": "https://github.com/FlowiseAI/Flowise",
+      "domain": "github.com",
+      "logo": "https://github.com/FlowiseAI.png?size=64",
+      "language": "TypeScript",
+      "tags": [
+        "agentic ai",
+        "ai agents",
+        "chatbot",
+        "chatgpt",
+        "flowise",
+        "langchain"
+      ],
+      "stats": {
+        "stars": 53883,
+        "stars_today": 73
+      },
+      "is_trending": true,
+      "ai_relevance_score": 0.44999998807907104,
+      "created_at": "2026-06-22",
+      "categories": [
+        "agents"
+      ]
+    },
+    {
       "id": "hf-model-nemostation-marlin-2b",
       "type": "model",
       "source": "huggingface",
@@ -4395,37 +4591,6 @@
       "is_trending": true,
       "ai_relevance_score": 0.4000000059604645,
       "created_at": "2026-06-13",
-      "categories": []
-    },
-    {
-      "id": "hf-model-unsloth-diffusiongemma-26b-a4b-it-gguf",
-      "type": "model",
-      "source": "huggingface",
-      "title": "unsloth/diffusiongemma-26B-A4B-it-GGUF",
-      "tagline": "image-text-to-text",
-      "author": "unsloth",
-      "url": "https://huggingface.co/unsloth/diffusiongemma-26B-A4B-it-GGUF",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "gguf",
-        "gemma4",
-        "unsloth",
-        "gemma",
-        "google",
-        "diffusion_gemma",
-        "image-text-to-text",
-        "base_model:google/diffusiongemma-26B-A4B-it"
-      ],
-      "library": null,
-      "stats": {
-        "likes": 320,
-        "downloads": 216396
-      },
-      "is_trending": true,
-      "trending_rank": 26,
-      "created_at": "2026-06-10T14:19:12",
-      "updated_at": "2026-06-12T14:44:09",
       "categories": []
     },
     {
@@ -4489,6 +4654,68 @@
       "categories": []
     },
     {
+      "id": "gh-asgeirtj-system-prompts-leaks",
+      "type": "repo",
+      "source": "github",
+      "title": "asgeirtj/system_prompts_leaks",
+      "tagline": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - ",
+      "author": "asgeirtj",
+      "url": "https://github.com/asgeirtj/system_prompts_leaks",
+      "domain": "github.com",
+      "logo": "https://github.com/asgeirtj.png?size=64",
+      "language": "JavaScript",
+      "tags": [
+        "ai",
+        "ai agents",
+        "anthropic",
+        "chatbot",
+        "chatgpt",
+        "claude"
+      ],
+      "stats": {
+        "stars": 45100,
+        "stars_today": 775
+      },
+      "is_trending": true,
+      "ai_relevance_score": 0.800000011920929,
+      "created_at": "2026-06-23",
+      "categories": [
+        "claude",
+        "agents"
+      ]
+    },
+    {
+      "id": "hf-model-prefeitura-rio-rio-3-5-open-397b",
+      "type": "model",
+      "source": "huggingface",
+      "title": "prefeitura-rio/Rio-3.5-Open-397B",
+      "tagline": "image-text-to-text",
+      "author": "prefeitura-rio",
+      "url": "https://huggingface.co/prefeitura-rio/Rio-3.5-Open-397B",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3_5_moe",
+        "image-text-to-text",
+        "conversational",
+        "pt",
+        "en",
+        "base_model:Qwen/Qwen3.5-397B-A17B"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 327,
+        "downloads": 190791
+      },
+      "is_trending": false,
+      "trending_rank": 88,
+      "created_at": "2026-06-11T03:04:32",
+      "updated_at": "2026-06-14T18:58:47",
+      "categories": []
+    },
+    {
       "id": "ph-naptick-ai",
       "type": "product",
       "source": "producthunt",
@@ -4516,37 +4743,6 @@
         "artificial intelligence"
       ],
       "created_at": "2026-05-14T07:01:00",
-      "categories": []
-    },
-    {
-      "id": "hf-model-prefeitura-rio-rio-3-5-open-397b",
-      "type": "model",
-      "source": "huggingface",
-      "title": "prefeitura-rio/Rio-3.5-Open-397B",
-      "tagline": "image-text-to-text",
-      "author": "prefeitura-rio",
-      "url": "https://huggingface.co/prefeitura-rio/Rio-3.5-Open-397B",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "safetensors",
-        "qwen3_5_moe",
-        "image-text-to-text",
-        "conversational",
-        "pt",
-        "en",
-        "base_model:Qwen/Qwen3.5-397B-A17B"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 325,
-        "downloads": 190694
-      },
-      "is_trending": false,
-      "trending_rank": 7,
-      "created_at": "2026-06-11T03:04:32",
-      "updated_at": "2026-06-14T18:58:47",
       "categories": []
     },
     {
@@ -4602,7 +4798,7 @@
         "votes": 396,
         "comments": 118
       },
-      "is_trending": true,
+      "is_trending": false,
       "ai_relevant": true,
       "ai_keywords": [
         "ai",
@@ -4703,37 +4899,6 @@
       ]
     },
     {
-      "id": "hf-model-weiboai-vibethinker-3b",
-      "type": "model",
-      "source": "huggingface",
-      "title": "WeiboAI/VibeThinker-3B",
-      "tagline": "text-generation",
-      "author": "WeiboAI",
-      "url": "https://huggingface.co/WeiboAI/VibeThinker-3B",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "safetensors",
-        "qwen2",
-        "text-generation",
-        "math",
-        "code",
-        "reasoning",
-        "gpqa"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 494,
-        "downloads": 16270
-      },
-      "is_trending": true,
-      "trending_rank": 4,
-      "created_at": "2026-06-12T11:43:29",
-      "updated_at": "2026-06-19T18:28:29",
-      "categories": []
-    },
-    {
       "id": "gh-roboflow-supervision",
       "type": "repo",
       "source": "github",
@@ -4754,6 +4919,37 @@
       "is_trending": false,
       "ai_relevance_score": 0.4000000059604645,
       "created_at": "2026-06-11",
+      "categories": []
+    },
+    {
+      "id": "hf-model-coherelabs-north-mini-code-1-0",
+      "type": "model",
+      "source": "huggingface",
+      "title": "CohereLabs/North-Mini-Code-1.0",
+      "tagline": "text-generation",
+      "author": "CohereLabs",
+      "url": "https://huggingface.co/CohereLabs/North-Mini-Code-1.0",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "cohere2_moe",
+        "text-generation",
+        "conversational",
+        "chat",
+        "code",
+        "agent"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 482,
+        "downloads": 21078
+      },
+      "is_trending": false,
+      "trending_rank": 26,
+      "created_at": "2026-06-05T02:38:01",
+      "updated_at": "2026-06-15T04:32:41",
       "categories": []
     },
     {
@@ -4786,6 +4982,39 @@
       "created_at": "2026-06-01T07:01:00",
       "categories": [
         "tool-insights"
+      ]
+    },
+    {
+      "id": "hf-model-jackrong-qwopus3-6-27b-coder-mtp-gguf",
+      "type": "model",
+      "source": "huggingface",
+      "title": "Jackrong/Qwopus3.6-27B-Coder-MTP-GGUF",
+      "tagline": "image-text-to-text",
+      "author": "Jackrong",
+      "url": "https://huggingface.co/Jackrong/Qwopus3.6-27B-Coder-MTP-GGUF",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "gguf",
+        "llama.cpp",
+        "image-text-to-text",
+        "vision",
+        "multimodal",
+        "text-generation-inference",
+        "unsloth"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 282,
+        "downloads": 214630
+      },
+      "is_trending": false,
+      "trending_rank": 30,
+      "created_at": "2026-06-11T23:28:10",
+      "updated_at": "2026-06-20T12:52:25",
+      "categories": [
+        "coding"
       ]
     },
     {
@@ -4853,31 +5082,6 @@
       "categories": []
     },
     {
-      "id": "gh-microsoft-ai-for-beginners",
-      "type": "repo",
-      "source": "github",
-      "title": "microsoft/AI-For-Beginners",
-      "tagline": "12 Weeks, 24 Lessons, AI for All!",
-      "author": "microsoft",
-      "url": "https://github.com/microsoft/AI-For-Beginners",
-      "domain": "github.com",
-      "logo": "https://github.com/microsoft.png?size=64",
-      "language": "Jupyter Notebook",
-      "tags": [
-        "ai",
-        "ai-for-beginners",
-        "nlp"
-      ],
-      "stats": {
-        "stars": 48304,
-        "stars_today": 73
-      },
-      "is_trending": true,
-      "ai_relevance_score": 0.75,
-      "created_at": "2026-06-20",
-      "categories": []
-    },
-    {
       "id": "ph-openhuman",
       "type": "product",
       "source": "producthunt",
@@ -4913,6 +5117,62 @@
         "agents",
         "tool-insights"
       ]
+    },
+    {
+      "id": "hf-model-obliteratus-gemma-4-12b-obliterated",
+      "type": "model",
+      "source": "huggingface",
+      "title": "OBLITERATUS/Gemma-4-12B-OBLITERATED",
+      "tagline": "text-generation",
+      "author": "OBLITERATUS",
+      "url": "https://huggingface.co/OBLITERATUS/Gemma-4-12B-OBLITERATED",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "gguf",
+        "gemma4_unified",
+        "image-text-to-text",
+        "gemma",
+        "gemma4",
+        "text-generation"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 366,
+        "downloads": 120745
+      },
+      "is_trending": false,
+      "trending_rank": 76,
+      "created_at": "2026-06-05T08:58:36",
+      "updated_at": "2026-06-09T10:55:06",
+      "categories": []
+    },
+    {
+      "id": "gh-microsoft-ai-for-beginners",
+      "type": "repo",
+      "source": "github",
+      "title": "microsoft/AI-For-Beginners",
+      "tagline": "12 Weeks, 24 Lessons, AI for All!",
+      "author": "microsoft",
+      "url": "https://github.com/microsoft/AI-For-Beginners",
+      "domain": "github.com",
+      "logo": "https://github.com/microsoft.png?size=64",
+      "language": "Jupyter Notebook",
+      "tags": [
+        "ai",
+        "ai-for-beginners",
+        "nlp"
+      ],
+      "stats": {
+        "stars": 48345,
+        "stars_today": 29
+      },
+      "is_trending": true,
+      "ai_relevance_score": 0.75,
+      "created_at": "2026-06-22",
+      "categories": []
     },
     {
       "id": "ph-vc-boom",
@@ -5034,37 +5294,6 @@
       "categories": []
     },
     {
-      "id": "hf-model-coherelabs-north-mini-code-1-0",
-      "type": "model",
-      "source": "huggingface",
-      "title": "CohereLabs/North-Mini-Code-1.0",
-      "tagline": "text-generation",
-      "author": "CohereLabs",
-      "url": "https://huggingface.co/CohereLabs/North-Mini-Code-1.0",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "safetensors",
-        "cohere2_moe",
-        "text-generation",
-        "conversational",
-        "chat",
-        "code",
-        "agent"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 464,
-        "downloads": 18783
-      },
-      "is_trending": false,
-      "trending_rank": 17,
-      "created_at": "2026-06-05T02:38:01",
-      "updated_at": "2026-06-15T04:32:41",
-      "categories": []
-    },
-    {
       "id": "ph-pollyreach",
       "type": "product",
       "source": "producthunt",
@@ -5149,7 +5378,7 @@
         "votes": 372,
         "comments": 106
       },
-      "is_trending": true,
+      "is_trending": false,
       "ai_relevant": true,
       "ai_keywords": [
         "ai",
@@ -5189,36 +5418,6 @@
       "created_at": "2026-06-16T07:01:00",
       "categories": [
         "tool-insights"
-      ]
-    },
-    {
-      "id": "gh-asgeirtj-system-prompts-leaks",
-      "type": "repo",
-      "source": "github",
-      "title": "asgeirtj/system_prompts_leaks",
-      "tagline": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT 5.5 Thinking, GPT 5.5 Instant, Codex. Google - ",
-      "author": "asgeirtj",
-      "url": "https://github.com/asgeirtj/system_prompts_leaks",
-      "domain": "github.com",
-      "logo": "https://github.com/asgeirtj.png?size=64",
-      "language": "JavaScript",
-      "tags": [
-        "ai",
-        "anthropic",
-        "chatbot",
-        "chatgpt",
-        "claude",
-        "copilot"
-      ],
-      "stats": {
-        "stars": 43822,
-        "stars_today": 352
-      },
-      "is_trending": true,
-      "ai_relevance_score": 0.800000011920929,
-      "created_at": "2026-06-20",
-      "categories": [
-        "claude"
       ]
     },
     {
@@ -5290,35 +5489,37 @@
       ]
     },
     {
-      "id": "hf-model-obliteratus-gemma-4-12b-obliterated",
+      "id": "hf-model-zai-org-glm-5-2-fp8",
       "type": "model",
       "source": "huggingface",
-      "title": "OBLITERATUS/Gemma-4-12B-OBLITERATED",
+      "title": "zai-org/GLM-5.2-FP8",
       "tagline": "text-generation",
-      "author": "OBLITERATUS",
-      "url": "https://huggingface.co/OBLITERATUS/Gemma-4-12B-OBLITERATED",
+      "author": "zai-org",
+      "url": "https://huggingface.co/zai-org/GLM-5.2-FP8",
       "domain": "huggingface.co",
       "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
       "tags": [
         "transformers",
         "safetensors",
-        "gguf",
-        "gemma4_unified",
-        "image-text-to-text",
-        "gemma",
-        "gemma4",
-        "text-generation"
+        "glm_moe_dsa",
+        "text-generation",
+        "conversational",
+        "en",
+        "zh",
+        "arxiv:2602.15763"
       ],
       "library": "transformers",
       "stats": {
-        "likes": 359,
-        "downloads": 110450
+        "likes": 135,
+        "downloads": 334716
       },
-      "is_trending": false,
-      "trending_rank": 35,
-      "created_at": "2026-06-05T08:58:36",
-      "updated_at": "2026-06-09T10:55:06",
-      "categories": []
+      "is_trending": true,
+      "trending_rank": 17,
+      "created_at": "2026-06-16T07:20:33",
+      "updated_at": "2026-06-23T03:55:34",
+      "categories": [
+        "research"
+      ]
     },
     {
       "id": "ph-articuler-ai-4",
@@ -5455,6 +5656,32 @@
       ]
     },
     {
+      "id": "gh-anthropics-claude-cookbooks",
+      "type": "repo",
+      "source": "github",
+      "title": "anthropics/claude-cookbooks",
+      "tagline": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+      "author": "anthropics",
+      "url": "https://github.com/anthropics/claude-cookbooks",
+      "domain": "github.com",
+      "logo": "https://github.com/anthropics.png?size=64",
+      "language": "Jupyter Notebook",
+      "tags": [
+        "claude",
+        "claude-cookbooks"
+      ],
+      "stats": {
+        "stars": 45831,
+        "stars_today": 48
+      },
+      "is_trending": true,
+      "ai_relevance_score": 0.5,
+      "created_at": "2026-06-23",
+      "categories": [
+        "claude"
+      ]
+    },
+    {
       "id": "hf-model-inclusionai-ling-2-6-1t",
       "type": "model",
       "source": "huggingface",
@@ -5507,32 +5734,6 @@
       "ai_relevance_score": 0.30000001192092896,
       "created_at": "2026-06-07",
       "categories": []
-    },
-    {
-      "id": "gh-anthropics-claude-cookbooks",
-      "type": "repo",
-      "source": "github",
-      "title": "anthropics/claude-cookbooks",
-      "tagline": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
-      "author": "anthropics",
-      "url": "https://github.com/anthropics/claude-cookbooks",
-      "domain": "github.com",
-      "logo": "https://github.com/anthropics.png?size=64",
-      "language": "Jupyter Notebook",
-      "tags": [
-        "claude",
-        "claude-cookbooks"
-      ],
-      "stats": {
-        "stars": 45714,
-        "stars_today": 37
-      },
-      "is_trending": true,
-      "ai_relevance_score": 0.5,
-      "created_at": "2026-06-20",
-      "categories": [
-        "claude"
-      ]
     },
     {
       "id": "hf-model-hidream-ai-hidream-o1-image",
@@ -6050,6 +6251,40 @@
       ]
     },
     {
+      "id": "hf-model-yuxinlu1-gemma-4-12b-agentic-fable5-composer2-5-v2-3-5x-tau2-gguf",
+      "type": "model",
+      "source": "huggingface",
+      "title": "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
+      "tagline": "text-generation",
+      "author": "yuxinlu1",
+      "url": "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "gguf",
+        "gemma4",
+        "coding",
+        "agentic",
+        "terminal",
+        "tool-use",
+        "reasoning",
+        "thinking"
+      ],
+      "library": "gguf",
+      "stats": {
+        "likes": 390,
+        "downloads": 50314
+      },
+      "is_trending": true,
+      "trending_rank": 4,
+      "created_at": "2026-06-19T00:06:07",
+      "updated_at": "2026-06-19T09:31:48",
+      "categories": [
+        "coding",
+        "agents"
+      ]
+    },
+    {
       "id": "ph-browse-sh",
       "type": "product",
       "source": "producthunt",
@@ -6087,6 +6322,39 @@
       ]
     },
     {
+      "id": "ph-workclaw",
+      "type": "product",
+      "source": "producthunt",
+      "title": "WorkClaw",
+      "tagline": "Collaborative, proactive AI coworkers who work in Slack",
+      "description": "Meet the AI team for your team. WorkClaws are collaborative, proactive AI coworkers who work in Slack and Microsoft Teams just like every other colleague. They're fully customizable to get work done your way by learning skills and routines. Unlike most AI products that pair one p",
+      "author": "[REDACTED]",
+      "url": "https://www.producthunt.com/posts/workclaw",
+      "website": "https://www.producthunt.com/r/ZQTLJJWTPLMI3Z?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+NewsFlux+%28ID%3A+281470%29",
+      "domain": "producthunt.com",
+      "logo": "https://ph-files.imgix.net/1e2b3a72-85b4-47c4-b551-5a1a6ad1b57e.png?auto=format",
+      "tags": [
+        "productivity",
+        "artificial-intelligence",
+        "business"
+      ],
+      "stats": {
+        "votes": 352,
+        "comments": 86
+      },
+      "is_trending": true,
+      "ai_relevant": true,
+      "ai_keywords": [
+        "ai",
+        "artificial intelligence"
+      ],
+      "created_at": "2026-06-20T07:01:00",
+      "categories": [
+        "business",
+        "tool-insights"
+      ]
+    },
+    {
       "id": "ph-honen",
       "type": "product",
       "source": "producthunt",
@@ -6116,35 +6384,6 @@
       "created_at": "2026-06-08T07:01:00",
       "categories": [
         "tool-insights"
-      ]
-    },
-    {
-      "id": "gh-zhulinsen-daily-stock-analysis",
-      "type": "repo",
-      "source": "github",
-      "title": "ZhuLinsen/daily_stock_analysis",
-      "tagline": "LLM\u9a71\u52a8\u7684 A/H/\u7f8e\u80a1\u667a\u80fd\u5206\u6790\uff1a\u591a\u6570\u636e\u6e90\u884c\u60c5 + \u5b9e\u65f6\u65b0\u95fb + LLM\u51b3\u7b56\u4eea\u8868\u76d8 + \u591a\u6e20\u9053\u63a8\u9001\uff0c\u96f6\u6210\u672c\u5b9a\u65f6\u8fd0\u884c\uff0c\u7eaf\u767d\u5ad6. LLM-powered stock analysis system for A/H/US markets.",
-      "author": "ZhuLinsen",
-      "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
-      "domain": "github.com",
-      "logo": "https://github.com/ZhuLinsen.png?size=64",
-      "language": "Python",
-      "tags": [
-        "ai agent",
-        "aigc",
-        "daily_stock_analysis",
-        "llm"
-      ],
-      "stats": {
-        "stars": 40982,
-        "stars_today": 253
-      },
-      "is_trending": false,
-      "ai_relevance_score": 0.30000001192092896,
-      "created_at": "2026-06-06",
-      "categories": [
-        "agents",
-        "fundamentals"
       ]
     },
     {
@@ -6178,36 +6417,40 @@
       ]
     },
     {
-      "id": "hf-model-jackrong-qwopus3-6-27b-coder-mtp-gguf",
-      "type": "model",
-      "source": "huggingface",
-      "title": "Jackrong/Qwopus3.6-27B-Coder-MTP-GGUF",
-      "tagline": "image-text-to-text",
-      "author": "Jackrong",
-      "url": "https://huggingface.co/Jackrong/Qwopus3.6-27B-Coder-MTP-GGUF",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "id": "ph-skybridge",
+      "type": "product",
+      "source": "producthunt",
+      "title": "Skybridge",
+      "tagline": "The full-stack open source React framework for MCP Apps",
+      "description": "MCP apps are the new website: they're real, interactive apps that run right inside AI assistants like ChatGPT and Claude. The tooling to build them didn't exist, so we built it. Meet Skybridge, the React framework that handles the infrastructure and the dev loop so you can focus ",
+      "author": "[REDACTED]",
+      "url": "https://www.producthunt.com/posts/skybridge",
+      "website": "https://www.producthunt.com/r/WYDUMMA2RJODS7?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+NewsFlux+%28ID%3A+281470%29",
+      "domain": "producthunt.com",
+      "logo": "https://ph-files.imgix.net/6b3e2d43-65bb-4aca-acac-bcd622430f4b.gif?auto=format",
       "tags": [
-        "transformers",
-        "gguf",
-        "llama.cpp",
-        "image-text-to-text",
-        "vision",
-        "multimodal",
-        "text-generation-inference",
-        "unsloth"
+        "open-source",
+        "developer-tools",
+        "artificial-intelligence"
       ],
-      "library": "transformers",
       "stats": {
-        "likes": 265,
-        "downloads": 168502
+        "votes": 348,
+        "comments": 86
       },
-      "is_trending": false,
-      "trending_rank": 18,
-      "created_at": "2026-06-11T23:28:10",
-      "updated_at": "2026-06-20T12:52:25",
+      "is_trending": true,
+      "ai_relevant": true,
+      "ai_keywords": [
+        "ai",
+        "artificial intelligence",
+        "chatgpt",
+        "claude",
+        "gpt"
+      ],
+      "created_at": "2026-06-22T07:01:00",
       "categories": [
-        "coding"
+        "coding",
+        "claude",
+        "agents"
       ]
     },
     {
@@ -6321,7 +6564,7 @@
         "votes": 372,
         "comments": 54
       },
-      "is_trending": true,
+      "is_trending": false,
       "ai_relevant": true,
       "ai_keywords": [
         "ai",
@@ -6542,7 +6785,7 @@
         "votes": 357,
         "comments": 55
       },
-      "is_trending": true,
+      "is_trending": false,
       "ai_relevant": true,
       "ai_keywords": [
         "ai",
@@ -6553,6 +6796,38 @@
       "created_at": "2026-06-17T07:01:00",
       "categories": [
         "agents",
+        "coding"
+      ]
+    },
+    {
+      "id": "ph-agent-37-cloud",
+      "type": "product",
+      "source": "producthunt",
+      "title": "Agent 37 Cloud",
+      "tagline": "Give every customer their own Hermes or OpenClaw agent",
+      "description": "Agent 37 is managed hosting for persistent agents like Hermes, OpenClaw and ClaudeCode. So you don't need to run them on Mac minis or VPS yourself. One API call gives each of your customers their own always-on agent, from $3.44/mo. Founders use it to ship vertical agents to their",
+      "author": "Vishnu",
+      "url": "https://www.producthunt.com/posts/agent-37-cloud",
+      "website": "https://www.producthunt.com/r/G7ASKEML5CLFTD?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+NewsFlux+%28ID%3A+281470%29",
+      "domain": "producthunt.com",
+      "logo": "https://ph-files.imgix.net/4c93466c-c1c1-437d-81e3-730c65fa6cc1.vnd.microsoft.icon?auto=format",
+      "tags": [
+        "developer-tools",
+        "artificial-intelligence",
+        "sdk"
+      ],
+      "stats": {
+        "votes": 376,
+        "comments": 36
+      },
+      "is_trending": true,
+      "ai_relevant": true,
+      "ai_keywords": [
+        "artificial intelligence",
+        "claude"
+      ],
+      "created_at": "2026-06-21T07:01:00",
+      "categories": [
         "coding"
       ]
     },
@@ -6893,6 +7168,33 @@
       ]
     },
     {
+      "id": "gh-alishahryar1-free-claude-code",
+      "type": "repo",
+      "source": "github",
+      "title": "Alishahryar1/free-claude-code",
+      "tagline": "Use claude code and codex for free in the terminal, VSCode extension, and discord like OpenClaw (voice supported)",
+      "author": "Alishahryar1",
+      "url": "https://github.com/Alishahryar1/free-claude-code",
+      "domain": "github.com",
+      "logo": "https://github.com/Alishahryar1.png?size=64",
+      "language": "Python",
+      "tags": [
+        "claude",
+        "free-claude-code"
+      ],
+      "stats": {
+        "stars": 36174,
+        "stars_today": 258
+      },
+      "is_trending": true,
+      "ai_relevance_score": 0.20000000298023224,
+      "created_at": "2026-06-22",
+      "categories": [
+        "claude",
+        "coding"
+      ]
+    },
+    {
       "id": "gh-luongnv89-claude-howto",
       "type": "repo",
       "source": "github",
@@ -6918,6 +7220,30 @@
         "claude",
         "beginners"
       ]
+    },
+    {
+      "id": "gh-google-research-google-research",
+      "type": "repo",
+      "source": "github",
+      "title": "google-research/google-research",
+      "tagline": "Google Research",
+      "author": "google-research",
+      "url": "https://github.com/google-research/google-research",
+      "domain": "github.com",
+      "logo": "https://github.com/google-research.png?size=64",
+      "language": "Jupyter Notebook",
+      "tags": [
+        "ai",
+        "google-research"
+      ],
+      "stats": {
+        "stars": 38210,
+        "stars_today": 11
+      },
+      "is_trending": true,
+      "ai_relevance_score": 0.550000011920929,
+      "created_at": "2026-06-23",
+      "categories": []
     },
     {
       "id": "ph-astra-autonomous-pentest",
@@ -6957,57 +7283,6 @@
       ]
     },
     {
-      "id": "gh-google-research-google-research",
-      "type": "repo",
-      "source": "github",
-      "title": "google-research/google-research",
-      "tagline": "Google Research",
-      "author": "google-research",
-      "url": "https://github.com/google-research/google-research",
-      "domain": "github.com",
-      "logo": "https://github.com/google-research.png?size=64",
-      "language": "Jupyter Notebook",
-      "tags": [
-        "ai",
-        "google-research"
-      ],
-      "stats": {
-        "stars": 38171,
-        "stars_today": 11
-      },
-      "is_trending": true,
-      "ai_relevance_score": 0.550000011920929,
-      "created_at": "2026-06-20",
-      "categories": []
-    },
-    {
-      "id": "gh-alishahryar1-free-claude-code",
-      "type": "repo",
-      "source": "github",
-      "title": "Alishahryar1/free-claude-code",
-      "tagline": "Use claude code and codex for free in the terminal, VSCode extension, and discord like OpenClaw (voice supported)",
-      "author": "Alishahryar1",
-      "url": "https://github.com/Alishahryar1/free-claude-code",
-      "domain": "github.com",
-      "logo": "https://github.com/Alishahryar1.png?size=64",
-      "language": "Python",
-      "tags": [
-        "claude",
-        "free-claude-code"
-      ],
-      "stats": {
-        "stars": 35832,
-        "stars_today": 241
-      },
-      "is_trending": true,
-      "ai_relevance_score": 0.20000000298023224,
-      "created_at": "2026-06-20",
-      "categories": [
-        "claude",
-        "coding"
-      ]
-    },
-    {
       "id": "gh-rohitg00-ai-engineering-from-scratch",
       "type": "repo",
       "source": "github",
@@ -7030,7 +7305,7 @@
         "stars": 34155,
         "stars_today": 396
       },
-      "is_trending": true,
+      "is_trending": false,
       "ai_relevance_score": 0.44999998807907104,
       "created_at": "2026-06-18",
       "categories": [
@@ -7059,7 +7334,7 @@
         "votes": 330,
         "comments": 49
       },
-      "is_trending": true,
+      "is_trending": false,
       "ai_relevant": true,
       "ai_keywords": [
         "ai",
@@ -7071,6 +7346,35 @@
         "coding",
         "agents",
         "fundamentals"
+      ]
+    },
+    {
+      "id": "gh-jamiepine-voicebox",
+      "type": "repo",
+      "source": "github",
+      "title": "jamiepine/voicebox",
+      "tagline": "The open-source AI voice studio. Clone, dictate, create.",
+      "author": "jamiepine",
+      "url": "https://github.com/jamiepine/voicebox",
+      "domain": "github.com",
+      "logo": "https://github.com/jamiepine.png?size=64",
+      "language": "TypeScript",
+      "tags": [
+        "ai",
+        "cuda",
+        "mlx",
+        "voice ai",
+        "voicebox"
+      ],
+      "stats": {
+        "stars": 32465,
+        "stars_today": 529
+      },
+      "is_trending": true,
+      "ai_relevance_score": 0.30000001192092896,
+      "created_at": "2026-06-23",
+      "categories": [
+        "coding"
       ]
     },
     {
@@ -7124,12 +7428,12 @@
         "ui-tars-desktop"
       ],
       "stats": {
-        "stars": 36979,
-        "stars_today": 48
+        "stars": 37006,
+        "stars_today": 49
       },
       "is_trending": true,
       "ai_relevance_score": 0.5,
-      "created_at": "2026-06-20",
+      "created_at": "2026-06-21",
       "categories": [
         "agents",
         "coding"
@@ -7217,12 +7521,12 @@
         "prompt-eng-interactive-tutorial"
       ],
       "stats": {
-        "stars": 36557,
-        "stars_today": 61
+        "stars": 36634,
+        "stars_today": 30
       },
       "is_trending": true,
       "ai_relevance_score": 0.44999998807907104,
-      "created_at": "2026-06-20",
+      "created_at": "2026-06-23",
       "categories": [
         "claude",
         "beginners"
@@ -7324,31 +7628,6 @@
       "categories": []
     },
     {
-      "id": "gh-anthropics-financial-services",
-      "type": "repo",
-      "source": "github",
-      "title": "anthropics/financial-services",
-      "tagline": "",
-      "author": "anthropics",
-      "url": "https://github.com/anthropics/financial-services",
-      "domain": "github.com",
-      "logo": "https://github.com/anthropics.png?size=64",
-      "language": "Python",
-      "tags": [
-        "financial-services"
-      ],
-      "stats": {
-        "stars": 31898,
-        "stars_today": 481
-      },
-      "is_trending": true,
-      "ai_relevance_score": 0.4000000059604645,
-      "created_at": "2026-06-19",
-      "categories": [
-        "claude"
-      ]
-    },
-    {
       "id": "hf-model-jackrong-qwopus3-5-9b-coder-mtp-gguf",
       "type": "model",
       "source": "huggingface",
@@ -7379,35 +7658,6 @@
       "updated_at": "2026-06-02T23:22:53",
       "categories": [
         "coding"
-      ]
-    },
-    {
-      "id": "gh-coreyhaines31-marketingskills",
-      "type": "repo",
-      "source": "github",
-      "title": "coreyhaines31/marketingskills",
-      "tagline": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
-      "author": "coreyhaines31",
-      "url": "https://github.com/coreyhaines31/marketingskills",
-      "domain": "github.com",
-      "logo": "https://github.com/coreyhaines31.png?size=64",
-      "language": "JavaScript",
-      "tags": [
-        "ai agents",
-        "claude",
-        "marketingskills"
-      ],
-      "stats": {
-        "stars": 34279,
-        "stars_today": 229
-      },
-      "is_trending": true,
-      "ai_relevance_score": 0.20000000298023224,
-      "created_at": "2026-06-20",
-      "categories": [
-        "agents",
-        "claude",
-        "business"
       ]
     },
     {
@@ -7461,7 +7711,7 @@
         "votes": 289,
         "comments": 72
       },
-      "is_trending": true,
+      "is_trending": false,
       "ai_relevant": true,
       "ai_keywords": [
         "ai",
@@ -7475,29 +7725,6 @@
         "coding",
         "business"
       ]
-    },
-    {
-      "id": "gh-microsoft-data-science-for-beginners",
-      "type": "repo",
-      "source": "github",
-      "title": "microsoft/Data-Science-For-Beginners",
-      "tagline": "10 Weeks, 20 Lessons, Data Science for All!",
-      "author": "microsoft",
-      "url": "https://github.com/microsoft/Data-Science-For-Beginners",
-      "domain": "github.com",
-      "logo": "https://github.com/microsoft.png?size=64",
-      "language": "Jupyter Notebook",
-      "tags": [
-        "data-science-for-beginners"
-      ],
-      "stats": {
-        "stars": 35761,
-        "stars_today": 27
-      },
-      "is_trending": true,
-      "ai_relevance_score": 0.3499999940395355,
-      "created_at": "2026-06-20",
-      "categories": []
     },
     {
       "id": "gh-patchy631-ai-engineering-hub",
@@ -7527,6 +7754,58 @@
       "created_at": "2026-06-16",
       "categories": [
         "agents"
+      ]
+    },
+    {
+      "id": "gh-microsoft-data-science-for-beginners",
+      "type": "repo",
+      "source": "github",
+      "title": "microsoft/Data-Science-For-Beginners",
+      "tagline": "10 Weeks, 20 Lessons, Data Science for All!",
+      "author": "microsoft",
+      "url": "https://github.com/microsoft/Data-Science-For-Beginners",
+      "domain": "github.com",
+      "logo": "https://github.com/microsoft.png?size=64",
+      "language": "Jupyter Notebook",
+      "tags": [
+        "data-science-for-beginners"
+      ],
+      "stats": {
+        "stars": 35766,
+        "stars_today": 24
+      },
+      "is_trending": true,
+      "ai_relevance_score": 0.3499999940395355,
+      "created_at": "2026-06-21",
+      "categories": []
+    },
+    {
+      "id": "gh-coreyhaines31-marketingskills",
+      "type": "repo",
+      "source": "github",
+      "title": "coreyhaines31/marketingskills",
+      "tagline": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
+      "author": "coreyhaines31",
+      "url": "https://github.com/coreyhaines31/marketingskills",
+      "domain": "github.com",
+      "logo": "https://github.com/coreyhaines31.png?size=64",
+      "language": "JavaScript",
+      "tags": [
+        "ai agents",
+        "claude",
+        "marketingskills"
+      ],
+      "stats": {
+        "stars": 34476,
+        "stars_today": 147
+      },
+      "is_trending": true,
+      "ai_relevance_score": 0.20000000298023224,
+      "created_at": "2026-06-22",
+      "categories": [
+        "agents",
+        "claude",
+        "business"
       ]
     },
     {
@@ -7596,6 +7875,37 @@
         "coding",
         "agents"
       ]
+    },
+    {
+      "id": "hf-model-nex-agi-nex-n2-pro",
+      "type": "model",
+      "source": "huggingface",
+      "title": "nex-agi/Nex-N2-Pro",
+      "tagline": "text-generation",
+      "author": "nex-agi",
+      "url": "https://huggingface.co/nex-agi/Nex-N2-Pro",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3_5_moe",
+        "image-text-to-text",
+        "text-generation",
+        "conversational",
+        "license:apache-2.0",
+        "eval-results"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 349,
+        "downloads": 7959
+      },
+      "is_trending": false,
+      "trending_rank": 42,
+      "created_at": "2026-06-03T03:15:13",
+      "updated_at": "2026-06-11T09:43:23",
+      "categories": []
     },
     {
       "id": "gh-khoj-ai-khoj",
@@ -7699,38 +8009,6 @@
       ]
     },
     {
-      "id": "gh-itzcrazykns-vane",
-      "type": "repo",
-      "source": "github",
-      "title": "ItzCrazyKns/Vane",
-      "tagline": "Vane is an AI-powered answering engine.",
-      "author": "ItzCrazyKns",
-      "url": "https://github.com/ItzCrazyKns/Vane",
-      "domain": "github.com",
-      "logo": "https://github.com/ItzCrazyKns.png?size=64",
-      "language": "TypeScript",
-      "tags": [
-        "ai agents",
-        "ai search engine",
-        "llm",
-        "open source ai search engine",
-        "rag",
-        "self hosted ai"
-      ],
-      "stats": {
-        "stars": 34854,
-        "stars_today": 53
-      },
-      "is_trending": false,
-      "ai_relevance_score": 0.4000000059604645,
-      "created_at": "2026-05-24",
-      "categories": [
-        "agents",
-        "coding",
-        "fundamentals"
-      ]
-    },
-    {
       "id": "gh-astrbotdevs-astrbot",
       "type": "repo",
       "source": "github",
@@ -7823,37 +8101,6 @@
         "business",
         "coding"
       ]
-    },
-    {
-      "id": "hf-model-nex-agi-nex-n2-pro",
-      "type": "model",
-      "source": "huggingface",
-      "title": "nex-agi/Nex-N2-Pro",
-      "tagline": "text-generation",
-      "author": "nex-agi",
-      "url": "https://huggingface.co/nex-agi/Nex-N2-Pro",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "safetensors",
-        "qwen3_5_moe",
-        "image-text-to-text",
-        "text-generation",
-        "conversational",
-        "license:apache-2.0",
-        "eval-results"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 340,
-        "downloads": 7724
-      },
-      "is_trending": false,
-      "trending_rank": 21,
-      "created_at": "2026-06-03T03:15:13",
-      "updated_at": "2026-06-11T09:43:23",
-      "categories": []
     },
     {
       "id": "hf-space-aimeebingmouqu-protectbirds",
@@ -8021,12 +8268,12 @@
         "openai"
       ],
       "stats": {
-        "stars": 33761,
-        "stars_today": 10
+        "stars": 33831,
+        "stars_today": 9
       },
-      "is_trending": false,
+      "is_trending": true,
       "ai_relevance_score": 0.6000000238418579,
-      "created_at": "2026-06-13",
+      "created_at": "2026-06-23",
       "categories": [
         "fundamentals"
       ]
@@ -8155,30 +8402,6 @@
       "categories": [
         "agents"
       ]
-    },
-    {
-      "id": "gh-dayuanjiang-next-ai-draw-io",
-      "type": "repo",
-      "source": "github",
-      "title": "DayuanJiang/next-ai-draw-io",
-      "tagline": "A next.js web application that integrates AI capabilities with draw.io diagrams. This app allows you to create, modify, and enhance diagrams through natural lan",
-      "author": "DayuanJiang",
-      "url": "https://github.com/DayuanJiang/next-ai-draw-io",
-      "domain": "github.com",
-      "logo": "https://github.com/DayuanJiang.png?size=64",
-      "language": "TypeScript",
-      "tags": [
-        "ai",
-        "next-ai-draw-io"
-      ],
-      "stats": {
-        "stars": 31404,
-        "stars_today": 165
-      },
-      "is_trending": false,
-      "ai_relevance_score": 0.20000000298023224,
-      "created_at": "2026-06-06",
-      "categories": []
     },
     {
       "id": "ph-sun-to-spotify",
@@ -8348,6 +8571,39 @@
       "categories": [
         "agents",
         "research"
+      ]
+    },
+    {
+      "id": "ph-alai-2-0",
+      "type": "product",
+      "source": "producthunt",
+      "title": "Alai 2.0",
+      "tagline": "AI design partner for presentations, social posts, and more",
+      "description": "Alai captures every little detail about your brand in a design system. Use it to create presentations, social assets, ads, or any canvas size, all perfectly on-brand. Make precise edits manually or with AI. And choose your own AI models to balance cost, quality, and latency.",
+      "author": "[REDACTED]",
+      "url": "https://www.producthunt.com/posts/alai-2-0",
+      "website": "https://www.producthunt.com/r/FXYXCM6UIMQ5YE?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+NewsFlux+%28ID%3A+281470%29",
+      "domain": "producthunt.com",
+      "logo": "https://ph-files.imgix.net/154efba0-d61f-4be9-a054-a0573d18fadf.png?auto=format",
+      "tags": [
+        "design-tools",
+        "productivity",
+        "artificial-intelligence"
+      ],
+      "stats": {
+        "votes": 273,
+        "comments": 51
+      },
+      "is_trending": true,
+      "ai_relevant": true,
+      "ai_keywords": [
+        "ai",
+        "artificial intelligence"
+      ],
+      "created_at": "2026-06-22T07:01:00",
+      "categories": [
+        "creative",
+        "tool-insights"
       ]
     },
     {
@@ -8566,31 +8822,27 @@
       ]
     },
     {
-      "id": "gh-datawhalechina-happy-llm",
-      "type": "repo",
-      "source": "github",
-      "title": "datawhalechina/happy-llm",
-      "tagline": "\ud83d\udcda \u4ece\u96f6\u5f00\u59cb\u6784\u5efa\u5927\u6a21\u578b",
-      "author": "datawhalechina",
-      "url": "https://github.com/datawhalechina/happy-llm",
-      "domain": "github.com",
-      "logo": "https://github.com/datawhalechina.png?size=64",
-      "language": "Jupyter Notebook",
+      "id": "hf-space-tencentarc-pixal3d",
+      "type": "space",
+      "source": "huggingface",
+      "title": "TencentARC/Pixal3D",
+      "tagline": "gradio demo",
+      "author": "TencentARC",
+      "url": "https://huggingface.co/spaces/TencentARC/Pixal3D",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
       "tags": [
-        "happy-llm",
-        "llm",
-        "rag"
+        "gradio",
+        "region:us"
       ],
       "stats": {
-        "stars": 31342,
-        "stars_today": 45
+        "likes": 317
       },
       "is_trending": false,
-      "ai_relevance_score": 0.30000001192092896,
-      "created_at": "2026-06-17",
-      "categories": [
-        "fundamentals"
-      ]
+      "trending_rank": 86,
+      "created_at": "2026-04-30T14:43:47",
+      "updated_at": "2026-05-15T09:00:53",
+      "categories": []
     },
     {
       "id": "ph-veltrix-ai-2",
@@ -8755,29 +9007,6 @@
         "coding",
         "claude"
       ]
-    },
-    {
-      "id": "hf-space-tencentarc-pixal3d",
-      "type": "space",
-      "source": "huggingface",
-      "title": "TencentARC/Pixal3D",
-      "tagline": "gradio demo",
-      "author": "TencentARC",
-      "url": "https://huggingface.co/spaces/TencentARC/Pixal3D",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "gradio",
-        "region:us"
-      ],
-      "stats": {
-        "likes": 308
-      },
-      "is_trending": false,
-      "trending_rank": 95,
-      "created_at": "2026-04-30T14:43:47",
-      "updated_at": "2026-05-15T09:00:53",
-      "categories": []
     },
     {
       "id": "ph-runtime",
@@ -9098,6 +9327,62 @@
       ]
     },
     {
+      "id": "hf-model-unsloth-glm-5-2-gguf",
+      "type": "model",
+      "source": "huggingface",
+      "title": "unsloth/GLM-5.2-GGUF",
+      "tagline": "text-generation",
+      "author": "unsloth",
+      "url": "https://huggingface.co/unsloth/GLM-5.2-GGUF",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "gguf",
+        "glm_moe_dsa",
+        "unsloth",
+        "text-generation",
+        "en",
+        "zh",
+        "arxiv:2602.15763",
+        "arxiv:2603.12201"
+      ],
+      "library": null,
+      "stats": {
+        "likes": 260,
+        "downloads": 41846
+      },
+      "is_trending": false,
+      "trending_rank": 6,
+      "created_at": "2026-06-17T00:21:36",
+      "updated_at": "2026-06-18T15:37:12",
+      "categories": [
+        "research"
+      ]
+    },
+    {
+      "id": "hf-space-webml-community-bonsai-image-webgpu",
+      "type": "space",
+      "source": "huggingface",
+      "title": "webml-community/bonsai-image-webgpu",
+      "tagline": "static demo",
+      "author": "webml-community",
+      "url": "https://huggingface.co/spaces/webml-community/bonsai-image-webgpu",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "static",
+        "region:us"
+      ],
+      "stats": {
+        "likes": 300
+      },
+      "is_trending": false,
+      "trending_rank": 65,
+      "created_at": "2026-05-26T17:12:36",
+      "updated_at": "2026-05-29T02:57:22",
+      "categories": []
+    },
+    {
       "id": "ph-autoedit",
       "type": "product",
       "source": "producthunt",
@@ -9330,26 +9615,34 @@
       ]
     },
     {
-      "id": "hf-space-webml-community-bonsai-image-webgpu",
-      "type": "space",
+      "id": "hf-model-microsoft-fastcontext-1-0-4b-sft",
+      "type": "model",
       "source": "huggingface",
-      "title": "webml-community/bonsai-image-webgpu",
-      "tagline": "static demo",
-      "author": "webml-community",
-      "url": "https://huggingface.co/spaces/webml-community/bonsai-image-webgpu",
+      "title": "microsoft/FastContext-1.0-4B-SFT",
+      "tagline": "text-generation",
+      "author": "microsoft",
+      "url": "https://huggingface.co/microsoft/FastContext-1.0-4B-SFT",
       "domain": "huggingface.co",
       "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
       "tags": [
-        "static",
-        "region:us"
+        "transformers",
+        "safetensors",
+        "qwen3",
+        "text-generation",
+        "Explorer SubAgent",
+        "Repository Exploration",
+        "conversational",
+        "en"
       ],
+      "library": "transformers",
       "stats": {
-        "likes": 296
+        "likes": 292,
+        "downloads": 3498
       },
       "is_trending": false,
-      "trending_rank": 63,
-      "created_at": "2026-05-26T17:12:36",
-      "updated_at": "2026-05-29T02:57:22",
+      "trending_rank": 12,
+      "created_at": "2026-06-14T14:39:57",
+      "updated_at": "2026-06-17T05:43:37",
       "categories": []
     },
     {
@@ -9676,6 +9969,35 @@
       ]
     },
     {
+      "id": "ph-reframe-9",
+      "type": "product",
+      "source": "producthunt",
+      "title": "Reframe",
+      "tagline": "Surf like it's 1999",
+      "description": "Reframe is an open-source browser based on Electron for macOS that brings back the look & feel of Safari 1.0, Netscape 4.8, Firefox 1.0 and Internet Explorer 5.0, with a built-in Wayback Mode.",
+      "author": "Maik Klotz",
+      "url": "https://www.producthunt.com/posts/reframe-9",
+      "website": "https://www.producthunt.com/r/TMRUV63DOAKQ46?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+NewsFlux+%28ID%3A+281470%29",
+      "domain": "producthunt.com",
+      "logo": "https://ph-files.imgix.net/81ca198a-33cc-40f6-a7eb-357f3f078df7.png?auto=format",
+      "tags": [
+        "open-source",
+        "user-experience",
+        "github"
+      ],
+      "stats": {
+        "votes": 257,
+        "comments": 22
+      },
+      "is_trending": false,
+      "ai_relevant": false,
+      "ai_keywords": [],
+      "created_at": "2026-06-20T07:01:00",
+      "categories": [
+        "coding"
+      ]
+    },
+    {
       "id": "hf-model-nvidia-nvidia-nemotron-3-ultra-550b-a55b-bf16",
       "type": "model",
       "source": "huggingface",
@@ -9967,6 +10289,37 @@
       ]
     },
     {
+      "id": "hf-model-nex-agi-nex-n2-mini",
+      "type": "model",
+      "source": "huggingface",
+      "title": "nex-agi/Nex-N2-mini",
+      "tagline": "text-generation",
+      "author": "nex-agi",
+      "url": "https://huggingface.co/nex-agi/Nex-N2-mini",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3_5_moe",
+        "image-text-to-text",
+        "text-generation",
+        "conversational",
+        "license:apache-2.0",
+        "endpoints_compatible"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 254,
+        "downloads": 14256
+      },
+      "is_trending": false,
+      "trending_rank": 77,
+      "created_at": "2026-06-04T04:59:34",
+      "updated_at": "2026-06-11T09:34:42",
+      "categories": []
+    },
+    {
       "id": "ph-prostir-zvuku",
       "type": "product",
       "source": "producthunt",
@@ -10096,6 +10449,29 @@
       "categories": []
     },
     {
+      "id": "hf-space-vast-ai-triposplat",
+      "type": "space",
+      "source": "huggingface",
+      "title": "VAST-AI/TripoSplat",
+      "tagline": "gradio demo",
+      "author": "VAST-AI",
+      "url": "https://huggingface.co/spaces/VAST-AI/TripoSplat",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "gradio",
+        "region:us"
+      ],
+      "stats": {
+        "likes": 265
+      },
+      "is_trending": false,
+      "trending_rank": 36,
+      "created_at": "2026-06-01T11:59:19",
+      "updated_at": "2026-06-04T09:13:28",
+      "categories": []
+    },
+    {
       "id": "ph-elvin",
       "type": "product",
       "source": "producthunt",
@@ -10191,60 +10567,6 @@
       ]
     },
     {
-      "id": "hf-model-nex-agi-nex-n2-mini",
-      "type": "model",
-      "source": "huggingface",
-      "title": "nex-agi/Nex-N2-mini",
-      "tagline": "text-generation",
-      "author": "nex-agi",
-      "url": "https://huggingface.co/nex-agi/Nex-N2-mini",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "safetensors",
-        "qwen3_5_moe",
-        "image-text-to-text",
-        "text-generation",
-        "conversational",
-        "license:apache-2.0",
-        "endpoints_compatible"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 248,
-        "downloads": 13331
-      },
-      "is_trending": false,
-      "trending_rank": 43,
-      "created_at": "2026-06-04T04:59:34",
-      "updated_at": "2026-06-11T09:34:42",
-      "categories": []
-    },
-    {
-      "id": "hf-space-vast-ai-triposplat",
-      "type": "space",
-      "source": "huggingface",
-      "title": "VAST-AI/TripoSplat",
-      "tagline": "gradio demo",
-      "author": "VAST-AI",
-      "url": "https://huggingface.co/spaces/VAST-AI/TripoSplat",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "gradio",
-        "region:us"
-      ],
-      "stats": {
-        "likes": 261
-      },
-      "is_trending": false,
-      "trending_rank": 10,
-      "created_at": "2026-06-01T11:59:19",
-      "updated_at": "2026-06-04T09:13:28",
-      "categories": []
-    },
-    {
       "id": "ph-investorfinder",
       "type": "product",
       "source": "producthunt",
@@ -10304,6 +10626,52 @@
       "categories": [
         "coding"
       ]
+    },
+    {
+      "id": "hf-space-signsur4739379373-ltx-2-3-finetuned-i2v",
+      "type": "space",
+      "source": "huggingface",
+      "title": "signsur4739379373/LTX-2.3-Finetuned-I2V",
+      "tagline": "gradio demo",
+      "author": "signsur4739379373",
+      "url": "https://huggingface.co/spaces/signsur4739379373/LTX-2.3-Finetuned-I2V",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "gradio",
+        "region:us"
+      ],
+      "stats": {
+        "likes": 258
+      },
+      "is_trending": false,
+      "trending_rank": 2,
+      "created_at": "2026-05-26T14:28:33",
+      "updated_at": "2026-06-18T23:27:12",
+      "categories": []
+    },
+    {
+      "id": "hf-space-techfreakworm-ltx2-3-studio",
+      "type": "space",
+      "source": "huggingface",
+      "title": "techfreakworm/LTX2.3-Studio",
+      "tagline": "gradio demo",
+      "author": "techfreakworm",
+      "url": "https://huggingface.co/spaces/techfreakworm/LTX2.3-Studio",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "gradio",
+        "region:us"
+      ],
+      "stats": {
+        "likes": 257
+      },
+      "is_trending": false,
+      "trending_rank": 45,
+      "created_at": "2026-05-01T05:41:26",
+      "updated_at": "2026-05-19T20:32:55",
+      "categories": []
     },
     {
       "id": "ph-daemons-by-charlie-labs",
@@ -10372,29 +10740,6 @@
       "categories": []
     },
     {
-      "id": "hf-space-techfreakworm-ltx2-3-studio",
-      "type": "space",
-      "source": "huggingface",
-      "title": "techfreakworm/LTX2.3-Studio",
-      "tagline": "gradio demo",
-      "author": "techfreakworm",
-      "url": "https://huggingface.co/spaces/techfreakworm/LTX2.3-Studio",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "gradio",
-        "region:us"
-      ],
-      "stats": {
-        "likes": 255
-      },
-      "is_trending": false,
-      "trending_rank": 36,
-      "created_at": "2026-05-01T05:41:26",
-      "updated_at": "2026-05-19T20:32:55",
-      "categories": []
-    },
-    {
       "id": "ph-peakroutine",
       "type": "product",
       "source": "producthunt",
@@ -10442,7 +10787,7 @@
         "likes": 253
       },
       "is_trending": false,
-      "trending_rank": 80,
+      "trending_rank": 87,
       "created_at": "2026-05-22T13:56:32",
       "updated_at": "2026-05-26T16:44:17",
       "categories": []
@@ -10478,36 +10823,36 @@
       "categories": []
     },
     {
-      "id": "ph-workclaw",
-      "type": "product",
-      "source": "producthunt",
-      "title": "WorkClaw",
-      "tagline": "Collaborative, proactive AI coworkers who work in Slack",
-      "description": "Meet the AI team for your team. WorkClaws are collaborative, proactive AI coworkers who work in Slack and Microsoft Teams just like every other colleague. They're fully customizable to get work done your way by learning skills and routines. Unlike most AI products that pair one p",
-      "author": "[REDACTED]",
-      "url": "https://www.producthunt.com/posts/workclaw",
-      "website": "https://www.producthunt.com/r/ZQTLJJWTPLMI3Z?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+NewsFlux+%28ID%3A+281470%29",
-      "domain": "producthunt.com",
-      "logo": "https://ph-files.imgix.net/1e2b3a72-85b4-47c4-b551-5a1a6ad1b57e.png?auto=format",
+      "id": "hf-model-zai-org-scail-2",
+      "type": "model",
+      "source": "huggingface",
+      "title": "zai-org/SCAIL-2",
+      "tagline": "image-to-video",
+      "author": "zai-org",
+      "url": "https://huggingface.co/zai-org/SCAIL-2",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
       "tags": [
-        "productivity",
-        "artificial-intelligence",
-        "business"
+        "scail-2",
+        "character-animation",
+        "video-generation",
+        "pose-driven",
+        "diffusion",
+        "image-to-video",
+        "arxiv:2606.10804",
+        "license:mit"
       ],
+      "library": "scail-2",
       "stats": {
-        "votes": 213,
-        "comments": 40
+        "likes": 253,
+        "downloads": 0
       },
       "is_trending": false,
-      "ai_relevant": true,
-      "ai_keywords": [
-        "ai",
-        "artificial intelligence"
-      ],
-      "created_at": "2026-06-20T07:01:00",
+      "trending_rank": 43,
+      "created_at": "2026-06-09T07:18:27",
+      "updated_at": "2026-06-22T08:23:40",
       "categories": [
-        "business",
-        "tool-insights"
+        "research"
       ]
     },
     {
@@ -10572,39 +10917,6 @@
       "created_at": "2026-06-12T07:01:00",
       "categories": [
         "business"
-      ]
-    },
-    {
-      "id": "hf-model-zai-org-glm-5-2-fp8",
-      "type": "model",
-      "source": "huggingface",
-      "title": "zai-org/GLM-5.2-FP8",
-      "tagline": "text-generation",
-      "author": "zai-org",
-      "url": "https://huggingface.co/zai-org/GLM-5.2-FP8",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "safetensors",
-        "glm_moe_dsa",
-        "text-generation",
-        "conversational",
-        "en",
-        "zh",
-        "arxiv:2602.15763"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 113,
-        "downloads": 138174
-      },
-      "is_trending": false,
-      "trending_rank": 19,
-      "created_at": "2026-06-16T07:20:33",
-      "updated_at": "2026-06-19T09:16:07",
-      "categories": [
-        "research"
       ]
     },
     {
@@ -10868,29 +11180,6 @@
       ]
     },
     {
-      "id": "hf-space-signsur4739379373-ltx-2-3-finetuned-i2v",
-      "type": "space",
-      "source": "huggingface",
-      "title": "signsur4739379373/LTX-2.3-Finetuned-I2V",
-      "tagline": "gradio demo",
-      "author": "signsur4739379373",
-      "url": "https://huggingface.co/spaces/signsur4739379373/LTX-2.3-Finetuned-I2V",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "gradio",
-        "region:us"
-      ],
-      "stats": {
-        "likes": 243
-      },
-      "is_trending": false,
-      "trending_rank": 1,
-      "created_at": "2026-05-26T14:28:33",
-      "updated_at": "2026-06-18T23:27:12",
-      "categories": []
-    },
-    {
       "id": "ph-crustrecruiter",
       "type": "product",
       "source": "producthunt",
@@ -10922,37 +11211,6 @@
         "claude",
         "agents"
       ]
-    },
-    {
-      "id": "hf-model-microsoft-fastcontext-1-0-4b-sft",
-      "type": "model",
-      "source": "huggingface",
-      "title": "microsoft/FastContext-1.0-4B-SFT",
-      "tagline": "text-generation",
-      "author": "microsoft",
-      "url": "https://huggingface.co/microsoft/FastContext-1.0-4B-SFT",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "safetensors",
-        "qwen3",
-        "text-generation",
-        "Explorer SubAgent",
-        "Repository Exploration",
-        "conversational",
-        "en"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 239,
-        "downloads": 1998
-      },
-      "is_trending": false,
-      "trending_rank": 8,
-      "created_at": "2026-06-14T14:39:57",
-      "updated_at": "2026-06-17T05:43:37",
-      "categories": []
     },
     {
       "id": "ph-githired-3",
@@ -11109,39 +11367,6 @@
       ]
     },
     {
-      "id": "hf-model-zai-org-scail-2",
-      "type": "model",
-      "source": "huggingface",
-      "title": "zai-org/SCAIL-2",
-      "tagline": "image-to-video",
-      "author": "zai-org",
-      "url": "https://huggingface.co/zai-org/SCAIL-2",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "diffusers",
-        "character-animation",
-        "video-generation",
-        "pose-driven",
-        "diffusion",
-        "image-to-video",
-        "arxiv:2606.10804",
-        "license:mit"
-      ],
-      "library": "diffusers",
-      "stats": {
-        "likes": 238,
-        "downloads": 0
-      },
-      "is_trending": false,
-      "trending_rank": 25,
-      "created_at": "2026-06-09T07:18:27",
-      "updated_at": "2026-06-19T09:52:15",
-      "categories": [
-        "research"
-      ]
-    },
-    {
       "id": "ph-ideogram-4-0",
       "type": "product",
       "source": "producthunt",
@@ -11202,6 +11427,42 @@
       ],
       "created_at": "2026-06-07T07:01:00",
       "categories": []
+    },
+    {
+      "id": "ph-atomic-mail-agentic",
+      "type": "product",
+      "source": "producthunt",
+      "title": "Atomic Mail Agentic",
+      "tagline": "Let your agents read, send, and react to email autonomously",
+      "description": "Atomic Mail Agentic gives autonomous AI agents their own real @atomicmail.ai inbox to manage fully without human setup, verification, or ongoing intervention. Built on JMAP (RFC 8620), the standard mailbox API LLMs already know fluently, so agents read, send, reply, draft, search",
+      "author": "",
+      "url": "https://www.producthunt.com/posts/atomic-mail-agentic",
+      "website": "https://www.producthunt.com/r/X4MCSFBVD3XQRK?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+NewsFlux+%28ID%3A+281470%29",
+      "domain": "producthunt.com",
+      "logo": "https://ph-files.imgix.net/f5cb2a7f-7c02-4997-a1a1-78cf3118803b.jpeg?auto=format",
+      "tags": [
+        "email",
+        "newsletters",
+        "customer-communication"
+      ],
+      "stats": {
+        "votes": 225,
+        "comments": 10
+      },
+      "is_trending": false,
+      "ai_relevant": true,
+      "ai_keywords": [
+        "agentic",
+        "ai",
+        "ai agent",
+        "ai agents",
+        "llm"
+      ],
+      "created_at": "2026-06-21T07:01:00",
+      "categories": [
+        "agents",
+        "coding"
+      ]
     },
     {
       "id": "ph-memdex",
@@ -11270,39 +11531,6 @@
       "updated_at": "2026-06-04T22:29:40",
       "categories": [
         "research"
-      ]
-    },
-    {
-      "id": "ph-agentic-videos-by-d-id",
-      "type": "product",
-      "source": "producthunt",
-      "title": "Agentic videos by D-ID",
-      "tagline": "Interactive videos that talk back ",
-      "description": "Turn any video into an interactive AI experience. With Agentic Videos, viewers don't just watch - they pause, ask questions, get real-time answers, and interact with the presenter inside the video itself. Viewers experience content in a fully personalized way. Creators gain a new",
-      "author": "[REDACTED]",
-      "url": "https://www.producthunt.com/posts/agentic-videos-by-d-id",
-      "website": "https://www.producthunt.com/r/U6TALWDWNUDFNC?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+NewsFlux+%28ID%3A+281470%29",
-      "domain": "producthunt.com",
-      "logo": "https://ph-files.imgix.net/bc610697-7e78-435c-a3e4-0606022d8765.png?auto=format",
-      "tags": [
-        "user-experience",
-        "artificial-intelligence",
-        "video"
-      ],
-      "stats": {
-        "votes": 178,
-        "comments": 55
-      },
-      "is_trending": false,
-      "ai_relevant": true,
-      "ai_keywords": [
-        "agentic",
-        "ai",
-        "artificial intelligence"
-      ],
-      "created_at": "2026-06-18T07:01:00",
-      "categories": [
-        "agents"
       ]
     },
     {
@@ -11770,6 +11998,39 @@
       ]
     },
     {
+      "id": "ph-slackbot-s-mcp-client",
+      "type": "product",
+      "source": "producthunt",
+      "title": "Slackbot\u2019s MCP Client",
+      "tagline": "Work across 20+ apps in Slack with multiplayer collaboration",
+      "description": "Slackbot\u2019s new MCP Client ends fragmented AI work by connecting 20+ apps (Atlassian, Linear, Canva, Zoom) to one conversational interface. Ask Slackbot in plain language to act across tools\u2014sign docs, update tickets, view dashboards\u2014then share results in team channels for true mu",
+      "author": "",
+      "url": "https://www.producthunt.com/posts/slackbot-s-mcp-client",
+      "website": "https://www.producthunt.com/r/36XRGPIO7B2ANE?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+NewsFlux+%28ID%3A+281470%29",
+      "domain": "producthunt.com",
+      "logo": "https://ph-files.imgix.net/e9704d67-8670-4b5b-89b5-425234abeb19.gif?auto=format",
+      "tags": [
+        "slack",
+        "task-management",
+        "artificial-intelligence"
+      ],
+      "stats": {
+        "votes": 217,
+        "comments": 7
+      },
+      "is_trending": false,
+      "ai_relevant": true,
+      "ai_keywords": [
+        "ai",
+        "artificial intelligence",
+        "rag"
+      ],
+      "created_at": "2026-06-20T07:01:00",
+      "categories": [
+        "agents"
+      ]
+    },
+    {
       "id": "ph-tabtasker",
       "type": "product",
       "source": "producthunt",
@@ -11831,39 +12092,6 @@
       "created_at": "2026-06-19T07:01:00",
       "categories": [
         "coding",
-        "research"
-      ]
-    },
-    {
-      "id": "hf-model-unsloth-glm-5-2-gguf",
-      "type": "model",
-      "source": "huggingface",
-      "title": "unsloth/GLM-5.2-GGUF",
-      "tagline": "text-generation",
-      "author": "unsloth",
-      "url": "https://huggingface.co/unsloth/GLM-5.2-GGUF",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "gguf",
-        "glm_moe_dsa",
-        "unsloth",
-        "text-generation",
-        "en",
-        "zh",
-        "arxiv:2602.15763",
-        "arxiv:2603.12201"
-      ],
-      "library": null,
-      "stats": {
-        "likes": 200,
-        "downloads": 22586
-      },
-      "is_trending": false,
-      "trending_rank": 11,
-      "created_at": "2026-06-17T00:21:36",
-      "updated_at": "2026-06-18T15:37:12",
-      "categories": [
         "research"
       ]
     },
@@ -12088,6 +12316,63 @@
       ]
     },
     {
+      "id": "hf-model-baidu-unlimited-ocr",
+      "type": "model",
+      "source": "huggingface",
+      "title": "baidu/Unlimited-OCR",
+      "tagline": "image-text-to-text",
+      "author": "baidu",
+      "url": "https://huggingface.co/baidu/Unlimited-OCR",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "unlimited-ocr",
+        "image-feature-extraction",
+        "baidu",
+        "vision-language",
+        "ocr",
+        "custom_code"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 219,
+        "downloads": 47
+      },
+      "is_trending": false,
+      "trending_rank": 7,
+      "created_at": "2026-06-19T09:40:33",
+      "updated_at": "2026-06-23T05:00:24",
+      "categories": []
+    },
+    {
+      "id": "hf-space-cbensimon-wan2-2-fp8da-aoti-preview2",
+      "type": "space",
+      "source": "huggingface",
+      "title": "cbensimon/wan2-2-fp8da-aoti-preview2",
+      "tagline": "gradio demo",
+      "author": "cbensimon",
+      "url": "https://huggingface.co/spaces/cbensimon/wan2-2-fp8da-aoti-preview2",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "gradio",
+        "mcp-server",
+        "region:us"
+      ],
+      "stats": {
+        "likes": 219
+      },
+      "is_trending": false,
+      "trending_rank": 51,
+      "created_at": "2026-05-12T10:08:17",
+      "updated_at": "2026-05-14T11:52:10",
+      "categories": [
+        "agents"
+      ]
+    },
+    {
       "id": "ph-lensmor-2",
       "type": "product",
       "source": "producthunt",
@@ -12178,65 +12463,6 @@
       "created_at": "2026-05-12T07:01:00",
       "categories": [
         "coding"
-      ]
-    },
-    {
-      "id": "hf-space-cbensimon-wan2-2-fp8da-aoti-preview2",
-      "type": "space",
-      "source": "huggingface",
-      "title": "cbensimon/wan2-2-fp8da-aoti-preview2",
-      "tagline": "gradio demo",
-      "author": "cbensimon",
-      "url": "https://huggingface.co/spaces/cbensimon/wan2-2-fp8da-aoti-preview2",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "gradio",
-        "mcp-server",
-        "region:us"
-      ],
-      "stats": {
-        "likes": 217
-      },
-      "is_trending": false,
-      "trending_rank": 42,
-      "created_at": "2026-05-12T10:08:17",
-      "updated_at": "2026-05-14T11:52:10",
-      "categories": [
-        "agents"
-      ]
-    },
-    {
-      "id": "ph-lobehub-2",
-      "type": "product",
-      "source": "producthunt",
-      "title": "LobeHub",
-      "tagline": "Your Chief Agent Operator for multi-agent work",
-      "description": "LobeHub is a Chief Agent Operator (CAO) that builds, runs, and coordinates your AI agent team. Describe a goal, and it assembles the right agents/skills, runs tasks in parallel in the cloud, routes work across models, and reports back only when decisions are needed\u2014via your exist",
-      "author": "[REDACTED]",
-      "url": "https://www.producthunt.com/posts/lobehub-2",
-      "website": "https://www.producthunt.com/r/GDRCLPANDCILEI?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+NewsFlux+%28ID%3A+281470%29",
-      "domain": "producthunt.com",
-      "logo": "https://ph-files.imgix.net/d91fc33b-29d2-4222-b0dc-977c6a78a670.png?auto=format",
-      "tags": [
-        "productivity",
-        "artificial-intelligence"
-      ],
-      "stats": {
-        "votes": 177,
-        "comments": 40
-      },
-      "is_trending": false,
-      "ai_relevant": true,
-      "ai_keywords": [
-        "ai",
-        "ai agent",
-        "artificial intelligence"
-      ],
-      "created_at": "2026-05-18T07:01:00",
-      "categories": [
-        "agents",
-        "tool-insights"
       ]
     },
     {
@@ -12617,40 +12843,6 @@
       "categories": []
     },
     {
-      "id": "ph-edgee-turbo-models",
-      "type": "product",
-      "source": "producthunt",
-      "title": "Edgee Turbo Models",
-      "tagline": "Use Claude Code with Kimi K2.7 Code, MiniMax M2.7, and more",
-      "description": "Run state-of-the-art open-source models (GLM 5.1, Kimi K2.7 Code, MiniMax M2.7, and more) in Claude Code at up to 4\u00d7 the speed (up to 200 tok/s) for a flat $29/month. Set up in minutes, no code changes.",
-      "author": "[REDACTED]",
-      "url": "https://www.producthunt.com/posts/edgee-turbo-models",
-      "website": "https://www.producthunt.com/r/RA45EQ767HXQGH?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+NewsFlux+%28ID%3A+281470%29",
-      "domain": "producthunt.com",
-      "logo": "https://ph-files.imgix.net/cea13bd0-7efd-4a1c-b99a-d4cb7b1e4276.png?auto=format",
-      "tags": [
-        "software-engineering",
-        "developer-tools",
-        "artificial-intelligence",
-        "vercel-day"
-      ],
-      "stats": {
-        "votes": 175,
-        "comments": 32
-      },
-      "is_trending": false,
-      "ai_relevant": true,
-      "ai_keywords": [
-        "artificial intelligence",
-        "claude"
-      ],
-      "created_at": "2026-06-16T07:01:00",
-      "categories": [
-        "claude",
-        "coding"
-      ]
-    },
-    {
       "id": "ph-warmintro",
       "type": "product",
       "source": "producthunt",
@@ -12864,6 +13056,32 @@
       ]
     },
     {
+      "id": "hf-space-onise-qwen-image-edit-2509-loras-fast2",
+      "type": "space",
+      "source": "huggingface",
+      "title": "Onise/Qwen-Image-Edit-2509-LoRAs-Fast2",
+      "tagline": "gradio demo",
+      "author": "Onise",
+      "url": "https://huggingface.co/spaces/Onise/Qwen-Image-Edit-2509-LoRAs-Fast2",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "gradio",
+        "mcp-server",
+        "region:us"
+      ],
+      "stats": {
+        "likes": 203
+      },
+      "is_trending": false,
+      "trending_rank": 30,
+      "created_at": "2026-04-30T19:11:32",
+      "updated_at": "2026-05-31T03:17:30",
+      "categories": [
+        "agents"
+      ]
+    },
+    {
       "id": "ph-prism-00e67431-1004-462c-ba5d-3124fde2f5ce",
       "type": "product",
       "source": "producthunt",
@@ -12892,34 +13110,58 @@
       "categories": []
     },
     {
-      "id": "ph-incorruptible-by-eric-ries",
-      "type": "product",
-      "source": "producthunt",
-      "title": "Incorruptible by Eric Ries",
-      "tagline": "Why good companies go bad and how great companies stay great",
-      "description": "Instant NY Times bestseller from Eric Ries, creator of The Lean Startup. Incorruptible reveals the structural forces (\"financial gravity\") that pull great companies away from their founding purpose, and the governance design that lets the best ones resist it. The book offers the ",
-      "author": "Eric Ries",
-      "url": "https://www.producthunt.com/posts/incorruptible-by-eric-ries",
-      "website": "https://www.producthunt.com/r/O2SPCGELEUD5BO?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+NewsFlux+%28ID%3A+281470%29",
-      "domain": "producthunt.com",
-      "logo": "https://ph-files.imgix.net/9790b427-614e-4725-9f35-d4668a614418.svg?auto=format",
+      "id": "hf-space-ideogram-ai-ideogram4",
+      "type": "space",
+      "source": "huggingface",
+      "title": "ideogram-ai/ideogram4",
+      "tagline": "gradio demo",
+      "author": "ideogram-ai",
+      "url": "https://huggingface.co/spaces/ideogram-ai/ideogram4",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
       "tags": [
-        "startup-books",
-        "startup-lessons",
-        "business-books"
+        "gradio",
+        "region:us"
       ],
       "stats": {
-        "votes": 174,
-        "comments": 28
+        "likes": 202
       },
       "is_trending": false,
-      "ai_relevant": false,
-      "ai_keywords": [],
-      "created_at": "2026-06-10T07:01:00",
-      "categories": [
-        "business",
-        "creative"
-      ]
+      "trending_rank": 37,
+      "created_at": "2026-06-02T13:23:11",
+      "updated_at": "2026-06-03T17:30:19",
+      "categories": []
+    },
+    {
+      "id": "hf-model-unsloth-kimi-k2-7-code-gguf",
+      "type": "model",
+      "source": "huggingface",
+      "title": "unsloth/Kimi-K2.7-Code-GGUF",
+      "tagline": "image-text-to-text",
+      "author": "unsloth",
+      "url": "https://huggingface.co/unsloth/Kimi-K2.7-Code-GGUF",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "gguf",
+        "kimi_k25",
+        "image-feature-extraction",
+        "compressed-tensors",
+        "unsloth",
+        "image-text-to-text",
+        "custom_code"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 153,
+        "downloads": 48642
+      },
+      "is_trending": false,
+      "trending_rank": 50,
+      "created_at": "2026-06-12T18:03:48",
+      "updated_at": "2026-06-19T10:51:39",
+      "categories": []
     },
     {
       "id": "ph-paste-mcp-ai-tools",
@@ -12955,29 +13197,6 @@
         "claude",
         "agents"
       ]
-    },
-    {
-      "id": "hf-space-ideogram-ai-ideogram4",
-      "type": "space",
-      "source": "huggingface",
-      "title": "ideogram-ai/ideogram4",
-      "tagline": "gradio demo",
-      "author": "ideogram-ai",
-      "url": "https://huggingface.co/spaces/ideogram-ai/ideogram4",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "gradio",
-        "region:us"
-      ],
-      "stats": {
-        "likes": 201
-      },
-      "is_trending": false,
-      "trending_rank": 13,
-      "created_at": "2026-06-02T13:23:11",
-      "updated_at": "2026-06-03T17:30:19",
-      "categories": []
     },
     {
       "id": "ph-notra-image-generation",
@@ -13144,32 +13363,6 @@
       ]
     },
     {
-      "id": "hf-space-onise-qwen-image-edit-2509-loras-fast2",
-      "type": "space",
-      "source": "huggingface",
-      "title": "Onise/Qwen-Image-Edit-2509-LoRAs-Fast2",
-      "tagline": "gradio demo",
-      "author": "Onise",
-      "url": "https://huggingface.co/spaces/Onise/Qwen-Image-Edit-2509-LoRAs-Fast2",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "gradio",
-        "mcp-server",
-        "region:us"
-      ],
-      "stats": {
-        "likes": 196
-      },
-      "is_trending": false,
-      "trending_rank": 35,
-      "created_at": "2026-04-30T19:11:32",
-      "updated_at": "2026-05-31T03:17:30",
-      "categories": [
-        "agents"
-      ]
-    },
-    {
       "id": "ph-hermes-desktop",
       "type": "product",
       "source": "producthunt",
@@ -13259,70 +13452,34 @@
       ]
     },
     {
-      "id": "ph-fabraix-2",
+      "id": "ph-grok-by-spacexai-for-word",
       "type": "product",
       "source": "producthunt",
-      "title": "Fabraix",
-      "tagline": "Find gaps in your AI agents before users do",
-      "description": "AI agents fail in ways traditional software doesn't. Our agents help you find all the ways in which your AI agents fail by adversarially testing them in a dedicated environment. Point it at any AI agent, or multi-agent system, and it launches 1,000+ strategies that adapt to your ",
-      "author": "[REDACTED]",
-      "url": "https://www.producthunt.com/posts/fabraix-2",
-      "website": "https://www.producthunt.com/r/343V4QSMXHGFIP?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+NewsFlux+%28ID%3A+281470%29",
+      "title": "Grok by SpaceXAI for Word",
+      "tagline": "Draft, restructure & tighten wording from panel inside Word",
+      "description": "Work with an AI Agent directly in your Word documents. The add-in enables a conversation-based agent sidebar that can search the web, update paragraphs, or build professional documents. Simply type what you want into the conversation pane and let the Agent handle research and exe",
+      "author": "",
+      "url": "https://www.producthunt.com/posts/grok-by-spacexai-for-word",
+      "website": "https://www.producthunt.com/r/UWES5GXBNLEAZI?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+NewsFlux+%28ID%3A+281470%29",
       "domain": "producthunt.com",
-      "logo": "https://ph-files.imgix.net/7db6ae83-50cf-4635-adee-236755a1014a.svg?auto=format",
+      "logo": "https://ph-files.imgix.net/b94eff0c-8fb6-4332-ab81-80c085972592.png?auto=format",
       "tags": [
-        "developer-tools",
-        "artificial-intelligence",
-        "yc-application"
+        "productivity",
+        "artificial-intelligence"
       ],
       "stats": {
-        "votes": 178,
-        "comments": 17
+        "votes": 185,
+        "comments": 10
       },
       "is_trending": false,
       "ai_relevant": true,
       "ai_keywords": [
         "ai",
         "ai agent",
-        "ai agents",
-        "artificial intelligence"
-      ],
-      "created_at": "2026-05-08T07:01:00",
-      "categories": [
-        "agents",
-        "coding"
-      ]
-    },
-    {
-      "id": "ph-adject-2-0-2",
-      "type": "product",
-      "source": "producthunt",
-      "title": "Adject 2.0",
-      "tagline": "Create hyperrealistic product visuals with AI",
-      "description": "Adject 2.0 is an agentic product studio where brands can create, edit, and iterate product visuals inside an infinite creative workflow. Instead of isolated generations, products, models, edits, videos, and assets stay connected inside projects and evolve continuously over time. ",
-      "author": "[REDACTED]",
-      "url": "https://www.producthunt.com/posts/adject-2-0-2",
-      "website": "https://www.producthunt.com/r/BPB5EVZOROWIVC?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+NewsFlux+%28ID%3A+281470%29",
-      "domain": "producthunt.com",
-      "logo": "https://ph-files.imgix.net/71bffed4-4e53-4c02-aff9-d9d5cf2fcd84.png?auto=format",
-      "tags": [
-        "design-tools",
-        "artificial-intelligence",
-        "e-commerce"
-      ],
-      "stats": {
-        "votes": 176,
-        "comments": 17
-      },
-      "is_trending": false,
-      "ai_relevant": true,
-      "ai_keywords": [
-        "agentic",
-        "ai",
         "artificial intelligence",
         "rag"
       ],
-      "created_at": "2026-05-10T07:01:00",
+      "created_at": "2026-06-21T07:01:00",
       "categories": [
         "agents",
         "tool-insights"
@@ -13387,67 +13544,6 @@
       "ai_relevant": false,
       "ai_keywords": [],
       "created_at": "2026-05-17T07:01:00",
-      "categories": []
-    },
-    {
-      "id": "ph-cakewordai",
-      "type": "product",
-      "source": "producthunt",
-      "title": "CakewordAI",
-      "tagline": "Point at anything to learn its name in any language",
-      "description": "Kids point the camera at anything \u2014 a cup, a teddy bear, a guitar \u2014 and Cakeword cuts it out into a sticker, says its name in the language they're learning, and adds it to their Word Dex. 100% on-device AI. No accounts, no ads, no data collection.",
-      "author": "Worathiti Pung",
-      "url": "https://www.producthunt.com/posts/cakewordai",
-      "website": "https://www.producthunt.com/r/UHT22SUFPDVBCG?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+NewsFlux+%28ID%3A+281470%29",
-      "domain": "producthunt.com",
-      "logo": "https://ph-files.imgix.net/6e09e6b7-29a4-4055-84ec-1629545276ad.png?auto=format",
-      "tags": [
-        "kids",
-        "artificial-intelligence",
-        "tech"
-      ],
-      "stats": {
-        "votes": 173,
-        "comments": 17
-      },
-      "is_trending": false,
-      "ai_relevant": true,
-      "ai_keywords": [
-        "ai",
-        "artificial intelligence"
-      ],
-      "created_at": "2026-06-13T07:01:00",
-      "categories": []
-    },
-    {
-      "id": "hf-model-unsloth-gemma-4-e4b-it-qat-gguf",
-      "type": "model",
-      "source": "huggingface",
-      "title": "unsloth/gemma-4-E4B-it-qat-GGUF",
-      "tagline": "any-to-any",
-      "author": "unsloth",
-      "url": "https://huggingface.co/unsloth/gemma-4-E4B-it-qat-GGUF",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "gguf",
-        "gemma4",
-        "image-text-to-text",
-        "unsloth",
-        "gemma",
-        "google",
-        "any-to-any"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 73,
-        "downloads": 116660
-      },
-      "is_trending": false,
-      "trending_rank": 99,
-      "created_at": "2026-06-05T10:35:41",
-      "updated_at": "2026-06-10T11:44:10",
       "categories": []
     },
     {
@@ -13603,37 +13699,6 @@
       "categories": []
     },
     {
-      "id": "ph-franz-6",
-      "type": "product",
-      "source": "producthunt",
-      "title": "Franz 6",
-      "tagline": "All your messaging apps in one window \u2014 with private AI",
-      "description": "WhatsApp, Slack, Signal, Telegram, Gmail, Outlook and 75+ services in one fast desktop app \u2014 no more juggling ten browser tabs. Franz 6 adds a built-in AI assistant that summarizes long chats, transcribes voice notes, triages your inbox and drafts replies \u2014 all on-device, so your",
-      "author": "Stefan Malzner",
-      "url": "https://www.producthunt.com/posts/franz-6",
-      "website": "https://www.producthunt.com/r/FS4OANAZV3TTIP?utm_campaign=producthunt-api&utm_medium=api-v2&utm_source=Application%3A+NewsFlux+%28ID%3A+281470%29",
-      "domain": "producthunt.com",
-      "logo": "https://ph-files.imgix.net/dd7991cd-c5a0-41f3-a31b-c2bb8d5eeba5.png?auto=format",
-      "tags": [
-        "email",
-        "productivity",
-        "messaging"
-      ],
-      "stats": {
-        "votes": 175,
-        "comments": 10
-      },
-      "is_trending": false,
-      "ai_relevant": true,
-      "ai_keywords": [
-        "ai"
-      ],
-      "created_at": "2026-06-03T07:01:00",
-      "categories": [
-        "tool-insights"
-      ]
-    },
-    {
       "id": "ph-android-17-18",
       "type": "product",
       "source": "producthunt",
@@ -13693,37 +13758,6 @@
       "trending_rank": 81,
       "created_at": "2026-05-11T14:56:58",
       "updated_at": "2026-05-26T09:05:54",
-      "categories": []
-    },
-    {
-      "id": "hf-model-unsloth-kimi-k2-7-code-gguf",
-      "type": "model",
-      "source": "huggingface",
-      "title": "unsloth/Kimi-K2.7-Code-GGUF",
-      "tagline": "image-text-to-text",
-      "author": "unsloth",
-      "url": "https://huggingface.co/unsloth/Kimi-K2.7-Code-GGUF",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "gguf",
-        "kimi_k25",
-        "image-feature-extraction",
-        "compressed-tensors",
-        "unsloth",
-        "image-text-to-text",
-        "custom_code"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 145,
-        "downloads": 37260
-      },
-      "is_trending": false,
-      "trending_rank": 22,
-      "created_at": "2026-06-12T18:03:48",
-      "updated_at": "2026-06-19T10:51:39",
       "categories": []
     },
     {
@@ -13970,6 +14004,37 @@
       "categories": []
     },
     {
+      "id": "hf-model-owensong-inflect-nano-v1",
+      "type": "model",
+      "source": "huggingface",
+      "title": "owensong/Inflect-Nano-v1",
+      "tagline": "text-to-speech",
+      "author": "owensong",
+      "url": "https://huggingface.co/owensong/Inflect-Nano-v1",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "pytorch",
+        "text-to-speech",
+        "tts",
+        "speech-synthesis",
+        "ultra-small",
+        "local-tts",
+        "efficient-inference",
+        "experimental"
+      ],
+      "library": "pytorch",
+      "stats": {
+        "likes": 168,
+        "downloads": 0
+      },
+      "is_trending": false,
+      "trending_rank": 13,
+      "created_at": "2026-06-16T19:31:16",
+      "updated_at": "2026-06-19T23:47:30",
+      "categories": []
+    },
+    {
       "id": "hf-space-huggingfacebio-carbon-demo",
       "type": "space",
       "source": "huggingface",
@@ -13990,6 +14055,37 @@
       "trending_rank": 94,
       "created_at": "2026-05-19T14:18:55",
       "updated_at": "2026-05-28T16:57:47",
+      "categories": []
+    },
+    {
+      "id": "hf-model-lordx64-qwable-v1",
+      "type": "model",
+      "source": "huggingface",
+      "title": "lordx64/Qwable-v1",
+      "tagline": "text-generation",
+      "author": "lordx64",
+      "url": "https://huggingface.co/lordx64/Qwable-v1",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "safetensors",
+        "qwen3_5_moe",
+        "image-text-to-text",
+        "qwen",
+        "qwen3",
+        "qwen3.6",
+        "moe"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 162,
+        "downloads": 3733
+      },
+      "is_trending": false,
+      "trending_rank": 15,
+      "created_at": "2026-06-14T22:42:57",
+      "updated_at": "2026-06-15T21:19:20",
       "categories": []
     },
     {
@@ -14113,38 +14209,66 @@
       "categories": []
     },
     {
-      "id": "hf-model-yuxinlu1-gemma-4-12b-agentic-fable5-composer2-5-v2-3-5x-tau2-gguf",
+      "id": "hf-model-bytkim-qwen3-6-27b-mtp-pi-tune-gguf",
       "type": "model",
       "source": "huggingface",
-      "title": "yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
+      "title": "bytkim/Qwen3.6-27B-MTP-pi-tune-GGUF",
       "tagline": "text-generation",
-      "author": "yuxinlu1",
-      "url": "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
+      "author": "bytkim",
+      "url": "https://huggingface.co/bytkim/Qwen3.6-27B-MTP-pi-tune-GGUF",
       "domain": "huggingface.co",
       "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
       "tags": [
         "gguf",
-        "gemma4",
-        "coding",
-        "agentic",
-        "terminal",
-        "tool-use",
-        "reasoning",
-        "thinking"
+        "llama.cpp",
+        "qwen",
+        "qwen3_6",
+        "mtp",
+        "multi-token-prediction",
+        "speculative-decoding",
+        "conversational"
       ],
       "library": "gguf",
       "stats": {
-        "likes": 152,
-        "downloads": 6307
+        "likes": 107,
+        "downloads": 52774
       },
       "is_trending": false,
-      "trending_rank": 13,
-      "created_at": "2026-06-19T00:06:07",
-      "updated_at": "2026-06-19T09:31:48",
-      "categories": [
-        "coding",
-        "agents"
-      ]
+      "trending_rank": 25,
+      "created_at": "2026-06-02T08:31:19",
+      "updated_at": "2026-06-15T07:15:56",
+      "categories": []
+    },
+    {
+      "id": "hf-model-unsloth-north-mini-code-1-0-gguf",
+      "type": "model",
+      "source": "huggingface",
+      "title": "unsloth/North-Mini-Code-1.0-GGUF",
+      "tagline": "",
+      "author": "unsloth",
+      "url": "https://huggingface.co/unsloth/North-Mini-Code-1.0-GGUF",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "gguf",
+        "conversational",
+        "unsloth",
+        "chat",
+        "code",
+        "agent",
+        "base_model:CohereLabs/North-Mini-Code-1.0"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 103,
+        "downloads": 53479
+      },
+      "is_trending": false,
+      "trending_rank": 80,
+      "created_at": "2026-06-10T02:42:59",
+      "updated_at": "2026-06-10T12:34:56",
+      "categories": []
     },
     {
       "id": "hf-model-huihui-ai-huihui-qwen3-6-35b-a3b-claude-4-7-opus-abliterated",
@@ -14180,6 +14304,32 @@
       ]
     },
     {
+      "id": "hf-space-kulkas2pintu-wan555",
+      "type": "space",
+      "source": "huggingface",
+      "title": "kulkas2pintu/wan555",
+      "tagline": "gradio demo",
+      "author": "kulkas2pintu",
+      "url": "https://huggingface.co/spaces/kulkas2pintu/wan555",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "gradio",
+        "mcp-server",
+        "region:us"
+      ],
+      "stats": {
+        "likes": 153
+      },
+      "is_trending": false,
+      "trending_rank": 12,
+      "created_at": "2026-05-17T06:59:17",
+      "updated_at": "2026-05-17T06:59:50",
+      "categories": [
+        "agents"
+      ]
+    },
+    {
       "id": "hf-model-jdopensource-joyai-echo",
       "type": "model",
       "source": "huggingface",
@@ -14208,6 +14358,70 @@
       "trending_rank": 90,
       "created_at": "2026-06-02T02:32:45",
       "updated_at": "2026-06-16T07:36:22",
+      "categories": []
+    },
+    {
+      "id": "hf-model-empero-ai-qwythos-9b-claude-mythos-5-1m-gguf",
+      "type": "model",
+      "source": "huggingface",
+      "title": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
+      "tagline": "text-generation",
+      "author": "empero-ai",
+      "url": "https://huggingface.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M-GGUF",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "gguf",
+        "llama.cpp",
+        "quantized",
+        "qwen3.5",
+        "reasoning",
+        "uncensored",
+        "long-context",
+        "1M-context"
+      ],
+      "library": "gguf",
+      "stats": {
+        "likes": 144,
+        "downloads": 6633
+      },
+      "is_trending": false,
+      "trending_rank": 16,
+      "created_at": "2026-06-19T14:32:14",
+      "updated_at": "2026-06-22T13:23:52",
+      "categories": [
+        "claude"
+      ]
+    },
+    {
+      "id": "hf-model-mia-ailab-qwable-3-6-27b",
+      "type": "model",
+      "source": "huggingface",
+      "title": "Mia-AiLab/Qwable-3.6-27b",
+      "tagline": "",
+      "author": "Mia-AiLab",
+      "url": "https://huggingface.co/Mia-AiLab/Qwable-3.6-27b",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "transformers",
+        "gguf",
+        "qwen",
+        "qwen3",
+        "qwen3.6",
+        "fable",
+        "fable5",
+        "reasoning"
+      ],
+      "library": "transformers",
+      "stats": {
+        "likes": 126,
+        "downloads": 23958
+      },
+      "is_trending": false,
+      "trending_rank": 20,
+      "created_at": "2026-06-15T14:32:38",
+      "updated_at": "2026-06-18T22:31:32",
       "categories": []
     },
     {
@@ -14296,6 +14510,29 @@
       "categories": []
     },
     {
+      "id": "hf-space-huuyfytryr-jigarrzz",
+      "type": "space",
+      "source": "huggingface",
+      "title": "huuyfytryr/Jigarrzz",
+      "tagline": "docker demo",
+      "author": "huuyfytryr",
+      "url": "https://huggingface.co/spaces/huuyfytryr/Jigarrzz",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "docker",
+        "region:us"
+      ],
+      "stats": {
+        "likes": 145
+      },
+      "is_trending": false,
+      "trending_rank": 9,
+      "created_at": "2026-06-15T15:46:23",
+      "updated_at": "2026-06-16T10:21:44",
+      "categories": []
+    },
+    {
       "id": "hf-model-nvidia-nemotron-labs-diffusion-14b",
       "type": "model",
       "source": "huggingface",
@@ -14358,65 +14595,34 @@
       "categories": []
     },
     {
-      "id": "hf-model-unsloth-north-mini-code-1-0-gguf",
+      "id": "hf-model-unsloth-minimax-m3-gguf",
       "type": "model",
       "source": "huggingface",
-      "title": "unsloth/North-Mini-Code-1.0-GGUF",
-      "tagline": "",
+      "title": "unsloth/MiniMax-M3-GGUF",
+      "tagline": "image-text-to-text",
       "author": "unsloth",
-      "url": "https://huggingface.co/unsloth/North-Mini-Code-1.0-GGUF",
+      "url": "https://huggingface.co/unsloth/MiniMax-M3-GGUF",
       "domain": "huggingface.co",
       "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
       "tags": [
         "transformers",
         "gguf",
-        "conversational",
-        "unsloth",
-        "chat",
-        "code",
+        "multimodal",
+        "moe",
         "agent",
-        "base_model:CohereLabs/North-Mini-Code-1.0"
+        "coding",
+        "video",
+        "minimax_m3_vl"
       ],
       "library": "transformers",
       "stats": {
-        "likes": 95,
-        "downloads": 44886
+        "likes": 113,
+        "downloads": 28881
       },
       "is_trending": false,
-      "trending_rank": 64,
-      "created_at": "2026-06-10T02:42:59",
-      "updated_at": "2026-06-10T12:34:56",
-      "categories": []
-    },
-    {
-      "id": "hf-model-lordx64-qwable-v1",
-      "type": "model",
-      "source": "huggingface",
-      "title": "lordx64/Qwable-v1",
-      "tagline": "text-generation",
-      "author": "lordx64",
-      "url": "https://huggingface.co/lordx64/Qwable-v1",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "safetensors",
-        "qwen3_5_moe",
-        "image-text-to-text",
-        "qwen",
-        "qwen3",
-        "qwen3.6",
-        "moe"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 137,
-        "downloads": 2769
-      },
-      "is_trending": false,
-      "trending_rank": 14,
-      "created_at": "2026-06-14T22:42:57",
-      "updated_at": "2026-06-15T21:19:20",
+      "trending_rank": 100,
+      "created_at": "2026-06-12T05:56:13",
+      "updated_at": "2026-06-15T01:57:42",
       "categories": []
     },
     {
@@ -14476,37 +14682,6 @@
       ]
     },
     {
-      "id": "hf-model-unsloth-minimax-m3-gguf",
-      "type": "model",
-      "source": "huggingface",
-      "title": "unsloth/MiniMax-M3-GGUF",
-      "tagline": "image-text-to-text",
-      "author": "unsloth",
-      "url": "https://huggingface.co/unsloth/MiniMax-M3-GGUF",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "gguf",
-        "multimodal",
-        "moe",
-        "agent",
-        "coding",
-        "video",
-        "minimax_m3_vl"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 110,
-        "downloads": 25835
-      },
-      "is_trending": false,
-      "trending_rank": 36,
-      "created_at": "2026-06-12T05:56:13",
-      "updated_at": "2026-06-15T01:57:42",
-      "categories": []
-    },
-    {
       "id": "hf-space-victor-ace-step-jam",
       "type": "space",
       "source": "huggingface",
@@ -14530,35 +14705,37 @@
       "categories": []
     },
     {
-      "id": "hf-model-owensong-inflect-nano-v1",
+      "id": "hf-model-empero-ai-qwythos-9b-claude-mythos-5-1m",
       "type": "model",
       "source": "huggingface",
-      "title": "owensong/Inflect-Nano-v1",
-      "tagline": "text-to-speech",
-      "author": "owensong",
-      "url": "https://huggingface.co/owensong/Inflect-Nano-v1",
+      "title": "empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
+      "tagline": "text-generation",
+      "author": "empero-ai",
+      "url": "https://huggingface.co/empero-ai/Qwythos-9B-Claude-Mythos-5-1M",
       "domain": "huggingface.co",
       "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
       "tags": [
-        "pytorch",
-        "text-to-speech",
-        "tts",
-        "speech-synthesis",
-        "ultra-small",
-        "local-tts",
-        "efficient-inference",
-        "experimental"
+        "transformers",
+        "safetensors",
+        "qwen3_5",
+        "image-text-to-text",
+        "qwen3.5",
+        "reasoning",
+        "uncensored",
+        "long-context"
       ],
-      "library": "pytorch",
+      "library": "transformers",
       "stats": {
-        "likes": 135,
-        "downloads": 0
+        "likes": 134,
+        "downloads": 842
       },
       "is_trending": false,
-      "trending_rank": 15,
-      "created_at": "2026-06-16T19:31:16",
-      "updated_at": "2026-06-19T23:47:30",
-      "categories": []
+      "trending_rank": 18,
+      "created_at": "2026-06-19T14:01:14",
+      "updated_at": "2026-06-19T15:10:49",
+      "categories": [
+        "claude"
+      ]
     },
     {
       "id": "hf-model-xiaomimimo-mimo-v2-5-pro-fp4-dflash",
@@ -14646,6 +14823,37 @@
       "categories": []
     },
     {
+      "id": "hf-space-build-small-hackathon-pitchfight-ai",
+      "type": "space",
+      "source": "huggingface",
+      "title": "build-small-hackathon/PITCHFIGHT_AI",
+      "tagline": "gradio demo",
+      "author": "build-small-hackathon",
+      "url": "https://huggingface.co/spaces/build-small-hackathon/PITCHFIGHT_AI",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "gradio",
+        "build-small-hackathon",
+        "backyard-ai",
+        "startup",
+        "pitch-practice",
+        "founder-tooling",
+        "voice-ai",
+        "nvidia"
+      ],
+      "stats": {
+        "likes": 131
+      },
+      "is_trending": false,
+      "trending_rank": 38,
+      "created_at": "2026-06-10T13:44:38",
+      "updated_at": "2026-06-15T15:29:14",
+      "categories": [
+        "business"
+      ]
+    },
+    {
       "id": "hf-model-scenemaai-scenema-audio",
       "type": "model",
       "source": "huggingface",
@@ -14698,32 +14906,6 @@
       "created_at": "2026-05-09T15:30:47",
       "updated_at": "2026-05-09T18:48:40",
       "categories": []
-    },
-    {
-      "id": "hf-space-kulkas2pintu-wan555",
-      "type": "space",
-      "source": "huggingface",
-      "title": "kulkas2pintu/wan555",
-      "tagline": "gradio demo",
-      "author": "kulkas2pintu",
-      "url": "https://huggingface.co/spaces/kulkas2pintu/wan555",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "gradio",
-        "mcp-server",
-        "region:us"
-      ],
-      "stats": {
-        "likes": 130
-      },
-      "is_trending": false,
-      "trending_rank": 8,
-      "created_at": "2026-05-17T06:59:17",
-      "updated_at": "2026-05-17T06:59:50",
-      "categories": [
-        "agents"
-      ]
     },
     {
       "id": "hf-model-jackxinning-leanly-ai",
@@ -14813,7 +14995,7 @@
         "downloads": 48012
       },
       "is_trending": false,
-      "trending_rank": 92,
+      "trending_rank": 99,
       "created_at": "2026-06-04T06:31:02",
       "updated_at": "2026-06-18T00:25:23",
       "categories": [
@@ -14822,34 +15004,34 @@
       ]
     },
     {
-      "id": "hf-model-mia-ailab-qwable-3-6-27b",
+      "id": "hf-model-datalab-to-lift",
       "type": "model",
       "source": "huggingface",
-      "title": "Mia-AiLab/Qwable-3.6-27b",
-      "tagline": "",
-      "author": "Mia-AiLab",
-      "url": "https://huggingface.co/Mia-AiLab/Qwable-3.6-27b",
+      "title": "datalab-to/lift",
+      "tagline": "image-text-to-text",
+      "author": "datalab-to",
+      "url": "https://huggingface.co/datalab-to/lift",
       "domain": "huggingface.co",
       "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
       "tags": [
         "transformers",
-        "gguf",
-        "qwen",
-        "qwen3",
-        "qwen3.6",
-        "fable",
-        "fable5",
-        "reasoning"
+        "safetensors",
+        "qwen3_5",
+        "image-text-to-text",
+        "pdf",
+        "extraction",
+        "structured-data",
+        "json"
       ],
       "library": "transformers",
       "stats": {
-        "likes": 110,
-        "downloads": 17311
+        "likes": 126,
+        "downloads": 1821
       },
       "is_trending": false,
-      "trending_rank": 20,
-      "created_at": "2026-06-15T14:32:38",
-      "updated_at": "2026-06-18T22:31:32",
+      "trending_rank": 19,
+      "created_at": "2026-06-19T12:20:44",
+      "updated_at": "2026-06-19T12:21:42",
       "categories": []
     },
     {
@@ -14884,37 +15066,6 @@
       "categories": []
     },
     {
-      "id": "hf-space-build-small-hackathon-pitchfight-ai",
-      "type": "space",
-      "source": "huggingface",
-      "title": "build-small-hackathon/PITCHFIGHT_AI",
-      "tagline": "gradio demo",
-      "author": "build-small-hackathon",
-      "url": "https://huggingface.co/spaces/build-small-hackathon/PITCHFIGHT_AI",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "gradio",
-        "build-small-hackathon",
-        "backyard-ai",
-        "startup",
-        "pitch-practice",
-        "founder-tooling",
-        "voice-ai",
-        "nvidia"
-      ],
-      "stats": {
-        "likes": 127
-      },
-      "is_trending": false,
-      "trending_rank": 14,
-      "created_at": "2026-06-10T13:44:38",
-      "updated_at": "2026-06-15T15:29:14",
-      "categories": [
-        "business"
-      ]
-    },
-    {
       "id": "hf-model-joyfox-ltx2-3-icedit-insight",
       "type": "model",
       "source": "huggingface",
@@ -14943,6 +15094,33 @@
       "trending_rank": 95,
       "created_at": "2026-04-23T10:09:22",
       "updated_at": "2026-05-10T14:23:59",
+      "categories": []
+    },
+    {
+      "id": "hf-model-zyphra-zonos2",
+      "type": "model",
+      "source": "huggingface",
+      "title": "Zyphra/ZONOS2",
+      "tagline": "text-to-speech",
+      "author": "Zyphra",
+      "url": "https://huggingface.co/Zyphra/ZONOS2",
+      "domain": "huggingface.co",
+      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
+      "tags": [
+        "ZONOS2",
+        "text-to-speech",
+        "license:apache-2.0",
+        "region:us"
+      ],
+      "library": "ZONOS2",
+      "stats": {
+        "likes": 123,
+        "downloads": 1102
+      },
+      "is_trending": false,
+      "trending_rank": 84,
+      "created_at": "2026-06-11T02:20:46",
+      "updated_at": "2026-06-22T20:24:27",
       "categories": []
     },
     {
@@ -15012,26 +15190,32 @@
       ]
     },
     {
-      "id": "hf-space-huuyfytryr-jigarrzz",
+      "id": "hf-space-build-small-hackathon-small-talk",
       "type": "space",
       "source": "huggingface",
-      "title": "huuyfytryr/Jigarrzz",
-      "tagline": "docker demo",
-      "author": "huuyfytryr",
-      "url": "https://huggingface.co/spaces/huuyfytryr/Jigarrzz",
+      "title": "build-small-hackathon/small-talk",
+      "tagline": "gradio demo",
+      "author": "build-small-hackathon",
+      "url": "https://huggingface.co/spaces/build-small-hackathon/small-talk",
       "domain": "huggingface.co",
       "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
       "tags": [
-        "docker",
-        "region:us"
+        "gradio",
+        "reachy_mini",
+        "livekit",
+        "webrtc",
+        "three.js",
+        "track:wood",
+        "sponsor:nvidia",
+        "sponsor:modal"
       ],
       "stats": {
-        "likes": 122
+        "likes": 120
       },
       "is_trending": false,
-      "trending_rank": 15,
-      "created_at": "2026-06-15T15:46:23",
-      "updated_at": "2026-06-16T10:21:44",
+      "trending_rank": 8,
+      "created_at": "2026-06-10T14:59:10",
+      "updated_at": "2026-06-15T17:09:19",
       "categories": []
     },
     {
@@ -15066,33 +15250,6 @@
       "categories": []
     },
     {
-      "id": "hf-model-zyphra-zonos2",
-      "type": "model",
-      "source": "huggingface",
-      "title": "Zyphra/ZONOS2",
-      "tagline": "text-to-speech",
-      "author": "Zyphra",
-      "url": "https://huggingface.co/Zyphra/ZONOS2",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "ZONOS2",
-        "text-to-speech",
-        "license:apache-2.0",
-        "region:us"
-      ],
-      "library": "ZONOS2",
-      "stats": {
-        "likes": 117,
-        "downloads": 763
-      },
-      "is_trending": false,
-      "trending_rank": 37,
-      "created_at": "2026-06-11T02:20:46",
-      "updated_at": "2026-06-13T01:05:00",
-      "categories": []
-    },
-    {
       "id": "hf-model-baidu-nava",
       "type": "model",
       "source": "huggingface",
@@ -15124,34 +15281,26 @@
       "categories": []
     },
     {
-      "id": "hf-model-bytkim-qwen3-6-27b-mtp-pi-tune-gguf",
-      "type": "model",
+      "id": "hf-space-webml-community-gemma-4-webgpu-kernels",
+      "type": "space",
       "source": "huggingface",
-      "title": "bytkim/Qwen3.6-27B-MTP-pi-tune-GGUF",
-      "tagline": "text-generation",
-      "author": "bytkim",
-      "url": "https://huggingface.co/bytkim/Qwen3.6-27B-MTP-pi-tune-GGUF",
+      "title": "webml-community/gemma-4-webgpu-kernels",
+      "tagline": "static demo",
+      "author": "webml-community",
+      "url": "https://huggingface.co/spaces/webml-community/gemma-4-webgpu-kernels",
       "domain": "huggingface.co",
       "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
       "tags": [
-        "gguf",
-        "llama.cpp",
-        "qwen",
-        "qwen3_6",
-        "mtp",
-        "multi-token-prediction",
-        "speculative-decoding",
-        "conversational"
+        "static",
+        "region:us"
       ],
-      "library": "gguf",
       "stats": {
-        "likes": 95,
-        "downloads": 20465
+        "likes": 115
       },
       "is_trending": false,
-      "trending_rank": 24,
-      "created_at": "2026-06-02T08:31:19",
-      "updated_at": "2026-06-15T07:15:56",
+      "trending_rank": 1,
+      "created_at": "2026-06-17T05:21:48",
+      "updated_at": "2026-06-17T22:28:48",
       "categories": []
     },
     {
@@ -15188,35 +15337,6 @@
       ]
     },
     {
-      "id": "hf-space-build-small-hackathon-small-talk",
-      "type": "space",
-      "source": "huggingface",
-      "title": "build-small-hackathon/small-talk",
-      "tagline": "gradio demo",
-      "author": "build-small-hackathon",
-      "url": "https://huggingface.co/spaces/build-small-hackathon/small-talk",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "gradio",
-        "reachy_mini",
-        "livekit",
-        "webrtc",
-        "three.js",
-        "track:wood",
-        "sponsor:nvidia",
-        "sponsor:modal"
-      ],
-      "stats": {
-        "likes": 114
-      },
-      "is_trending": false,
-      "trending_rank": 3,
-      "created_at": "2026-06-10T14:59:10",
-      "updated_at": "2026-06-15T17:09:19",
-      "categories": []
-    },
-    {
       "id": "hf-space-stabilityai-stable-audio-3",
       "type": "space",
       "source": "huggingface",
@@ -15238,93 +15358,6 @@
       "created_at": "2026-05-20T15:54:00",
       "updated_at": "2026-05-22T21:24:33",
       "categories": []
-    },
-    {
-      "id": "hf-model-kwai-keye-keye-vl-2-0-30b-a3b",
-      "type": "model",
-      "source": "huggingface",
-      "title": "Kwai-Keye/Keye-VL-2.0-30B-A3B",
-      "tagline": "image-text-to-text",
-      "author": "Kwai-Keye",
-      "url": "https://huggingface.co/Kwai-Keye/Keye-VL-2.0-30B-A3B",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "safetensors",
-        "KeyeVL2",
-        "feature-extraction",
-        "multimodal",
-        "image-text-to-text",
-        "conversational",
-        "custom_code"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 109,
-        "downloads": 2853
-      },
-      "is_trending": false,
-      "trending_rank": 63,
-      "created_at": "2026-05-25T15:32:15",
-      "updated_at": "2026-05-29T03:57:43",
-      "categories": []
-    },
-    {
-      "id": "hf-space-bytedance-research-lance",
-      "type": "space",
-      "source": "huggingface",
-      "title": "bytedance-research/Lance",
-      "tagline": "gradio demo",
-      "author": "bytedance-research",
-      "url": "https://huggingface.co/spaces/bytedance-research/Lance",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "gradio",
-        "region:us"
-      ],
-      "stats": {
-        "likes": 110
-      },
-      "is_trending": false,
-      "trending_rank": 77,
-      "created_at": "2026-05-22T05:42:54",
-      "updated_at": "2026-05-28T17:00:43",
-      "categories": []
-    },
-    {
-      "id": "hf-model-hidream-ai-hidream-o1-image-dev",
-      "type": "model",
-      "source": "huggingface",
-      "title": "HiDream-ai/HiDream-O1-Image-Dev",
-      "tagline": "image-text-to-image",
-      "author": "HiDream-ai",
-      "url": "https://huggingface.co/HiDream-ai/HiDream-O1-Image-Dev",
-      "domain": "huggingface.co",
-      "logo": "https://www.google.com/s2/favicons?domain=huggingface.co&sz=64",
-      "tags": [
-        "transformers",
-        "safetensors",
-        "qwen3_vl",
-        "image-text-to-text",
-        "image-text-to-image",
-        "arxiv:2605.11061",
-        "license:mit",
-        "endpoints_compatible"
-      ],
-      "library": "transformers",
-      "stats": {
-        "likes": 104,
-        "downloads": 5253
-      },
-      "is_trending": false,
-      "trending_rank": 82,
-      "created_at": "2026-05-08T13:09:29",
-      "updated_at": "2026-05-15T10:40:24",
-      "categories": [
-        "research"
-      ]
     }
   ]
 }
