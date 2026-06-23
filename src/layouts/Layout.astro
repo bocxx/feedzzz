@@ -109,6 +109,20 @@ const hreflangs = [
     )}
 
     <slot name="head" />
+
+    {/* Umami Analytics — vul data-website-id met het Website ID van deze site
+        (cloud.umami.is/settings/websites). Eén Umami-account/abonnement, per
+        site een eigen Website ID. Leeg laten = geen tracking. */}
+    <link rel="preconnect" href="https://cloud.umami.is" crossorigin />
+    <link rel="dns-prefetch" href="https://cloud.umami.is" />
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="fe29f592-51df-4ee7-959e-196f52eeb213" data-auto-track="false"></script>
+    <script is:inline>{`
+      (function(){
+        function t(){if(window.umami&&typeof window.umami.track==='function')window.umami.track();}
+        if(document.readyState!=='loading')t();else document.addEventListener('DOMContentLoaded',t);
+        document.addEventListener('astro:page-load',t);
+      })();
+    `}</script>
   </head>
   <body>
     <SiteHeader locale={locale} />
