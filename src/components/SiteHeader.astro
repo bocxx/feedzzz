@@ -37,6 +37,21 @@ const nav = [
   </div>
 </header>
 
+<script>
+  // Scroll-affordance: fade aan de rechterrand van de nav zolang er buiten
+  // beeld nog items staan (mobiel: 7 nav-items + taal + thema in één balk).
+  const nav = document.querySelector<HTMLElement>('.site-nav');
+  if (nav) {
+    const update = () => {
+      const more = nav.scrollWidth - nav.clientWidth - nav.scrollLeft > 4;
+      nav.classList.toggle('has-overflow', more);
+    };
+    nav.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
+    update();
+  }
+</script>
+
 <style>
   .lang-toggle {
     border: 1px solid var(--border-subtle);

@@ -98,6 +98,12 @@
     justify-content: flex-end;
   }
   .site-nav::-webkit-scrollbar { display: none; }
+  /* Affordance op mobiel: fade aan de rechterrand zolang er meer nav is om
+     naartoe te scrollen. JS (SiteHeader) toggelt .has-overflow. */
+  .site-nav.has-overflow {
+    -webkit-mask-image: linear-gradient(to right, black calc(100% - 32px), transparent);
+    mask-image: linear-gradient(to right, black calc(100% - 32px), transparent);
+  }
   .site-nav a {
     color: var(--text-secondary);
     font-size: var(--text-sm);
