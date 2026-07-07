@@ -59,6 +59,7 @@ export const messages = {
 
     about: {
       title: 'Over feedzz',
+      metaDescription: 'Wat feedzz is en hoe het werkt: een doorlopend ververste discovery-feed van AI-launches, modellen en repos uit HuggingFace, Product Hunt en GitHub — zonder tracking of cookies.',
       whatHeading: 'Wat zit erin',
       whatIntro: 'Een doorlopend bijgewerkte feed van AI launches uit drie bronnen:',
       sourceHF: 'nieuwe modellen en spaces (demo\'s), gesorteerd op trending score en likes',
@@ -136,6 +137,7 @@ export const messages = {
 
     about: {
       title: 'About feedzz',
+      metaDescription: 'What feedzz is and how it works: a continuously refreshed discovery feed of AI launches, models and repos from HuggingFace, Product Hunt and GitHub — no tracking, no cookies.',
       whatHeading: 'What\'s inside',
       whatIntro: 'A continuously updated feed of AI launches from three sources:',
       sourceHF: 'new models and spaces (demos), sorted by trending score and likes',

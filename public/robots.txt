@@ -1,4 +1,12 @@
+# robots.txt — feedzz.online
+# AI-crawlers welkom — feedzz aggregeert AI-launches.
+
 User-agent: *
 Allow: /
+# Content Signals (https://contentsignals.org/) — AI-inzet-voorkeuren.
+# ai-train: nee (geen trainingsdata zonder licentie)
+# search: ja (indexering welkom)
+# ai-input: ja (content als agent-context gebruiken mag)
+Content-Signal: ai-train=no, search=yes, ai-input=yes
 
 Sitemap: https://feedzz.online/sitemap-index.xml
