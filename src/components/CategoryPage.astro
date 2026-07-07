@@ -95,9 +95,17 @@ const jsonLd = {
       </p>
     </header>
 
-    <div class="feed-grid">
-      {items.map((it) => <FeedItemCard item={it} locale={locale} />)}
-    </div>
+    {items.length > 0 ? (
+      <div class="feed-grid">
+        {items.map((it) => <FeedItemCard item={it} locale={locale} />)}
+      </div>
+    ) : (
+      <p class="cathub-empty">
+        {locale === 'nl'
+          ? 'Op dit moment geen items in deze categorie — de feed ververst wekelijks, kom later terug of kies hieronder een ander onderwerp.'
+          : 'No items in this category right now — the feed refreshes weekly, check back later or pick another topic below.'}
+      </p>
+    )}
 
     <section class="cathub-more">
       <h2>{locale === 'nl' ? 'Meer onderwerpen' : 'More topics'}</h2>
@@ -156,6 +164,16 @@ const jsonLd = {
   .cathub-hero__meta {
     font-family: var(--font-mono); font-size: var(--text-sm);
     color: var(--text-muted); margin: 0;
+  }
+
+  .cathub-empty {
+    text-align: center;
+    padding: var(--space-12) var(--space-4);
+    color: var(--text-muted);
+    border: 1px dashed var(--border-subtle);
+    border-radius: var(--radius-lg);
+    max-width: 560px;
+    margin: 0 auto;
   }
 
   .cathub-more {
