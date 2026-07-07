@@ -208,6 +208,12 @@ export function getAlternateUrl(currentPath: string, currentLocale: Locale): str
     if (cleaned === aliases[currentLocale]) return aliases[target];
   }
 
+  // 1b) Categorie-hubs hebben per-locale slugs: /categorie/x ↔ /en/category/x
+  const catNl = cleaned.match(/^\/categorie\/([^/]+)$/);
+  if (catNl && target === 'en') return `/en/category/${catNl[1]}`;
+  const catEn = cleaned.match(/^\/en\/category\/([^/]+)$/);
+  if (catEn && target === 'nl') return `/categorie/${catEn[1]}`;
+
   // 2) Default: strip /en/ → re-prefix for target locale
   const noLocale = pathWithoutLocale(cleaned);
   return localizedHref(noLocale, target);

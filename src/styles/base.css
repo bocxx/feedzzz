@@ -285,6 +285,7 @@
     letter-spacing: var(--tracking-wider);
     white-space: nowrap;
     cursor: pointer;
+    text-decoration: none; /* cat-pills zijn ankers naar de categorie-hubs */
     transition: background var(--duration-fast), border-color var(--duration-fast), color var(--duration-fast);
   }
   .cat-pill svg { opacity: 0.7; flex-shrink: 0; }

@@ -1,0 +1,13 @@
+---
+import CategoryPage from '../../../components/CategoryPage.astro';
+import { CATEGORY_ORDER, type CategorySlug } from '../../../lib/categories';
+import type { Locale } from '../../../i18n/messages';
+
+export function getStaticPaths() {
+  return CATEGORY_ORDER.map((cat) => ({ params: { cat } }));
+}
+
+const { cat } = Astro.params;
+const locale = (Astro.currentLocale ?? 'en') as Locale;
+---
+<CategoryPage cat={cat as CategorySlug} locale={locale} />

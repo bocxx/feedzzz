@@ -4,6 +4,7 @@ import FeedItemCard from '../../components/molecules/FeedItemCard.astro';
 import LaunchHeatmap from '../../components/molecules/LaunchHeatmap.astro';
 import { siteConfig } from '../../config/site';
 import { getAllItems, getCounts, getGeneratedAt, sourceLabels, categoryLabel } from '../../lib/data';
+import { CATEGORY_ORDER, categoryHref } from '../../lib/categories';
 import { useTranslations, getDateLocale, type Locale } from '../../i18n/messages';
 import {
   Zap, TrendingUp, Sparkles, Code, Bot, BookOpen, Briefcase,
@@ -16,11 +17,6 @@ const CategoryIcon: Record<string, any> = {
   'creative': Palette, 'fundamentals': GraduationCap,
   'tool-insights': Wrench, 'official': ShieldCheck, 'branding': Megaphone,
 };
-
-const CATEGORY_ORDER = [
-  'claude', 'coding', 'agents', 'tool-insights', 'fundamentals',
-  'research', 'business', 'creative', 'beginners', 'branding', 'official',
-];
 
 const locale = (Astro.currentLocale ?? 'nl') as Locale;
 const t = useTranslations(locale);
@@ -87,11 +83,13 @@ const websiteJsonLd = {
           const Icon = CategoryIcon[c];
           const n = counts.byCategory[c];
           return (
-            <button class="cat-pill" data-cat={c} data-cat-filter={c} type="button">
+            /* Anker i.p.v. button: crawlbaar pad naar de statische categorie-hub;
+               JS onderschept de klik (preventDefault) en filtert zoals voorheen. */
+            <a class="cat-pill" data-cat={c} data-cat-filter={c} href={categoryHref(c, locale)}>
               {Icon && <Icon size={11} stroke-width={1.8} />}
               <span>{categoryLabel(c, locale)}</span>
               <span class="cat-pill__count">{n}</span>
-            </button>
+            </a>
           );
         })}
     </div>
@@ -195,7 +193,7 @@ const websiteJsonLd = {
   // Two-dimensional filtering: scope (all/trending/source) AND category.
   const grid = document.getElementById('feed-grid');
   const scopePills = document.querySelectorAll<HTMLButtonElement>('.filter-pill');
-  const catPills = document.querySelectorAll<HTMLButtonElement>('.cat-pill');
+  const catPills = document.querySelectorAll<HTMLElement>('.cat-pill');
 
   let activeScope = 'all';
   let activeCategory = 'all';
@@ -310,7 +308,10 @@ const websiteJsonLd = {
   });
 
   catPills.forEach((p) => {
-    p.addEventListener('click', () => {
+    p.addEventListener('click', (e) => {
+      // Categorie-pills zijn ankers naar de statische hubs (crawlbaar);
+      // met JS filteren we in-place, zonder JS navigeert de link gewoon.
+      e.preventDefault();
       catPills.forEach((x) => x.classList.remove('is-active'));
       p.classList.add('is-active');
       activeCategory = p.dataset.catFilter || 'all';

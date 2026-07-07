@@ -45,6 +45,8 @@ export default defineConfig({
           '/trending', '/ai-modellen', '/ai-repos', '/ai-launches',
           '/en/trending', '/en/ai-modellen', '/en/ai-repos', '/en/ai-launches',
         ]);
+        // Categorie-hubs (statisch, gecureerd, indexeerbaar) — zie src/lib/categories.ts
+        if (/^\/categorie\/[^/]+$/.test(path) || /^\/en\/category\/[^/]+$/.test(path)) return true;
         return HUBS.has(path);
       },
       // Alle opgenomen pagina's zijn data-gedreven en verversen met de export.
