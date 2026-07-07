@@ -132,7 +132,7 @@ const websiteJsonLd = {
       {serverItems.map((it) => <FeedItemCard item={it} locale={locale} />)}
     </div>
 
-    <script type="application/json" id="feed-rest" set:html={restJson} />
+    <script is:inline type="application/json" id="feed-rest" set:html={restJson} />
 
     <div class="load-more" id="load-more-wrap" hidden>
       <button class="load-more__btn" id="load-more" type="button">
