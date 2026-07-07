@@ -1,8 +1,17 @@
+import { readFileSync } from 'node:fs';
 import { defineConfig } from 'astro/config';
 import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
 
 const isDev = process.argv.includes('dev');
+
+// Export-datum van de data-pipeline → sitemap-lastmod. Alle hub-pagina's
+// verversen ter plekke bij elke data-export, dus dit is de eerlijke
+// hercrawl-hint voor Google (leert het wekelijkse ritme).
+const { generated_at: dataGeneratedAt } = JSON.parse(
+  readFileSync(new URL('./src/data/feedzzz_items.json', import.meta.url), 'utf8'),
+);
+const sitemapLastmod = new Date(dataGeneratedAt).toISOString();
 
 export default defineConfig({
   site: 'https://feedzz.online',
@@ -38,6 +47,8 @@ export default defineConfig({
         ]);
         return HUBS.has(path);
       },
+      // Alle opgenomen pagina's zijn data-gedreven en verversen met de export.
+      serialize: (item) => ({ ...item, lastmod: sitemapLastmod }),
       i18n: {
         defaultLocale: 'nl',
         locales: { nl: 'nl-NL', en: 'en-US' },

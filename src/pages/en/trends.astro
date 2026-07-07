@@ -10,6 +10,7 @@
  * sits on the curve. Pure SVG, no client libs.
  */
 import Layout from '../../layouts/Layout.astro';
+import { siteConfig } from '../../config/site';
 import { useTranslations, localizedHref, type Locale } from '../../i18n/messages';
 import { Activity, ArrowLeft } from '@lucide/astro';
 import hypeData from '../../data/feedzzz_hype.json';
@@ -99,11 +100,32 @@ const heading = locale === 'nl' ? 'AI Hype-cycle' : 'AI hype cycle';
 const sub = locale === 'nl'
   ? `${items.length} keywords gepositioneerd op basis van groei, piek-afstand en huidige activiteit.`
   : `${items.length} keywords positioned by growth, distance from peak, and current activity.`;
+
+// Dataset-schema: dit is de meest linkbare pagina van de site — wekelijks
+// ververste hype-ratio's per AI-keyword, afgeleid uit de NewsFlux-pipeline.
+const datasetJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: locale === 'nl' ? 'AI Hype-cycle — keyword-posities' : 'AI hype cycle — keyword positions',
+  description: locale === 'nl'
+    ? `Wekelijks ververste dataset die ${items.length} AI-keywords op een Gartner-achtige hype-curve plaatst, op basis van vermeldingsvolume, groei en afstand tot de piek.`
+    : `Weekly refreshed dataset placing ${items.length} AI keywords on a Gartner-style hype curve, based on mention volume, growth and distance from peak.`,
+  url: `${siteConfig.url}${localizedHref('/trends', locale)}/`,
+  inLanguage: locale,
+  dateModified: (hypeData as any).generated_at,
+  creator: { '@type': 'Organization', name: t.siteName, url: siteConfig.url },
+  keywords: items.map((i) => i.keyword),
+  variableMeasured: ['phase', 'total', 'current', 'growth_pct', 'pct_of_peak'],
+  isPartOf: { '@type': 'WebSite', name: t.siteName, url: siteConfig.url },
+};
 ---
 
 <Layout
   title={`${heading} · ${t.siteName}`}
   description={sub}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(datasetJsonLd)} />
+  </Fragment>
   <main class="container container-wide" style="padding-block: var(--space-8);">
     <a href={localizedHref('/', locale)} class="detail__back" style="margin-bottom: var(--space-4);">
       <ArrowLeft size={14} stroke-width={2} /> {locale === 'nl' ? 'Terug naar feed' : 'Back to feed'}
