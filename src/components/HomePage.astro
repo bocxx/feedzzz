@@ -1,0 +1,530 @@
+---
+/**
+ * HomePage — gedeeld template voor / (NL) en /en/ (EN).
+ *
+ * DOM-reductie (audit juli 2026): van de ~500 items worden alleen de eerste
+ * INITIAL_CARDS server-side als kaart gerenderd (~80% minder DOM-nodes).
+ * De rest zit als compacte JSON in <script id="feed-rest"> en wordt pas
+ * client-side tot kaart gebouwd zodra een filter of "Meer laden" hem
+ * zichtbaar maakt. Filteren (bron × categorie × heatmap-datum) blijft over
+ * de VOLLEDIGE dataset werken: het datamodel in JS combineert de
+ * server-kaarten met de JSON-items.
+ */
+import FeedItemCard from './molecules/FeedItemCard.astro';
+import LaunchHeatmap from './molecules/LaunchHeatmap.astro';
+import Layout from '../layouts/Layout.astro';
+import { siteConfig } from '../config/site';
+import { getAllItems, getCounts, getGeneratedAt, sourceLabels, categoryLabel } from '../lib/data';
+import { CATEGORY_ORDER, categoryHref } from '../lib/categories';
+import { useTranslations, getDateLocale, type Locale } from '../i18n/messages';
+import {
+  Zap, TrendingUp, Sparkles, Code, Bot, BookOpen, Briefcase,
+  Microscope, Palette, GraduationCap, Wrench, ShieldCheck, Megaphone, Layers,
+} from '@lucide/astro';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+
+const CategoryIcon: Record<string, any> = {
+  'claude': Sparkles, 'coding': Code, 'agents': Bot,
+  'beginners': BookOpen, 'business': Briefcase, 'research': Microscope,
+  'creative': Palette, 'fundamentals': GraduationCap,
+  'tool-insights': Wrench, 'official': ShieldCheck, 'branding': Megaphone,
+};
+
+const t = useTranslations(locale);
+
+const items = getAllItems();
+const counts = getCounts();
+const generatedAt = getGeneratedAt();
+
+// Eerste ~100 kaarten server-side; de rest als JSON voor client-side opbouw.
+const INITIAL_CARDS = 100;
+const serverItems = items.slice(0, INITIAL_CARDS);
+const restItems = items.slice(INITIAL_CARDS).map((it) => ({
+  id: it.id,
+  type: it.type,
+  source: it.source,
+  title: it.title,
+  tagline: it.tagline ?? '',
+  author: it.author ?? '',
+  logo: it.logo ?? null,
+  tags: (it.tags ?? []).slice(0, 4),
+  categories: it.categories ?? [],
+  stats: it.stats ?? {},
+  is_trending: !!it.is_trending,
+  created_at: it.created_at ?? null,
+}));
+// <-escape voorkomt dat een titel met "</script>" de JSON-tag afbreekt.
+const restJson = JSON.stringify(restItems).replace(/</g, '\\u003c');
+
+const updated = new Date(generatedAt).toLocaleDateString(getDateLocale(locale), {
+  day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit',
+});
+
+const websiteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: t.siteName,
+  url: siteConfig.url,
+  description: t.siteDescription,
+  inLanguage: locale,
+};
+---
+
+<Layout title={`${t.siteName} — ${counts.total}+ ${locale === 'nl' ? 'AI launches in real-time' : 'AI launches in real time'}`}
+        description={t.siteDescription}>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)} />
+  </Fragment>
+
+  <main class="container container-wide">
+    <section class="hero">
+      <div class="hero__meta">
+        <span class="badge badge--primary"><Zap size={11} stroke-width={2} /> {t.hero.live}</span>
+        <span>{t.hero.updated} {updated}</span>
+      </div>
+      <h1 class="hero__title">
+        <span class="hero__gradient">{t.hero.titleA}</span>
+        <br />{t.hero.titleB}
+      </h1>
+      <p class="hero__sub">{t.hero.sub(counts.total, counts.trending)}</p>
+    </section>
+
+    <LaunchHeatmap items={items} locale={locale} />
+
+    <div class="filter-stack">
+    <div class="filter-bar" data-dim="scope">
+      <button class="filter-pill is-active" data-filter="all" aria-pressed="true">{t.filters.all} · {counts.total}</button>
+      <button class="filter-pill" data-filter="trending" aria-pressed="false">
+        <TrendingUp size={11} stroke-width={2} style="vertical-align: -2px; margin-right: 3px;" />
+        {t.filters.trending} · {counts.trending}
+      </button>
+      {Object.entries(counts.bySource).map(([s, n]) => (
+        <button class="filter-pill" data-filter={s} aria-pressed="false">{sourceLabels[s] ?? s} · {n}</button>
+      ))}
+    </div>
+
+    <div class="cat-bar" data-dim="category" aria-label={t.filters.categoryHeading}>
+      <button class="cat-pill is-active" data-cat-filter="all" type="button" aria-pressed="true">
+        <Layers size={11} stroke-width={2} />
+        {t.filters.categoryAll}
+      </button>
+      {CATEGORY_ORDER
+        .filter((c) => (counts.byCategory?.[c] ?? 0) > 0)
+        .map((c) => {
+          const Icon = CategoryIcon[c];
+          const n = counts.byCategory[c];
+          return (
+            /* Anker i.p.v. button: crawlbaar pad naar de statische categorie-hub;
+               JS onderschept de klik (preventDefault) en filtert zoals voorheen. */
+            <a class="cat-pill" data-cat={c} data-cat-filter={c} href={categoryHref(c, locale)}>
+              {Icon && <Icon size={11} stroke-width={1.8} />}
+              <span>{categoryLabel(c, locale)}</span>
+              <span class="cat-pill__count">{n}</span>
+            </a>
+          );
+        })}
+    </div>
+    </div>
+
+    <div class="feed-grid" id="feed-grid" data-locale={locale}>
+      {serverItems.map((it) => <FeedItemCard item={it} locale={locale} />)}
+    </div>
+
+    <script type="application/json" id="feed-rest" set:html={restJson} />
+
+    <div class="load-more" id="load-more-wrap" hidden>
+      <button class="load-more__btn" id="load-more" type="button">
+        {locale === 'nl' ? 'Meer laden' : 'Load more'}
+      </button>
+      <p class="load-more__count" id="load-more-count"></p>
+    </div>
+
+    <div class="empty-state" id="empty-state" hidden>
+      <h3>{t.filters.emptyTitle}</h3>
+      <p>{t.filters.emptyBody}</p>
+      <button class="clear-btn" id="clear-filters" type="button">{t.filters.clearAll}</button>
+    </div>
+  </main>
+</Layout>
+
+<style is:global>
+  /* Render-perf: laat de browser off-screen kaarten overslaan. De intrinsieke
+     hoogte voorkomt scroll-sprongen. is:global zodat de regel ook geldt voor
+     kaarten die client-side uit #feed-rest worden gebouwd (die krijgen geen
+     Astro-scope-attribuut). */
+  .feed-grid > .feed-card {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 220px;
+  }
+</style>
+
+<style>
+  /* Laad-meer */
+  .load-more {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    margin: var(--space-8) 0 var(--space-4);
+  }
+  .load-more__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    background: color-mix(in oklch, var(--primary-bright) 12%, transparent);
+    color: var(--primary-bright);
+    border: 1px solid var(--border-accent);
+    padding: var(--space-3) var(--space-6);
+    border-radius: var(--radius-full);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: background var(--duration-fast), transform var(--duration-fast), box-shadow var(--duration-fast);
+  }
+  .load-more__btn:hover {
+    background: var(--primary-bright);
+    color: var(--text-inverse);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+  .load-more__btn:active { transform: translateY(0); }
+  .load-more__count {
+    margin: 0;
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+  }
+
+  .empty-state {
+    text-align: center;
+    padding: var(--space-12) var(--space-4);
+    color: var(--text-muted);
+    border: 1px dashed var(--border-subtle);
+    border-radius: var(--radius-lg);
+    margin-top: var(--space-4);
+  }
+  .empty-state h3 {
+    color: var(--text-secondary);
+    font-size: var(--text-xl);
+    margin: 0 0 var(--space-2);
+  }
+  .empty-state p {
+    max-width: 420px;
+    margin: 0 auto var(--space-4);
+    font-size: var(--text-sm);
+  }
+  .clear-btn {
+    background: var(--primary-bright);
+    color: var(--text-inverse);
+    border: none;
+    padding: var(--space-2) var(--space-4);
+    border-radius: var(--radius-md);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-sm);
+    cursor: pointer;
+    transition: filter var(--duration-fast);
+  }
+  .clear-btn:hover { filter: brightness(1.15); }
+</style>
+
+<script>
+  // Two-dimensional filtering: scope (all/trending/source) AND category.
+  // Datamodel = server-side kaarten (eerste ~100) + JSON-items (#feed-rest)
+  // die lazy tot kaart worden gebouwd. Filters werken over de hele set.
+  interface RestItem {
+    id: string; type: string; source: string; title: string; tagline: string;
+    author: string; logo: string | null; tags: string[]; categories: string[];
+    stats: Record<string, number>; is_trending: boolean; created_at: string | null;
+  }
+  interface Entry {
+    el: HTMLElement | null;
+    source: string; cats: string[]; created: string; trending: boolean;
+    data?: RestItem;
+  }
+
+  const grid = document.getElementById('feed-grid');
+  const scopePills = document.querySelectorAll<HTMLButtonElement>('.filter-pill');
+  const catPills = document.querySelectorAll<HTMLElement>('.cat-pill');
+
+  let activeScope = 'all';
+  let activeCategory = 'all';
+  let activeDate: string | null = null;
+
+  // Laad-meer: filteren bepaalt de match-set, deze limiet bepaalt hoeveel
+  // ervan zichtbaar zijn. Reset naar PAGE_SIZE bij elke filterwijziging.
+  const PAGE_SIZE = 48;
+  let shownCount = PAGE_SIZE;
+
+  const emptyState = document.getElementById('empty-state') as HTMLElement;
+  const clearBtn = document.getElementById('clear-filters') as HTMLButtonElement;
+  const loadMoreWrap = document.getElementById('load-more-wrap') as HTMLElement;
+  const loadMoreBtn = document.getElementById('load-more') as HTMLButtonElement;
+  const loadMoreCount = document.getElementById('load-more-count') as HTMLElement;
+  const FEED_LOCALE = grid?.dataset.locale === 'en' ? 'en' : 'nl';
+
+  // ---- Datamodel opbouwen -------------------------------------------------
+  const entries: Entry[] = Array.from(
+    grid?.querySelectorAll<HTMLAnchorElement>('.feed-card') ?? [],
+  ).map((el) => ({
+    el,
+    source: el.dataset.source ?? '',
+    cats: (el.dataset.cats ?? '').split(' ').filter(Boolean),
+    created: el.dataset.created ?? '',
+    trending: !!el.querySelector('.badge--trending'),
+  }));
+
+  try {
+    const restRaw = document.getElementById('feed-rest')?.textContent || '[]';
+    for (const d of JSON.parse(restRaw) as RestItem[]) {
+      entries.push({
+        el: null,
+        source: d.source,
+        cats: d.categories,
+        created: d.created_at ?? '',
+        trending: d.is_trending,
+        data: d,
+      });
+    }
+  } catch { /* corrupte JSON → alleen server-kaarten, site blijft werken */ }
+
+  // ---- Client-side kaartbouw (spiegel van FeedItemCard.astro) -------------
+  const SOURCE_LABELS: Record<string, string> = {
+    huggingface: 'HuggingFace', github: 'GitHub', producthunt: 'Product Hunt',
+  };
+  const TYPE_LABELS: Record<string, string> = {
+    model: 'Model', space: 'Space', repo: 'Repo', product: 'Product',
+  };
+  const TIME_UNITS = FEED_LOCALE === 'nl'
+    ? { m: 'm geleden', h: 'u geleden', d: 'd geleden', mo: 'mnd geleden' }
+    : { m: 'm ago', h: 'h ago', d: 'd ago', mo: 'mo ago' };
+
+  function esc(s: unknown): string {
+    return String(s ?? '').replace(/[&<>"']/g, (ch) => (
+      { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' } as Record<string, string>
+    )[ch]);
+  }
+  function fmtNum(n?: number): string {
+    if (n == null || isNaN(n)) return '0';
+    if (n >= 1_000_000) return `${(n / 1_000_000).toFixed(1)}M`;
+    if (n >= 1_000) return `${(n / 1_000).toFixed(1)}K`;
+    return String(n);
+  }
+  function relTime(iso: string | null): string {
+    if (!iso) return '';
+    const ts = new Date(iso).getTime();
+    if (!ts) return '';
+    const m = Math.floor((Date.now() - ts) / 60000);
+    if (m < 60) return `${m}${TIME_UNITS.m}`;
+    const h = Math.floor(m / 60);
+    if (h < 24) return `${h}${TIME_UNITS.h}`;
+    const d = Math.floor(h / 24);
+    if (d < 30) return `${d}${TIME_UNITS.d}`;
+    return `${Math.floor(d / 30)}${TIME_UNITS.mo}`;
+  }
+  const ICON_PATHS: Record<string, string> = {
+    flame: '<path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>',
+    heart: '<path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>',
+    download: '<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>',
+    star: '<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>',
+    arrowup: '<path d="m18 9-6-6-6 6"/><path d="M12 3v14"/><path d="M5 21h14"/>',
+    message: '<path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>',
+  };
+  function icon(name: string, sw = 1.8): string {
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${sw}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON_PATHS[name] ?? ''}</svg>`;
+  }
+  function statsFor(d: RestItem): Array<{ icon: string; value?: number }> {
+    if (d.source === 'huggingface' && d.type === 'model') {
+      return [{ icon: 'heart', value: d.stats?.likes }, { icon: 'download', value: d.stats?.downloads }];
+    }
+    if (d.source === 'huggingface' && d.type === 'space') {
+      return [{ icon: 'heart', value: d.stats?.likes }];
+    }
+    if (d.source === 'github') {
+      return [{ icon: 'star', value: d.stats?.stars }, { icon: 'arrowup', value: d.stats?.stars_today }];
+    }
+    if (d.source === 'producthunt') {
+      return [{ icon: 'arrowup', value: d.stats?.votes }, { icon: 'message', value: d.stats?.comments }];
+    }
+    return [];
+  }
+  function buildCard(d: RestItem): HTMLElement {
+    const a = document.createElement('a');
+    a.href = FEED_LOCALE === 'nl' ? `/${d.id}` : `/en/${d.id}`;
+    a.className = 'feed-card';
+    a.dataset.source = d.source;
+    a.dataset.type = d.type;
+    a.dataset.cats = (d.categories ?? []).join(' ');
+    a.dataset.created = d.created_at ?? '';
+    const stats = statsFor(d)
+      .map((s) => `<span class="feed-card__stat">${icon(s.icon)}${fmtNum(s.value)}</span>`)
+      .join('');
+    a.innerHTML = `
+      <header class="feed-card__head">
+        <div class="feed-card__source">
+          <span class="source-dot"></span>
+          <span>${esc(SOURCE_LABELS[d.source] ?? d.source)}</span>
+          <span class="text-muted">· ${esc(TYPE_LABELS[d.type] ?? d.type)}</span>
+        </div>
+        ${d.is_trending ? `<span class="badge badge--trending">${icon('flame', 2)} Trending</span>` : ''}
+        ${d.logo ? `<img src="${esc(d.logo)}" alt="" class="feed-card__logo" width="28" height="28" loading="lazy">` : ''}
+      </header>
+      <h3 class="feed-card__title">${esc(d.title)}</h3>
+      ${d.tagline ? `<p class="feed-card__tagline">${esc(d.tagline)}</p>` : ''}
+      ${d.author ? `<span class="feed-card__author">@${esc(d.author)}</span>` : ''}
+      ${d.tags && d.tags.length ? `<div class="feed-card__tags">${d.tags.map((tg) => `<span class="badge badge--neutral">${esc(tg)}</span>`).join('')}</div>` : ''}
+      <footer class="feed-card__footer">
+        <div class="feed-card__stats">${stats}</div>
+        ${d.created_at ? `<span class="text-muted mono" style="font-size: var(--text-xs);">${relTime(d.created_at)}</span>` : ''}
+      </footer>`;
+    return a;
+  }
+  /** Bouw de kaart voor entry `idx` en hang hem op de juiste plek in de grid. */
+  function materialize(idx: number) {
+    const en = entries[idx];
+    if (en.el || !en.data || !grid) return;
+    const el = buildCard(en.data);
+    let next: HTMLElement | null = null;
+    for (let j = idx + 1; j < entries.length; j++) {
+      const cand = entries[j].el;
+      if (cand) { next = cand; break; }
+    }
+    grid.insertBefore(el, next);
+    en.el = el;
+  }
+
+  // ---- Filteren -----------------------------------------------------------
+  function applyFilters() {
+    let matched = 0;
+    let visible = 0;
+    entries.forEach((en, idx) => {
+      let scopeMatch = true;
+      if (activeScope === 'trending') scopeMatch = en.trending;
+      else if (activeScope !== 'all') scopeMatch = en.source === activeScope;
+
+      const catMatch = activeCategory === 'all' || en.cats.includes(activeCategory);
+      const dateMatch = !activeDate || en.created.slice(0, 10) === activeDate;
+
+      if (!(scopeMatch && catMatch && dateMatch)) {
+        if (en.el) en.el.style.display = 'none';
+        return;
+      }
+      matched++;
+      // Toon alleen de eerste `shownCount` matches; de rest wacht op "Meer laden".
+      if (matched <= shownCount) {
+        if (!en.el) materialize(idx);
+        if (en.el) { en.el.style.display = ''; visible++; }
+      } else if (en.el) {
+        en.el.style.display = 'none';
+      }
+    });
+
+    // Show empty-state when filters yield 0 cards AND at least one filter is active
+    const anyActive = activeScope !== 'all' || activeCategory !== 'all' || activeDate !== null;
+    if (matched === 0 && anyActive) {
+      emptyState.hidden = false;
+      if (grid) grid.style.display = 'none';
+      loadMoreWrap.hidden = true;
+      return;
+    }
+    emptyState.hidden = true;
+    if (grid) grid.style.display = '';
+
+    // Laad-meer knop + teller ("X van Y getoond")
+    if (matched > shownCount) {
+      loadMoreWrap.hidden = false;
+      loadMoreCount.textContent = FEED_LOCALE === 'nl'
+        ? `${visible} van ${matched} getoond`
+        : `Showing ${visible} of ${matched}`;
+    } else {
+      loadMoreWrap.hidden = true;
+    }
+  }
+
+  // Filterwijziging → terug naar de eerste pagina.
+  function filterChanged() {
+    shownCount = PAGE_SIZE;
+    applyFilters();
+  }
+
+  loadMoreBtn?.addEventListener('click', () => {
+    shownCount += PAGE_SIZE;
+    applyFilters();
+  });
+
+  // Toegankelijkheid: pill-status ook programmatisch communiceren.
+  // Cat-pills zijn ankers; met JS actief gedragen ze zich als toggle-knop.
+  function setActive(pills: NodeListOf<HTMLElement> | NodeListOf<HTMLButtonElement>, isActive: (p: HTMLElement) => boolean) {
+    pills.forEach((p) => {
+      const act = isActive(p);
+      p.classList.toggle('is-active', act);
+      p.setAttribute('aria-pressed', String(act));
+    });
+  }
+  catPills.forEach((p) => { if (p.tagName === 'A') p.setAttribute('role', 'button'); });
+  setActive(scopePills, (p) => p.dataset.filter === activeScope);
+  setActive(catPills, (p) => p.dataset.catFilter === activeCategory);
+
+  function clearAllFilters() {
+    activeScope = 'all';
+    activeCategory = 'all';
+    activeDate = null;
+    setActive(scopePills, (p) => p.dataset.filter === 'all');
+    setActive(catPills, (p) => p.dataset.catFilter === 'all');
+    document.querySelectorAll('.heatmap-cell--selected').forEach((x) => x.classList.remove('heatmap-cell--selected'));
+    // Clean URL too
+    history.replaceState({}, '', location.pathname);
+    filterChanged();
+  }
+  clearBtn?.addEventListener('click', clearAllFilters);
+
+  // Heatmap day → filter feed to that date
+  document.addEventListener('heatmap-day-select', (e: Event) => {
+    const detail = (e as CustomEvent).detail;
+    activeDate = activeDate === detail.date ? null : detail.date;
+    // Visual: pulse the active day cell
+    document.querySelectorAll('.heatmap-cell--selected').forEach((x) => x.classList.remove('heatmap-cell--selected'));
+    if (activeDate) {
+      document.querySelector(`.heatmap-cell[data-date="${activeDate}"]`)?.classList.add('heatmap-cell--selected');
+    }
+    filterChanged();
+    // Scroll to grid
+    grid?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+
+  scopePills.forEach((p) => {
+    p.addEventListener('click', () => {
+      activeScope = p.dataset.filter || 'all';
+      setActive(scopePills, (x) => x === p);
+      filterChanged();
+    });
+  });
+
+  catPills.forEach((p) => {
+    p.addEventListener('click', (e) => {
+      // Categorie-pills zijn ankers naar de statische hubs (crawlbaar);
+      // met JS filteren we in-place, zonder JS navigeert de link gewoon.
+      e.preventDefault();
+      activeCategory = p.dataset.catFilter || 'all';
+      setActive(catPills, (x) => x === p);
+      filterChanged();
+    });
+  });
+
+  // URL params: ?source=... or ?filter=trending (scope), ?cat=... (category)
+  const params = new URLSearchParams(location.search);
+  const scopeParam = params.get('filter') || params.get('source');
+  if (scopeParam) {
+    const pill = document.querySelector<HTMLButtonElement>(`.filter-pill[data-filter="${scopeParam}"]`);
+    pill?.click();
+  }
+  const catParam = params.get('cat') || params.get('category');
+  if (catParam) {
+    const pill = document.querySelector<HTMLElement>(`.cat-pill[data-cat-filter="${catParam}"]`);
+    pill?.click();
+  }
+
+  // Pas de initiële pagina-limiet toe (ook als er geen URL-filter is).
+  applyFilters();
+</script>
