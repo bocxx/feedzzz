@@ -1,506 +1,506 @@
 {
-  "generated_at": "2026-08-09T04:50:01.527612",
+  "generated_at": "2026-08-16T04:50:01.276691",
   "count": 50,
   "items": [
     {
       "keyword": "claude",
       "phase": "plateau",
-      "total": 26221,
+      "total": 25806,
       "peak": 701,
-      "current": 533,
-      "growth_pct": -8.2,
-      "days_since_peak": 35,
-      "pct_of_peak": 0.76
+      "current": 551,
+      "growth_pct": -3.4,
+      "days_since_peak": 42,
+      "pct_of_peak": 0.79
     },
     {
       "keyword": "rag",
-      "phase": "peak",
-      "total": 20094,
+      "phase": "plateau",
+      "total": 19648,
       "peak": 687,
-      "current": 652,
-      "growth_pct": 27.6,
-      "days_since_peak": 2,
-      "pct_of_peak": 0.95
+      "current": 291,
+      "growth_pct": -25.3,
+      "days_since_peak": 9,
+      "pct_of_peak": 0.42
+    },
+    {
+      "keyword": "large language model",
+      "phase": "plateau",
+      "total": 16833,
+      "peak": 771,
+      "current": 408,
+      "growth_pct": -17.5,
+      "days_since_peak": 8,
+      "pct_of_peak": 0.53
     },
     {
       "keyword": "openai",
       "phase": "plateau",
-      "total": 16651,
+      "total": 16165,
       "peak": 641,
-      "current": 365,
-      "growth_pct": -17.3,
-      "days_since_peak": 13,
-      "pct_of_peak": 0.57
-    },
-    {
-      "keyword": "large language model",
-      "phase": "peak",
-      "total": 16250,
-      "peak": 771,
-      "current": 741,
-      "growth_pct": 47.2,
-      "days_since_peak": 1,
-      "pct_of_peak": 0.96
+      "current": 243,
+      "growth_pct": -19.6,
+      "days_since_peak": 20,
+      "pct_of_peak": 0.38
     },
     {
       "keyword": "ai agent",
-      "phase": "peak",
-      "total": 10374,
+      "phase": "plateau",
+      "total": 10192,
       "peak": 305,
-      "current": 267,
-      "growth_pct": 9.8,
-      "days_since_peak": 14,
-      "pct_of_peak": 0.88
+      "current": 222,
+      "growth_pct": -9.7,
+      "days_since_peak": 21,
+      "pct_of_peak": 0.73
     },
     {
       "keyword": "anthropic",
       "phase": "plateau",
-      "total": 9802,
+      "total": 9377,
       "peak": 276,
-      "current": 182,
-      "growth_pct": -5.9,
-      "days_since_peak": 6,
-      "pct_of_peak": 0.66
+      "current": 207,
+      "growth_pct": -12.8,
+      "days_since_peak": 13,
+      "pct_of_peak": 0.75
     },
     {
       "keyword": "chatgpt",
       "phase": "plateau",
-      "total": 9538,
+      "total": 9290,
       "peak": 290,
-      "current": 204,
-      "growth_pct": -10.7,
-      "days_since_peak": 14,
-      "pct_of_peak": 0.7
-    },
-    {
-      "keyword": "agi",
-      "phase": "peak",
-      "total": 8823,
-      "peak": 242,
-      "current": 229,
-      "growth_pct": 5.0,
-      "days_since_peak": 37,
-      "pct_of_peak": 0.94
+      "current": 161,
+      "growth_pct": -16.4,
+      "days_since_peak": 21,
+      "pct_of_peak": 0.56
     },
     {
       "keyword": "ai agents",
-      "phase": "peak",
-      "total": 8502,
+      "phase": "plateau",
+      "total": 8489,
       "peak": 244,
-      "current": 221,
-      "growth_pct": 7.9,
-      "days_since_peak": 14,
-      "pct_of_peak": 0.91
+      "current": 183,
+      "growth_pct": -4.4,
+      "days_since_peak": 21,
+      "pct_of_peak": 0.75
+    },
+    {
+      "keyword": "agi",
+      "phase": "plateau",
+      "total": 8476,
+      "peak": 242,
+      "current": 112,
+      "growth_pct": -23.6,
+      "days_since_peak": 44,
+      "pct_of_peak": 0.46
     },
     {
       "keyword": "gemini",
       "phase": "plateau",
-      "total": 7158,
+      "total": 7275,
       "peak": 223,
-      "current": 186,
-      "growth_pct": -9.1,
-      "days_since_peak": 15,
-      "pct_of_peak": 0.83
+      "current": 165,
+      "growth_pct": -1.0,
+      "days_since_peak": 22,
+      "pct_of_peak": 0.74
     },
     {
       "keyword": "agentic",
-      "phase": "peak",
-      "total": 6635,
+      "phase": "plateau",
+      "total": 6785,
       "peak": 272,
-      "current": 256,
-      "growth_pct": 43.4,
-      "days_since_peak": 1,
-      "pct_of_peak": 0.94
+      "current": 128,
+      "growth_pct": -13.9,
+      "days_since_peak": 8,
+      "pct_of_peak": 0.47
     },
     {
       "keyword": "multimodal",
-      "phase": "peak",
-      "total": 5403,
+      "phase": "plateau",
+      "total": 5651,
       "peak": 264,
-      "current": 258,
-      "growth_pct": 46.1,
-      "days_since_peak": 1,
-      "pct_of_peak": 0.98
+      "current": 134,
+      "growth_pct": -11.4,
+      "days_since_peak": 8,
+      "pct_of_peak": 0.51
     },
     {
       "keyword": "reinforcement learning",
-      "phase": "peak",
-      "total": 4858,
+      "phase": "plateau",
+      "total": 4958,
       "peak": 237,
-      "current": 224,
-      "growth_pct": 84.2,
-      "days_since_peak": 2,
-      "pct_of_peak": 0.94
+      "current": 110,
+      "growth_pct": -24.2,
+      "days_since_peak": 9,
+      "pct_of_peak": 0.47
     },
     {
       "keyword": "github",
       "phase": "plateau",
-      "total": 4791,
+      "total": 4731,
       "peak": 143,
-      "current": 107,
-      "growth_pct": -21.8,
-      "days_since_peak": 14,
-      "pct_of_peak": 0.75
+      "current": 99,
+      "growth_pct": 11.2,
+      "days_since_peak": 21,
+      "pct_of_peak": 0.69
     },
     {
       "keyword": "mcp",
-      "phase": "peak",
-      "total": 4356,
+      "phase": "plateau",
+      "total": 4324,
       "peak": 132,
-      "current": 129,
-      "growth_pct": 24.6,
-      "days_since_peak": 2,
-      "pct_of_peak": 0.97
+      "current": 97,
+      "growth_pct": 8.1,
+      "days_since_peak": 9,
+      "pct_of_peak": 0.73
     },
     {
       "keyword": "lora",
-      "phase": "peak",
-      "total": 4218,
+      "phase": "plateau",
+      "total": 4299,
       "peak": 162,
-      "current": 159,
-      "growth_pct": 50.8,
-      "days_since_peak": 2,
-      "pct_of_peak": 0.98
-    },
-    {
-      "keyword": "fine-tuning",
-      "phase": "peak",
-      "total": 4186,
-      "peak": 194,
-      "current": 186,
-      "growth_pct": 62.6,
-      "days_since_peak": 1,
-      "pct_of_peak": 0.96
+      "current": 91,
+      "growth_pct": -8.6,
+      "days_since_peak": 9,
+      "pct_of_peak": 0.56
     },
     {
       "keyword": "qwen",
-      "phase": "peak",
-      "total": 4077,
+      "phase": "plateau",
+      "total": 4111,
       "peak": 135,
-      "current": 127,
-      "growth_pct": 25.5,
-      "days_since_peak": 1,
-      "pct_of_peak": 0.94
+      "current": 98,
+      "growth_pct": -10.4,
+      "days_since_peak": 8,
+      "pct_of_peak": 0.73
+    },
+    {
+      "keyword": "fine-tuning",
+      "phase": "plateau",
+      "total": 4082,
+      "peak": 194,
+      "current": 83,
+      "growth_pct": -25.1,
+      "days_since_peak": 8,
+      "pct_of_peak": 0.43
     },
     {
       "keyword": "grok",
-      "phase": "plateau",
-      "total": 3518,
+      "phase": "recovery",
+      "total": 3540,
       "peak": 143,
-      "current": 53,
-      "growth_pct": -35.4,
-      "days_since_peak": 23,
-      "pct_of_peak": 0.37
-    },
-    {
-      "keyword": "nvidia",
-      "phase": "plateau",
-      "total": 3320,
-      "peak": 138,
-      "current": 45,
-      "growth_pct": -57.0,
-      "days_since_peak": 12,
-      "pct_of_peak": 0.33
+      "current": 78,
+      "growth_pct": 16.1,
+      "days_since_peak": 30,
+      "pct_of_peak": 0.55
     },
     {
       "keyword": "deepseek",
+      "phase": "peak",
+      "total": 3403,
+      "peak": 125,
+      "current": 108,
+      "growth_pct": 2.3,
+      "days_since_peak": 2,
+      "pct_of_peak": 0.87
+    },
+    {
+      "keyword": "nvidia",
       "phase": "climbing",
-      "total": 3185,
-      "peak": 120,
-      "current": 98,
-      "growth_pct": 63.9,
-      "days_since_peak": 5,
-      "pct_of_peak": 0.82
+      "total": 3251,
+      "peak": 138,
+      "current": 66,
+      "growth_pct": 35.1,
+      "days_since_peak": 19,
+      "pct_of_peak": 0.48
     },
     {
       "keyword": "cursor",
-      "phase": "recovery",
-      "total": 2549,
+      "phase": "plateau",
+      "total": 2358,
       "peak": 86,
-      "current": 58,
-      "growth_pct": 16.1,
-      "days_since_peak": 37,
-      "pct_of_peak": 0.67
-    },
-    {
-      "keyword": "gpt-5",
-      "phase": "plateau",
-      "total": 2440,
-      "peak": 74,
-      "current": 58,
-      "growth_pct": -1.8,
-      "days_since_peak": 29,
-      "pct_of_peak": 0.78
-    },
-    {
-      "keyword": "together",
-      "phase": "plateau",
-      "total": 2370,
-      "peak": 88,
-      "current": 46,
-      "growth_pct": 4.7,
-      "days_since_peak": 29,
-      "pct_of_peak": 0.52
-    },
-    {
-      "keyword": "rl",
-      "phase": "peak",
-      "total": 2346,
-      "peak": 111,
-      "current": 105,
-      "growth_pct": 83.5,
-      "days_since_peak": 1,
-      "pct_of_peak": 0.94
+      "current": 42,
+      "growth_pct": -29.4,
+      "days_since_peak": 44,
+      "pct_of_peak": 0.49
     },
     {
       "keyword": "data center",
       "phase": "plateau",
-      "total": 2316,
+      "total": 2339,
       "peak": 79,
-      "current": 61,
-      "growth_pct": -21.5,
-      "days_since_peak": 12,
-      "pct_of_peak": 0.77
+      "current": 30,
+      "growth_pct": -7.9,
+      "days_since_peak": 19,
+      "pct_of_peak": 0.38
+    },
+    {
+      "keyword": "rl",
+      "phase": "plateau",
+      "total": 2303,
+      "peak": 111,
+      "current": 46,
+      "growth_pct": -24.9,
+      "days_since_peak": 8,
+      "pct_of_peak": 0.41
+    },
+    {
+      "keyword": "together",
+      "phase": "plateau",
+      "total": 2253,
+      "peak": 88,
+      "current": 29,
+      "growth_pct": -21.2,
+      "days_since_peak": 36,
+      "pct_of_peak": 0.33
+    },
+    {
+      "keyword": "gpt-5",
+      "phase": "plateau",
+      "total": 2252,
+      "peak": 74,
+      "current": 30,
+      "growth_pct": -41.1,
+      "days_since_peak": 36,
+      "pct_of_peak": 0.4
     },
     {
       "keyword": "llama",
-      "phase": "peak",
-      "total": 2022,
+      "phase": "plateau",
+      "total": 1952,
       "peak": 68,
-      "current": 65,
-      "growth_pct": 5.1,
-      "days_since_peak": 0,
-      "pct_of_peak": 0.95
+      "current": 32,
+      "growth_pct": -22.4,
+      "days_since_peak": 7,
+      "pct_of_peak": 0.48
     },
     {
       "keyword": "copilot",
       "phase": "plateau",
-      "total": 1999,
+      "total": 1876,
       "peak": 70,
-      "current": 45,
-      "growth_pct": -0.4,
-      "days_since_peak": 36,
-      "pct_of_peak": 0.64
+      "current": 30,
+      "growth_pct": -6.8,
+      "days_since_peak": 43,
+      "pct_of_peak": 0.43
     },
     {
       "keyword": "simulation",
-      "phase": "peak",
-      "total": 1799,
-      "peak": 78,
-      "current": 72,
-      "growth_pct": -0.3,
-      "days_since_peak": 1,
-      "pct_of_peak": 0.92
-    },
-    {
-      "keyword": "claude code",
-      "phase": "trough",
-      "total": 1657,
-      "peak": 65,
-      "current": 1,
-      "growth_pct": -61.6,
-      "days_since_peak": 31,
-      "pct_of_peak": 0.02
-    },
-    {
-      "keyword": "moe",
-      "phase": "climbing",
-      "total": 1601,
-      "peak": 59,
-      "current": 49,
-      "growth_pct": 35.9,
-      "days_since_peak": 29,
-      "pct_of_peak": 0.84
+      "phase": "plateau",
+      "total": 1868,
+      "peak": 82,
+      "current": 26,
+      "growth_pct": -11.0,
+      "days_since_peak": 5,
+      "pct_of_peak": 0.32
     },
     {
       "keyword": "distillation",
-      "phase": "peak",
-      "total": 1592,
+      "phase": "plateau",
+      "total": 1640,
       "peak": 68,
-      "current": 65,
-      "growth_pct": 80.2,
-      "days_since_peak": 1,
-      "pct_of_peak": 0.96
+      "current": 33,
+      "growth_pct": -11.3,
+      "days_since_peak": 8,
+      "pct_of_peak": 0.49
     },
     {
-      "keyword": "ai coding",
+      "keyword": "claude code",
+      "phase": "climbing",
+      "total": 1608,
+      "peak": 65,
+      "current": 31,
+      "growth_pct": 54.1,
+      "days_since_peak": 38,
+      "pct_of_peak": 0.48
+    },
+    {
+      "keyword": "moe",
       "phase": "plateau",
-      "total": 1434,
-      "peak": 58,
-      "current": 38,
-      "growth_pct": 9.4,
-      "days_since_peak": 34,
-      "pct_of_peak": 0.66
+      "total": 1547,
+      "peak": 59,
+      "current": 26,
+      "growth_pct": -38.6,
+      "days_since_peak": 36,
+      "pct_of_peak": 0.44
+    },
+    {
+      "keyword": "vlm",
+      "phase": "plateau",
+      "total": 1437,
+      "peak": 71,
+      "current": 24,
+      "growth_pct": -19.4,
+      "days_since_peak": 7,
+      "pct_of_peak": 0.34
     },
     {
       "keyword": "youtube",
       "phase": "plateau",
-      "total": 1405,
+      "total": 1392,
       "peak": 42,
-      "current": 30,
-      "growth_pct": -4.2,
-      "days_since_peak": 3,
-      "pct_of_peak": 0.71
-    },
-    {
-      "keyword": "vlm",
-      "phase": "peak",
-      "total": 1400,
-      "peak": 71,
-      "current": 64,
-      "growth_pct": 73.8,
-      "days_since_peak": 0,
-      "pct_of_peak": 0.9
-    },
-    {
-      "keyword": "gemma",
-      "phase": "trough",
-      "total": 1338,
-      "peak": 59,
-      "current": 13,
-      "growth_pct": -61.6,
-      "days_since_peak": 44,
-      "pct_of_peak": 0.21
+      "current": 28,
+      "growth_pct": 9.9,
+      "days_since_peak": 10,
+      "pct_of_peak": 0.67
     },
     {
       "keyword": "foundation model",
-      "phase": "peak",
-      "total": 1322,
-      "peak": 51,
-      "current": 49,
-      "growth_pct": 51.6,
-      "days_since_peak": 0,
-      "pct_of_peak": 0.97
+      "phase": "plateau",
+      "total": 1386,
+      "peak": 58,
+      "current": 17,
+      "growth_pct": -28.3,
+      "days_since_peak": 5,
+      "pct_of_peak": 0.29
+    },
+    {
+      "keyword": "ai coding",
+      "phase": "recovery",
+      "total": 1368,
+      "peak": 58,
+      "current": 23,
+      "growth_pct": 4.0,
+      "days_since_peak": 41,
+      "pct_of_peak": 0.4
     },
     {
       "keyword": "data centers",
       "phase": "plateau",
-      "total": 1317,
+      "total": 1329,
       "peak": 48,
-      "current": 30,
-      "growth_pct": -8.0,
-      "days_since_peak": 15,
-      "pct_of_peak": 0.63
+      "current": 20,
+      "growth_pct": -15.5,
+      "days_since_peak": 22,
+      "pct_of_peak": 0.42
+    },
+    {
+      "keyword": "cohere",
+      "phase": "trough",
+      "total": 1301,
+      "peak": 89,
+      "current": 18,
+      "growth_pct": -29.8,
+      "days_since_peak": 8,
+      "pct_of_peak": 0.2
+    },
+    {
+      "keyword": "xai",
+      "phase": "recovery",
+      "total": 1279,
+      "peak": 72,
+      "current": 32,
+      "growth_pct": 23.3,
+      "days_since_peak": 30,
+      "pct_of_peak": 0.44
     },
     {
       "keyword": "hallucination",
       "phase": "plateau",
-      "total": 1301,
+      "total": 1267,
       "peak": 51,
-      "current": 49,
-      "growth_pct": -7.8,
-      "days_since_peak": 0,
-      "pct_of_peak": 0.96
-    },
-    {
-      "keyword": "xai",
-      "phase": "trough",
-      "total": 1248,
-      "peak": 72,
-      "current": 16,
-      "growth_pct": -47.6,
-      "days_since_peak": 23,
-      "pct_of_peak": 0.23
-    },
-    {
-      "keyword": "cohere",
-      "phase": "peak",
-      "total": 1233,
-      "peak": 89,
-      "current": 84,
-      "growth_pct": 269.7,
-      "days_since_peak": 1,
-      "pct_of_peak": 0.95
-    },
-    {
-      "keyword": "cot",
-      "phase": "peak",
-      "total": 1205,
-      "peak": 55,
-      "current": 50,
-      "growth_pct": 63.7,
-      "days_since_peak": 2,
-      "pct_of_peak": 0.91
-    },
-    {
-      "keyword": "vibe coding",
-      "phase": "plateau",
-      "total": 1171,
-      "peak": 44,
-      "current": 29,
-      "growth_pct": 1.9,
-      "days_since_peak": 38,
-      "pct_of_peak": 0.66
+      "current": 20,
+      "growth_pct": -18.0,
+      "days_since_peak": 7,
+      "pct_of_peak": 0.39
     },
     {
       "keyword": "hugging face",
       "phase": "trough",
-      "total": 1138,
+      "total": 1184,
       "peak": 104,
-      "current": 24,
-      "growth_pct": -55.9,
-      "days_since_peak": 13,
-      "pct_of_peak": 0.23
+      "current": 6,
+      "growth_pct": -45.6,
+      "days_since_peak": 20,
+      "pct_of_peak": 0.06
+    },
+    {
+      "keyword": "cot",
+      "phase": "trough",
+      "total": 1144,
+      "peak": 55,
+      "current": 16,
+      "growth_pct": -45.5,
+      "days_since_peak": 9,
+      "pct_of_peak": 0.28
+    },
+    {
+      "keyword": "vibe coding",
+      "phase": "plateau",
+      "total": 1119,
+      "peak": 44,
+      "current": 21,
+      "growth_pct": -10.0,
+      "days_since_peak": 43,
+      "pct_of_peak": 0.48
+    },
+    {
+      "keyword": "gemma",
+      "phase": "plateau",
+      "total": 1081,
+      "peak": 48,
+      "current": 12,
+      "growth_pct": 14.8,
+      "days_since_peak": 44,
+      "pct_of_peak": 0.25
     },
     {
       "keyword": "claude opus",
       "phase": "trough",
-      "total": 1086,
+      "total": 1040,
       "peak": 49,
-      "current": 13,
-      "growth_pct": -51.5,
-      "days_since_peak": 11,
-      "pct_of_peak": 0.27
+      "current": 9,
+      "growth_pct": -59.2,
+      "days_since_peak": 18,
+      "pct_of_peak": 0.18
     },
     {
       "keyword": "perplexity",
-      "phase": "plateau",
-      "total": 1075,
+      "phase": "trough",
+      "total": 1022,
       "peak": 46,
-      "current": 20,
-      "growth_pct": -42.1,
-      "days_since_peak": 10,
-      "pct_of_peak": 0.43
-    },
-    {
-      "keyword": "jan",
-      "phase": "recovery",
-      "total": 1051,
-      "peak": 37,
-      "current": 14,
-      "growth_pct": 3.3,
-      "days_since_peak": 40,
-      "pct_of_peak": 0.38
+      "current": 11,
+      "growth_pct": -35.7,
+      "days_since_peak": 17,
+      "pct_of_peak": 0.24
     },
     {
       "keyword": "tiktok",
       "phase": "plateau",
-      "total": 1010,
+      "total": 963,
       "peak": 32,
-      "current": 25,
-      "growth_pct": 10.2,
-      "days_since_peak": 3,
-      "pct_of_peak": 0.78
+      "current": 21,
+      "growth_pct": -22.0,
+      "days_since_peak": 10,
+      "pct_of_peak": 0.66
     },
     {
       "keyword": "kimi",
       "phase": "trough",
-      "total": 983,
+      "total": 963,
       "peak": 132,
       "current": 2,
-      "growth_pct": -68.7,
-      "days_since_peak": 17,
-      "pct_of_peak": 0.02
+      "growth_pct": -86.4,
+      "days_since_peak": 24,
+      "pct_of_peak": 0.01
     },
     {
-      "keyword": "ml",
+      "keyword": "mcp server",
       "phase": "plateau",
-      "total": 915,
-      "peak": 36,
-      "current": 13,
-      "growth_pct": 0.0,
-      "days_since_peak": 30,
-      "pct_of_peak": 0.36
+      "total": 916,
+      "peak": 39,
+      "current": 21,
+      "growth_pct": 11.3,
+      "days_since_peak": 21,
+      "pct_of_peak": 0.55
+    },
+    {
+      "keyword": "jan",
+      "phase": "plateau",
+      "total": 899,
+      "peak": 35,
+      "current": 11,
+      "growth_pct": -37.6,
+      "days_since_peak": 33,
+      "pct_of_peak": 0.32
     }
   ]
 }
