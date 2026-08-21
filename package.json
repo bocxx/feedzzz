@@ -7,8 +7,9 @@
     "dev": "astro dev",
     "build": "node scripts/generate-og.mjs && astro build",
     "preview": "astro preview",
-    "deploy": "npm run build && wrangler deploy",
-    "sync-data": "tsx scripts/sync-data.ts"
+    "deploy": "npm run build && npm run audit:html && wrangler deploy",
+    "sync-data": "tsx scripts/sync-data.ts",
+    "audit:html": "node scripts/check-html-complete.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
