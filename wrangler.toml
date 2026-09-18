@@ -2,7 +2,9 @@ name = "feedzzz"
 compatibility_date = "2026-05-01"
 compatibility_flags = ["nodejs_compat"]
 workers_dev = true
-preview_urls = true
+# Geen versie-preview-URL's: elke deploy maakte anders een publieke
+# <versie>-<naam>.twilight-tooth-0aba.workers.dev, ook met workers_dev = false.
+preview_urls = false
 
 # Custom domains are bound via the Cloudflare dashboard
 # (Worker → Settings → Domains & Routes → Add Custom Domain),
