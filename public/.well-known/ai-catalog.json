@@ -1,0 +1,41 @@
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": "feedzz.online",
+    "identifier": "did:web:feedzz.online",
+    "description": "Doorlopende feed van nieuwe AI-modellen, launches en repositories"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:feedzz.online:docs:llms-txt",
+      "displayName": "feedzz.online llms.txt",
+      "type": "text/plain",
+      "url": "https://feedzz.online/llms.txt",
+      "representativeQueries": [
+        "nieuwe AI-modellen deze week",
+        "trending AI-repositories op GitHub",
+        "recente AI-launches op Product Hunt"
+      ]
+    },
+    {
+      "identifier": "urn:air:feedzz.online:feed:rss",
+      "displayName": "feedzz.online RSS-feed",
+      "type": "application/rss+xml",
+      "url": "https://feedzz.online/rss.xml",
+      "representativeQueries": [
+        "nieuwste items op feedzz.online",
+        "volg feedzz.online via RSS"
+      ]
+    },
+    {
+      "identifier": "urn:air:feedzz.online:index:sitemap",
+      "displayName": "feedzz.online sitemap",
+      "type": "application/xml",
+      "url": "https://feedzz.online/sitemap-index.xml",
+      "representativeQueries": [
+        "alle pagina's van feedzz.online",
+        "overzicht van feedzz.online"
+      ]
+    }
+  ]
+}

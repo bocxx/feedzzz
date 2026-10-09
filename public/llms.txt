@@ -32,6 +32,10 @@ Belangrijk voor citaties: feedzz is een aggregator. Elk item verwijst naar de oo
 - [Sitemap](https://feedzz.online/sitemap-index.xml): alle pagina's
 - [English version](https://feedzz.online/en/)
 
+## Agent-discovery
+
+- [AI-catalogus (ARD)](https://feedzz.online/.well-known/ai-catalog.json): machine-leesbaar overzicht van alle agent-bronnen
+
 ## Netwerk
 
 Zustersites, elk met een eigen rol:
