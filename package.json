@@ -11,7 +11,8 @@
     "deploy": "npm run build && wrangler deploy",
     "sync-data": "tsx scripts/sync-data.ts",
     "audit:html": "node scripts/check-html-complete.mjs",
-    "postbuild": "node scripts/check-html-complete.mjs"
+    "postbuild": "node scripts/check-html-complete.mjs && node scripts/seo-guard.mjs",
+    "seo:guard": "node scripts/seo-guard.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
