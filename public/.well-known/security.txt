@@ -1,4 +1,4 @@
-Contact: mailto:security@feedzz.online
+Contact: mailto:hallo@hetlaatsteainieuws.nl
 Expires: 2027-05-19T23:59:59.000Z
 Preferred-Languages: nl, en
 Canonical: https://feedzz.online/.well-known/security.txt
