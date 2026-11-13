@@ -1,0 +1,10 @@
+# robots.txt, feedzz.online
+# Sinds 13 november 2026 is feedzz.online opgegaan in ai/blik: elke pagina stuurt
+# met een 301 door naar https://www.aiblik.nl. Crawlers zijn welkom, zodat ze
+# die doorverwijzingen zien. De sitemap hieronder is de laatste van de oude site.
+
+User-agent: *
+Allow: /
+Content-Signal: ai-train=no, search=yes, ai-input=yes
+
+Sitemap: https://feedzz.online/sitemap-index.xml

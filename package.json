@@ -8,11 +8,13 @@
     "build": "npm run verify:links && node scripts/generate-og.mjs && astro build",
     "verify:links": "node scripts/verify-links.mjs",
     "preview": "astro preview",
-    "deploy": "npm run build && wrangler deploy",
+    "deploy": "npm run test:redirects && wrangler deploy",
     "sync-data": "tsx scripts/sync-data.ts",
     "audit:html": "node scripts/check-html-complete.mjs",
     "postbuild": "node scripts/check-html-complete.mjs && node scripts/seo-guard.mjs",
-    "seo:guard": "node scripts/seo-guard.mjs"
+    "seo:guard": "node scripts/seo-guard.mjs",
+    "test:redirects": "node --experimental-strip-types scripts/test-redirects.mjs",
+    "test:live": "node --experimental-strip-types scripts/test-redirects.mjs --live"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",

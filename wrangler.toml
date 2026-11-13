@@ -1,18 +1,24 @@
 name = "feedzzz"
 compatibility_date = "2026-05-01"
-compatibility_flags = ["nodejs_compat"]
-workers_dev = true
-# Geen versie-preview-URL's: elke deploy maakte anders een publieke
-# <versie>-<naam>.twilight-tooth-0aba.workers.dev, ook met workers_dev = false.
+# Geen workers.dev-tweeling en geen versie-preview-URLs: alleen het eigen domein.
+workers_dev = false
 preview_urls = false
 
-# Custom domains are bound via the Cloudflare dashboard
-# (Worker → Settings → Domains & Routes → Add Custom Domain),
-# not declared here — avoids "Can't infer zone" errors during deploy.
+# De domeinen feedzz.online en www.feedzz.online hangen aan deze Worker via het dashboard
+# (Worker, Settings, Domains & Routes), niet hier. Zo blijft een deploy zonder
+# "Can't infer zone"-fout.
 
+# Sinds 13 november 2026 serveert deze Worker geen site meer: src/worker.ts
+# stuurt elk verzoek met een 301 door naar www.aiblik.nl (besluit Cirsten,
+# aiblik/docs/besluiten.md). Kaart: aiblik/docs/features/satellieten-301.md
+main = "src/worker.ts"
+
+# Alleen robots.txt, de oude sitemaps en het favicon geven nog 200. Cloudflare
+# serveert een bestand uit ./bewaar vóór de Worker draait; voor elk ander pad
+# (geen bestand) draait de Worker en volgt de 301. Geen run_worker_first.
+# Terugdraaien = main weghalen en directory weer op ./dist met npm run build.
 [assets]
-directory = "./dist"
-not_found_handling = "404-page"
+directory = "./bewaar"
 
 [observability]
 enabled = true
